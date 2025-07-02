@@ -8,6 +8,7 @@ import CountUpStats from "@/components/count-up-stats"
 import ScrollReveal from "@/components/scroll-reveal"
 import Image from "next/image"
 
+
 export const metadata: Metadata = {
   title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
   description:
@@ -32,12 +33,12 @@ export default function HomePage() {
             muted
             loop
             playsInline
-            poster="/placeholder.svg?height=1080&width=1920&text=Solar+Installation+Video"
+            poster="/images/home-poster.webp"
           >
             <source src="/videos/solar-installation-hero.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <Image
-              src="/placeholder.svg?height=1080&width=1920&text=Beautiful+Florida+Solar+Installation"
+              src="/images/home-poster.webp"
               alt="Solar panel installation on Florida home"
               width={1920}
               height={1080}
@@ -65,7 +66,7 @@ export default function HomePage() {
               <ScrollReveal direction="up" delay={200}>
                 <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
                   Save thousands on electricity bills with premium solar panel installation in Tampa Bay. Get a free
-                  quote today and join 10,000+ satisfied Florida homeowners who've gone solar.
+                  quote today and join 10,000+ satisfied Florida homeowners who&apos;ve gone solar.
                 </p>
               </ScrollReveal>
             </div>
@@ -135,7 +136,7 @@ export default function HomePage() {
                 Why Tampa Bay Homeowners Choose Relentless Energy
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                As Florida's premier Tesla Certified solar installer, we deliver unmatched quality, service, and savings
+                As Florida&apos;s premier Tesla Certified solar installer, we deliver unmatched quality, service, and savings
                 for your solar energy investment.
               </p>
             </div>
@@ -259,7 +260,7 @@ export default function HomePage() {
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
                     <Link href="/solutions/residential-solar-panels">
-                      Learn More
+                      Learn more about residential solar
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </Button>
@@ -300,7 +301,7 @@ export default function HomePage() {
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
                     <Link href="/tesla-solar/powerwall">
-                      Learn More
+                      Learn more about Tesla Powerwall
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </Button>
@@ -341,7 +342,7 @@ export default function HomePage() {
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
                     <Link href="/solutions/commercial-solar-panels">
-                      Learn More
+                      Learn more about commercial solar
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
                   </Button>
@@ -359,7 +360,7 @@ export default function HomePage() {
             <div className="space-y-8">
               <h2 className="text-4xl lg:text-5xl font-bold text-white">Ready to Start Saving with Solar Energy?</h2>
               <p className="text-xl text-red-100 max-w-3xl mx-auto">
-                Join thousands of satisfied Florida homeowners who've made the switch to clean, renewable solar energy.
+                Join thousands of satisfied Florida homeowners who&apos;ve made the switch to clean, renewable solar energy.
                 Get your free quote today and start saving immediately.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

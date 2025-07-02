@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold text-red-500">Relentless Energy</h3>
                         <p className="text-gray-300">
-                            Florida's premier Tesla Certified solar installation company serving the Tampa Bay area with reliable,
+                            Florida&apos;s premier Tesla Certified solar installation company serving the Tampa Bay area with reliable,
                             efficient solar energy solutions.
                         </p>
                         <div className="flex space-x-4">
