@@ -156,14 +156,14 @@ export default function FreeQuotePage() {
                     <div className="space-y-6">
                         <Card>
                             <CardHeader>
-                                <CardTitle>What You'll Receive</CardTitle>
+                                <CardTitle>What You&apos;ll Receive</CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="flex items-start space-x-3">
                                     <CheckCircle className="h-5 w-5 text-green-600 mt-1" />
                                     <div>
                                         <h4 className="font-semibold">Custom System Design</h4>
-                                        <p className="text-sm text-gray-600">Tailored solar solution for your home's energy needs</p>
+                                        <p className="text-sm text-gray-600">Tailored solar solution for your home&apos;s energy needs</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-3">

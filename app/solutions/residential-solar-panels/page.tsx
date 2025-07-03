@@ -40,11 +40,46 @@ export default function ResidentialSolarPage() {
         <>
             {/* Hero Section */}
             <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white pt-[140px] overflow-hidden">
-                {/* Subtle Background Elements */}
+                {/* Animated Background Elements */}
                 <div className="absolute inset-0">
-                    {/* Soft gradient circles */}
-                    <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-red-100/30 rounded-full blur-3xl"></div>
-                    <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-orange-100/20 rounded-full blur-3xl"></div>
+                    {/* Large Animated Gradient Orbs */}
+                    <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-red-400/30 to-orange-400/30 rounded-full blur-3xl animate-pulse"></div>
+                    <div
+                        className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-full blur-3xl animate-pulse"
+                        style={{ animationDelay: "1s" }}
+                    ></div>
+                    <div
+                        className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-yellow-400/25 to-red-400/25 rounded-full blur-3xl animate-pulse"
+                        style={{ animationDelay: "0.5s" }}
+                    ></div>
+
+                    {/* Medium Floating Orbs */}
+                    <div
+                        className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-red-300/20 to-orange-300/20 rounded-full blur-2xl animate-bounce"
+                        style={{ animationDuration: "3s", animationDelay: "0.2s" }}
+                    ></div>
+                    <div
+                        className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-r from-orange-300/15 to-yellow-300/15 rounded-full blur-2xl animate-bounce"
+                        style={{ animationDuration: "4s", animationDelay: "1.5s" }}
+                    ></div>
+                    <div
+                        className="absolute top-3/4 left-1/3 w-24 h-24 bg-gradient-to-r from-yellow-300/25 to-red-300/25 rounded-full blur-xl animate-bounce"
+                        style={{ animationDuration: "2.5s", animationDelay: "0.8s" }}
+                    ></div>
+
+                    {/* Small Floating Particles */}
+                    <div
+                        className="absolute top-32 left-1/2 w-4 h-4 bg-red-400/40 rounded-full animate-ping"
+                        style={{ animationDelay: "0.3s" }}
+                    ></div>
+                    <div
+                        className="absolute bottom-40 right-1/3 w-3 h-3 bg-orange-400/50 rounded-full animate-ping"
+                        style={{ animationDelay: "1.2s" }}
+                    ></div>
+                    <div
+                        className="absolute top-2/3 left-16 w-2 h-2 bg-yellow-400/60 rounded-full animate-ping"
+                        style={{ animationDelay: "0.7s" }}
+                    ></div>
 
                     {/* Subtle grid pattern */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(239,68,68,0.04)_1px,transparent_0)] bg-[length:40px_40px]"></div>
