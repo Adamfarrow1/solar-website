@@ -286,7 +286,7 @@ export default function CommercialSolarPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Why Businesses Choose Commercial Solar</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Commercial solar offers compelling financial and strategic advantages that smart business owners can't
+                                Commercial solar offers compelling financial and strategic advantages that smart business owners can&apos;t
                                 ignore.
                             </p>
                         </div>

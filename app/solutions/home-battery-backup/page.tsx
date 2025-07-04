@@ -496,7 +496,7 @@ export default function HomeBatteryBackupPage() {
                                     <p className="text-gray-600">{testimonial.location}</p>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
+                                    <p className="text-gray-700 mb-4">&quot;{testimonial.text}&quot;</p>
                                     <div className="bg-green-50 text-green-700 px-3 py-2 rounded-lg text-sm font-semibold">
                                         {testimonial.savings}
                                     </div>

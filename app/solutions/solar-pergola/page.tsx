@@ -221,7 +221,7 @@ export default function SolarPergolaPage() {
                                 </CardHeader>
                                 <CardContent className="flex-grow flex items-center">
                                     <CardDescription className="text-base text-gray-600">
-                                        Create comfortable outdoor living spaces protected from Florida's intense sun.
+                                        Create comfortable outdoor living spaces protected from Florida&apos;s intense sun.
                                     </CardDescription>
                                 </CardContent>
                             </Card>
@@ -253,7 +253,7 @@ export default function SolarPergolaPage() {
                                 </CardHeader>
                                 <CardContent className="flex-grow flex items-center">
                                     <CardDescription className="text-base text-gray-600">
-                                        Increase your home's value with a beautiful, functional outdoor structure.
+                                        Increase your home&apos;s value with a beautiful, functional outdoor structure.
                                     </CardDescription>
                                 </CardContent>
                             </Card>
@@ -453,7 +453,7 @@ export default function SolarPergolaPage() {
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
                                     <CardDescription className="text-base text-gray-600">
-                                        Hurricane-rated design perfect for Florida's coastal lifestyle with integrated planters and louvered
+                                        Hurricane-rated design perfect for Florida&apos;s coastal lifestyle with integrated planters and louvered
                                         elements.
                                     </CardDescription>
                                     <ul className="space-y-2 text-sm flex-grow">
@@ -596,7 +596,7 @@ export default function SolarPergolaPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">What Our Customers Say</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Don't just take our word for it. Here's what Florida homeowners are saying about their solar pergola
+                                Don&apos;t just take our word for it. Here&apos;s what Florida homeowners are saying about their solar pergola
                                 experience.
                             </p>
                         </div>
@@ -638,7 +638,7 @@ export default function SolarPergolaPage() {
                                         <CardDescription className="text-sm text-gray-500">{testimonial.location}</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-4 flex-grow flex flex-col">
-                                        <p className="text-gray-600 italic flex-grow">"{testimonial.text}"</p>
+                                        <p className="text-gray-600 italic flex-grow">&quot;{testimonial.text}&quot;</p>
                                         <div className="bg-green-50 p-3 rounded-lg mt-auto">
                                             <div className="text-lg font-bold text-green-600">Saving {testimonial.savings}</div>
                                             <div className="text-sm text-green-700">Monthly energy savings</div>

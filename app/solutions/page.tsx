@@ -160,8 +160,8 @@ export default function SolutionsPage() {
                                 </h1>
                                 <div className="max-w-5xl mx-auto px-4">
                                     <p className="text-gray-200 leading-relaxed font-light text-base sm:text-lg md:text-xl lg:text-2xl">
-                                        From cutting-edge residential installations to enterprise-scale commercial systems, we're redefining
-                                        what's possible with solar energy in Florida.
+                                        From cutting-edge residential installations to enterprise-scale commercial systems, we&apos;re redefining
+                                        what&apos;s possible with solar energy in Florida.
                                     </p>
                                 </div>
                             </div>
@@ -421,8 +421,8 @@ export default function SolutionsPage() {
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Experience the future of solar energy with Tesla's revolutionary technology, professionally installed by
-                                Florida's certified experts.
+                                Experience the future of solar energy with Tesla&apos;s revolutionary technology, professionally installed by
+                                Florida&apos;s certified experts.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -635,7 +635,7 @@ export default function SolutionsPage() {
                     <ScrollReveal direction="up" delay={600}>
                         <div className="text-center mt-12">
                             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-                                Don't see your industry? We've installed solar across dozens of sectors.
+                                Don&apos;t see your industry? We&apos;ve installed solar across dozens of sectors.
                             </p>
                             <Button
                                 asChild

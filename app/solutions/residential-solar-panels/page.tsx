@@ -238,7 +238,7 @@ export default function ResidentialSolarPage() {
                                 </CardHeader>
                                 <CardContent className="flex-grow flex items-center">
                                     <CardDescription className="text-base text-gray-600">
-                                        Solar panels increase your home's value by an average of 4% while providing immediate savings.
+                                        Solar panels increase your home&apos;s value by an average of 4% while providing immediate savings.
                                     </CardDescription>
                                 </CardContent>
                             </Card>
@@ -357,7 +357,7 @@ export default function ResidentialSolarPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Complete Residential Solar Solutions</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                We offer comprehensive solar solutions tailored to your home's unique needs and energy requirements.
+                                We offer comprehensive solar solutions tailored to your home&apos;s unique needs and energy requirements.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -598,7 +598,7 @@ export default function ResidentialSolarPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">What Our Customers Say</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Don't just take our word for it. Here's what Florida homeowners are saying about their solar experience.
+                                Don&apos;t just take our word for it. Here&apos;s what Florida homeowners are saying about their solar experience.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -639,7 +639,7 @@ export default function ResidentialSolarPage() {
                                         <CardDescription className="text-sm text-gray-500">{testimonial.location}</CardDescription>
                                     </CardHeader>
                                     <CardContent className="space-y-4 flex-grow flex flex-col">
-                                        <p className="text-gray-600 italic flex-grow">"{testimonial.text}"</p>
+                                        <p className="text-gray-600 italic flex-grow">&quot;{testimonial.text}&quot;</p>
                                         <div className="bg-green-50 p-3 rounded-lg mt-auto">
                                             <div className="text-lg font-bold text-green-600">Saving {testimonial.savings}</div>
                                             <div className="text-sm text-green-700">Annual electricity savings</div>
