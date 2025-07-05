@@ -18,7 +18,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-}
+  openGraph: {
+    title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
+    description:
+      "Get solar panels installed by Florida's #1 Tesla Certified solar company. Serving St Petersburg, Clearwater, Largo & Tampa Bay.",
+    url: "https://relentlessenergy.netlify.app/", // Replace with your real domain
+    type: "website",
+    images: [
+      {
+        url: "https://yourdomain.com/residential-solar.jpg", // ✅ Replace with your real OG image URL
+        width: 1200,
+        height: 630,
+        alt: "Solar panels installed by Relentless Energy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
+    description:
+      "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
+    images: ["https://yourdomain.com/residential-solar.jpg"], // ✅ Replace with your real OG image URL
+  },
+};
+
 
 export default function HomePage() {
   return (
