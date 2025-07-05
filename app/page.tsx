@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://yourdomain.com/residential-solar.jpg", // ✅ Replace with your real OG image URL
+        url: "https://relentlessenergy.netlify.app/images/residential-solar.jpg", // ✅ Replace with your real OG image URL
         width: 1200,
         height: 630,
         alt: "Solar panels installed by Relentless Energy",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
     description:
       "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
-    images: ["https://yourdomain.com/residential-solar.jpg"], // ✅ Replace with your real OG image URL
+    images: ["https://relentlessenergy.netlify.app/images/residential-solar.jpg"], // ✅ Replace with your real OG image URL
   },
 };
 
