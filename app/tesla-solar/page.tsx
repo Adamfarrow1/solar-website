@@ -198,7 +198,7 @@ export default function TeslaSolarPage() {
                                 </h1>
                                 <div className="max-w-4xl mx-auto px-4">
                                     <p className="text-gray-200 leading-relaxed font-light text-base sm:text-lg md:text-xl lg:text-2xl">
-                                        Experience the future of solar energy with Tesla's cutting-edge panels. Sleek design meets maximum
+                                        Experience the future of solar energy with Tesla&apos;s cutting-edge panels. Sleek design meets maximum
                                         efficiency for the ultimate clean energy solution.
                                     </p>
                                 </div>
@@ -362,15 +362,15 @@ export default function TeslaSolarPage() {
                                     {/* Step Card */}
                                     <div
                                         className={`bg-gradient-to-br ${currentStep === index
-                                                ? "from-red-50 to-orange-50 border-red-200 shadow-2xl"
-                                                : "from-gray-50 to-white border-gray-200 shadow-lg"
+                                            ? "from-red-50 to-orange-50 border-red-200 shadow-2xl"
+                                            : "from-gray-50 to-white border-gray-200 shadow-lg"
                                             } border-2 rounded-3xl p-8 text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-2 h-full flex flex-col`}
                                     >
                                         {/* Step Number */}
                                         <div
                                             className={`w-12 h-12 rounded-full ${currentStep === index
-                                                    ? "bg-gradient-to-r from-red-500 to-orange-500 text-white"
-                                                    : "bg-gray-200 text-gray-600"
+                                                ? "bg-gradient-to-r from-red-500 to-orange-500 text-white"
+                                                : "bg-gray-200 text-gray-600"
                                                 } flex items-center justify-center font-bold text-lg mx-auto mb-6 transition-all duration-500`}
                                         >
                                             {index + 1}
@@ -462,7 +462,7 @@ export default function TeslaSolarPage() {
                                     </span>
                                 </h2>
                                 <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                                    Join the solar revolution with Tesla's cutting-edge technology. Get your free consultation and
+                                    Join the solar revolution with Tesla&apos;s cutting-edge technology. Get your free consultation and
                                     discover how much you can save!
                                 </p>
                             </div>

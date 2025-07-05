@@ -67,7 +67,7 @@ export default function TeslaCertifiedInstallerPage() {
                                     <p className="text-xl text-gray-600 leading-relaxed">
                                         As an official Tesla Certified installer in Tampa Bay, we bring you the highest standards of solar
                                         installation expertise. Trust your Tesla Solar Roof, Powerwall, and solar panel installation to
-                                        Florida's premier certified professionals.
+                                        Florida&apos;s premier certified professionals.
                                     </p>
                                 </div>
                             </ScrollReveal>
@@ -147,7 +147,7 @@ export default function TeslaCertifiedInstallerPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">What Tesla Certification Means</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Tesla certification isn't just a badge—it's a commitment to excellence, ongoing training, and adherence
+                                Tesla certification isn&apos;t just a badge—it&apos;s a commitment to excellence, ongoing training, and adherence
                                 to the highest installation standards in the solar industry.
                             </p>
                         </div>
@@ -181,7 +181,7 @@ export default function TeslaCertifiedInstallerPage() {
                                 </CardHeader>
                                 <CardContent className="flex-1">
                                     <CardDescription className="text-base text-gray-600">
-                                        Adherence to Tesla's strict quality control measures, installation guidelines, and performance
+                                        Adherence to Tesla&apos;s strict quality control measures, installation guidelines, and performance
                                         standards to ensure optimal system performance and longevity.
                                     </CardDescription>
                                 </CardContent>
@@ -232,7 +232,7 @@ export default function TeslaCertifiedInstallerPage() {
                                 </CardHeader>
                                 <CardContent className="flex-1">
                                     <CardDescription className="text-base text-gray-600">
-                                        Access to Tesla's proprietary installation tools, software, and diagnostic equipment for precise
+                                        Access to Tesla&apos;s proprietary installation tools, software, and diagnostic equipment for precise
                                         installation and optimal system configuration.
                                     </CardDescription>
                                 </CardContent>
@@ -249,7 +249,7 @@ export default function TeslaCertifiedInstallerPage() {
                                 </CardHeader>
                                 <CardContent className="flex-1">
                                     <CardDescription className="text-base text-gray-600">
-                                        Membership in Tesla's exclusive installer network, providing access to technical support, best
+                                        Membership in Tesla&apos;s exclusive installer network, providing access to technical support, best
                                         practices, and collaboration with top installers nationwide.
                                     </CardDescription>
                                 </CardContent>
@@ -266,7 +266,7 @@ export default function TeslaCertifiedInstallerPage() {
                         <div className="text-center space-y-4 mb-16">
                             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Tesla Products We Install</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                As a Tesla Certified installer, we're authorized to install the complete range of Tesla energy products
+                                As a Tesla Certified installer, we&apos;re authorized to install the complete range of Tesla energy products
                                 with factory-backed warranties and support.
                             </p>
                         </div>
@@ -532,7 +532,7 @@ export default function TeslaCertifiedInstallerPage() {
                         <div className="space-y-8">
                             <h2 className="text-4xl lg:text-5xl font-bold text-white">Ready for Tesla Solar Excellence?</h2>
                             <p className="text-xl text-red-100 max-w-3xl mx-auto">
-                                Experience the difference of working with Florida's premier Tesla Certified installer. Get your free
+                                Experience the difference of working with Florida&apos;s premier Tesla Certified installer. Get your free
                                 consultation and discover how Tesla energy products can transform your home.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
