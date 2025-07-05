@@ -154,14 +154,14 @@ export default function SolutionsPage() {
                                     <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">
                                         Solar Solutions
                                     </span>
-                                    <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight pb-2">
+                                    <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight pb-4">
                                         Reimagined
                                     </span>
                                 </h1>
                                 <div className="max-w-5xl mx-auto px-4">
                                     <p className="text-gray-200 leading-relaxed font-light text-base sm:text-lg md:text-xl lg:text-2xl">
-                                        From cutting-edge residential installations to enterprise-scale commercial systems, we&apos;re redefining
-                                        what&apos;s possible with solar energy in Florida.
+                                        From cutting-edge residential installations to enterprise-scale commercial systems, we&apos;re
+                                        redefining what&apos;s possible with solar energy in Florida.
                                     </p>
                                 </div>
                             </div>
@@ -237,7 +237,7 @@ export default function SolutionsPage() {
                             </div>
                             <h2 className="text-5xl lg:text-6xl font-black text-gray-900">
                                 Choose Your
-                                <span className="block bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent pb-2">
                                     Solar Journey
                                 </span>
                             </h2>
@@ -270,9 +270,9 @@ export default function SolutionsPage() {
                                             <div className="text-3xl font-black text-green-600">90%</div>
                                             <div className="text-green-700 font-semibold">Bill Reduction</div>
                                         </div>
-                                        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl border-2 border-blue-100">
-                                            <div className="text-3xl font-black text-blue-600">$15K</div>
-                                            <div className="text-blue-700 font-semibold">Starting Price</div>
+                                        <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl border-2 border-red-100">
+                                            <div className="text-3xl font-black text-red-600">$15K</div>
+                                            <div className="text-red-700 font-semibold">Starting Price</div>
                                         </div>
                                     </div>
 
@@ -307,7 +307,7 @@ export default function SolutionsPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/images/residential-solar-hero.png"
+                                            src="/placeholder.svg?height=400&width=600&text=Residential+Solar+Installation"
                                             alt="Residential solar installation"
                                             width={600}
                                             height={400}
@@ -322,10 +322,10 @@ export default function SolutionsPage() {
                         <ScrollReveal direction="right">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                                 <div className="relative lg:order-1">
-                                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-400 rounded-3xl blur opacity-20"></div>
+                                    <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/images/commercial-solar-hero.png"
+                                            src="/placeholder.svg?height=400&width=600&text=Commercial+Solar+Installation"
                                             alt="Commercial solar installation"
                                             width={600}
                                             height={400}
@@ -336,11 +336,11 @@ export default function SolutionsPage() {
 
                                 <div className="space-y-8 lg:order-2">
                                     <div className="flex items-center gap-4">
-                                        <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-2xl shadow-lg">
+                                        <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-2xl shadow-lg">
                                             <Building className="h-8 w-8 text-white" />
                                         </div>
                                         <div>
-                                            <Badge className="bg-blue-600 text-white mb-2">Business Solution</Badge>
+                                            <Badge className="bg-red-600 text-white mb-2">Business Solution</Badge>
                                             <h3 className="text-4xl font-bold text-gray-900">Commercial Solar</h3>
                                         </div>
                                     </div>
@@ -355,9 +355,9 @@ export default function SolutionsPage() {
                                             <div className="text-3xl font-black text-green-600">75%</div>
                                             <div className="text-green-700 font-semibold">Cost Reduction</div>
                                         </div>
-                                        <div className="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-2xl border-2 border-purple-100">
-                                            <div className="text-3xl font-black text-purple-600">30%</div>
-                                            <div className="text-purple-700 font-semibold">Tax Credit</div>
+                                        <div className="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl border-2 border-red-100">
+                                            <div className="text-3xl font-black text-red-600">30%</div>
+                                            <div className="text-red-700 font-semibold">Tax Credit</div>
                                         </div>
                                     </div>
 
@@ -369,8 +369,8 @@ export default function SolutionsPage() {
                                             "Enhanced brand reputation",
                                         ].map((feature, index) => (
                                             <div key={index} className="flex items-center gap-3">
-                                                <div className="bg-blue-100 p-1 rounded-full">
-                                                    <CheckCircle className="h-5 w-5 text-blue-600" />
+                                                <div className="bg-green-100 p-1 rounded-full">
+                                                    <CheckCircle className="h-5 w-5 text-green-600" />
                                                 </div>
                                                 <span className="text-gray-700 font-medium">{feature}</span>
                                             </div>
@@ -379,7 +379,7 @@ export default function SolutionsPage() {
 
                                     <Button
                                         asChild
-                                        className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                                        className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                                     >
                                         <Link href="/solutions/commercial-solar-panels">
                                             Explore Commercial Solar
@@ -416,13 +416,13 @@ export default function SolutionsPage() {
                             </div>
                             <h2 className="text-5xl lg:text-6xl font-black text-gray-900">
                                 Next-Generation
-                                <span className="block bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent pb-2">
                                     Tesla Technology
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Experience the future of solar energy with Tesla&apos;s revolutionary technology, professionally installed by
-                                Florida&apos;s certified experts.
+                                Experience the future of solar energy with Tesla&apos;s revolutionary technology, professionally
+                                installed by Florida&apos;s certified experts.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -431,30 +431,29 @@ export default function SolutionsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "Tesla Solar Roof",
-                                description:
-                                    "Revolutionary solar roof tiles that replace your entire roof while generating clean energy",
-                                image: "/images/tesla-solar-roof.png",
+                                title: "Tesla Solar Panels",
+                                description: "Revolutionary solar panels with industry-leading efficiency and sleek design",
+                                image: "/placeholder.svg?height=250&width=400&text=Tesla+Solar+Panels",
                                 color: "from-red-500 to-orange-500",
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
-                                features: ["Integrated solar tiles", "Weather-resistant glass", "25-year warranty"],
-                                link: "/tesla-solar/solar-roof",
+                                features: ["22.8% efficiency rating", "25-year warranty", "Sleek low-profile design"],
+                                link: "/solutions/tesla-solar",
                             },
                             {
                                 title: "Tesla Powerwall",
                                 description: "Store solar energy for use during outages or peak hours with Tesla's home battery system",
-                                image: "/images/tesla-charge.jpg",
+                                image: "/placeholder.svg?height=250&width=400&text=Tesla+Powerwall",
                                 color: "from-orange-500 to-red-500",
                                 bgColor: "from-orange-50 to-red-50",
                                 borderColor: "border-orange-200",
                                 features: ["13.5 kWh capacity", "Seamless backup power", "Mobile app monitoring"],
-                                link: "/tesla-solar/powerwall",
+                                link: "/solutions/home-battery-backup",
                             },
                             {
                                 title: "Solar Pergola",
                                 description: "Combine outdoor living with solar energy generation in a beautiful, functional structure",
-                                image: "/images/solar-pergola.png",
+                                image: "/placeholder.svg?height=250&width=400&text=Solar+Pergola",
                                 color: "from-red-600 to-orange-500",
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
@@ -463,7 +462,7 @@ export default function SolutionsPage() {
                             },
                         ].map((solution, index) => (
                             <ScrollReveal key={index} direction="up" delay={index * 200}>
-                                <div className="group relative">
+                                <div className="group relative h-full">
                                     {/* Subtle Glow Effect */}
                                     <div
                                         className={`absolute -inset-1 bg-gradient-to-r ${solution.color} rounded-3xl blur opacity-0 group-hover:opacity-20 transition duration-500`}
@@ -528,19 +527,19 @@ export default function SolutionsPage() {
             <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
                 {/* Subtle Background Pattern */}
                 <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.15)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(239,68,68,0.15)_1px,transparent_0)] bg-[length:40px_40px]"></div>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <ScrollReveal direction="up">
                         <div className="text-center space-y-6 mb-16">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full shadow-lg">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full shadow-lg">
                                 <Briefcase className="w-4 h-4" />
                                 <span className="font-semibold text-sm">Industry Expertise</span>
                             </div>
                             <h2 className="text-4xl lg:text-5xl font-black text-gray-900">
                                 Powering Every
-                                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                                <span className="block bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent pb-2">
                                     Industry Forward
                                 </span>
                             </h2>
@@ -557,42 +556,42 @@ export default function SolutionsPage() {
                                 icon: Factory,
                                 title: "Manufacturing",
                                 savings: "$100K+",
-                                color: "from-blue-500 to-cyan-500",
+                                color: "from-red-500 to-orange-500",
                                 delay: 0,
                             },
                             {
                                 icon: Store,
                                 title: "Retail",
                                 savings: "$50K+",
-                                color: "from-purple-500 to-pink-500",
+                                color: "from-orange-500 to-red-500",
                                 delay: 100,
                             },
                             {
                                 icon: Building,
                                 title: "Offices",
                                 savings: "$60K+",
-                                color: "from-green-500 to-emerald-500",
+                                color: "from-red-600 to-orange-500",
                                 delay: 200,
                             },
                             {
                                 icon: School,
                                 title: "Education",
                                 savings: "$75K+",
-                                color: "from-orange-500 to-red-500",
+                                color: "from-orange-600 to-red-600",
                                 delay: 300,
                             },
                             {
                                 icon: Users,
                                 title: "Healthcare",
                                 savings: "$80K+",
-                                color: "from-teal-500 to-blue-500",
+                                color: "from-red-500 to-orange-600",
                                 delay: 400,
                             },
                             {
                                 icon: TrendingUp,
                                 title: "Hospitality",
                                 savings: "$45K+",
-                                color: "from-indigo-500 to-purple-500",
+                                color: "from-orange-500 to-red-500",
                                 delay: 500,
                             },
                         ].map((industry, index) => (
@@ -639,7 +638,7 @@ export default function SolutionsPage() {
                             </p>
                             <Button
                                 asChild
-                                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                                className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-6 py-3 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                             >
                                 <Link href="/free-quote">
                                     Discuss Your Industry
@@ -677,7 +676,7 @@ export default function SolutionsPage() {
                                 </div>
                                 <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
                                     Start Your
-                                    <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                                    <span className="block bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent pb-4">
                                         Solar Journey Today
                                     </span>
                                 </h2>

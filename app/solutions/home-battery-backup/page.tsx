@@ -1,6 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -21,145 +20,179 @@ import {
     TrendingUp,
     Award,
     Users,
+    Phone,
 } from "lucide-react"
 import Link from "next/link"
 
 export default function HomeBatteryBackupPage() {
-    const [mounted, setMounted] = useState(false)
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) return null
-
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-red-900 via-red-800 to-orange-900">
-                {/* Animated Background */}
-                <div className="absolute inset-0 overflow-hidden">
-                    {/* Large gradient orbs */}
-                    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse" />
-                    <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-orange-500/15 to-yellow-500/15 rounded-full blur-3xl animate-pulse delay-1000" />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-full blur-2xl animate-pulse delay-500" />
+            <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white pt-[140px] overflow-hidden">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0">
+                    {/* Large Animated Gradient Orbs */}
+                    <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-red-400/30 to-orange-400/30 rounded-full blur-3xl animate-pulse"></div>
+                    <div
+                        className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-full blur-3xl animate-pulse"
+                        style={{ animationDelay: "1s" }}
+                    ></div>
+                    <div
+                        className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-yellow-400/25 to-red-400/25 rounded-full blur-3xl animate-pulse"
+                        style={{ animationDelay: "0.5s" }}
+                    ></div>
 
-                    {/* Medium floating orbs */}
-                    <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-red-400/30 to-orange-400/30 rounded-full blur-xl animate-bounce delay-300" />
-                    <div className="absolute bottom-32 right-32 w-24 h-24 bg-gradient-to-br from-orange-400/25 to-yellow-400/25 rounded-full blur-lg animate-bounce delay-700" />
-                    <div className="absolute top-1/3 right-20 w-20 h-20 bg-gradient-to-br from-red-300/20 to-orange-300/20 rounded-full blur-lg animate-bounce delay-1000" />
+                    {/* Medium Floating Orbs */}
+                    <div
+                        className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-r from-red-300/20 to-orange-300/20 rounded-full blur-2xl animate-bounce"
+                        style={{ animationDuration: "3s", animationDelay: "0.2s" }}
+                    ></div>
+                    <div
+                        className="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-r from-orange-300/15 to-yellow-300/15 rounded-full blur-2xl animate-bounce"
+                        style={{ animationDuration: "4s", animationDelay: "1.5s" }}
+                    ></div>
+                    <div
+                        className="absolute top-3/4 left-1/3 w-24 h-24 bg-gradient-to-r from-yellow-300/25 to-red-300/25 rounded-full blur-xl animate-bounce"
+                        style={{ animationDuration: "2.5s", animationDelay: "0.8s" }}
+                    ></div>
 
-                    {/* Small particles */}
-                    <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-red-400/40 rounded-full animate-ping delay-200" />
-                    <div className="absolute bottom-1/4 right-1/4 w-3 h-3 bg-orange-400/40 rounded-full animate-ping delay-500" />
-                    <div className="absolute top-3/4 left-3/4 w-2 h-2 bg-yellow-400/40 rounded-full animate-ping delay-800" />
+                    {/* Small Floating Particles */}
+                    <div
+                        className="absolute top-32 left-1/2 w-4 h-4 bg-red-400/40 rounded-full animate-ping"
+                        style={{ animationDelay: "0.3s" }}
+                    ></div>
+                    <div
+                        className="absolute bottom-40 right-1/3 w-3 h-3 bg-orange-400/50 rounded-full animate-ping"
+                        style={{ animationDelay: "1.2s" }}
+                    ></div>
+                    <div
+                        className="absolute top-2/3 left-16 w-2 h-2 bg-yellow-400/60 rounded-full animate-ping"
+                        style={{ animationDelay: "0.7s" }}
+                    ></div>
 
-                    {/* Grid pattern */}
-                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]" />
+                    {/* Subtle grid pattern */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(239,68,68,0.04)_1px,transparent_0)] bg-[length:40px_40px]"></div>
 
-                    {/* Subtle geometric shapes */}
-                    <div className="absolute top-1/4 right-1/3 w-16 h-16 border border-red-400/20 rotate-45 animate-spin-slow" />
-                    <div className="absolute bottom-1/3 left-1/4 w-12 h-12 border border-orange-400/20 rotate-12 animate-pulse" />
+                    {/* Minimal geometric shapes */}
+                    <div className="absolute top-32 right-20 w-28 h-28 border border-red-100 rounded-lg rotate-12 opacity-40"></div>
+                    <div className="absolute bottom-40 left-16 w-20 h-20 border border-orange-100 rounded-full opacity-30"></div>
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* Left Column - Content */}
-                        <div className="text-center lg:text-left">
-                            <Badge className="mb-6 bg-red-500/10 text-red-400 border-red-500/20 hover:bg-red-500/20">
-                                <Battery className="w-4 h-4 mr-2" />
-                                Home Energy Storage
-                            </Badge>
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        {/* Left Content */}
+                        <div className="space-y-8">
+                            {/* Simple Badge */}
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full">
+                                <Battery className="w-4 h-4 text-red-500" />
+                                <span className="text-sm font-medium text-red-700">Home Battery Backup</span>
+                            </div>
 
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
-                                Never Lose{" "}
-                                <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-                                    Power
-                                </span>{" "}
-                                Again
-                            </h1>
+                            {/* Clean Typography */}
+                            <div className="space-y-6">
+                                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                                    Never Lose
+                                    <span className="text-red-500 block">Power Again</span>
+                                </h1>
+                                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                                    Keep your home powered during outages with advanced battery backup systems. Store solar energy and
+                                    gain energy independence.
+                                </p>
+                            </div>
 
-                            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
-                                Keep your home powered during outages with advanced battery backup systems. Store solar energy, reduce
-                                electricity costs, and gain energy independence.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                            {/* Simple CTAs */}
+                            <div className="flex flex-col sm:flex-row gap-4">
                                 <Button
-                                    size="lg"
-                                    className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300"
                                     asChild
+                                    size="lg"
+                                    className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold"
                                 >
                                     <Link href="/free-quote">
                                         Get Free Quote
-                                        <ArrowRight className="ml-2 w-5 h-5" />
+                                        <ArrowRight className="ml-2 h-5 w-5" />
                                     </Link>
                                 </Button>
                                 <Button
+                                    asChild
                                     variant="outline"
                                     size="lg"
-                                    className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold backdrop-blur-sm bg-transparent"
+                                    className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3 text-lg font-semibold bg-transparent"
                                 >
-                                    Learn More
+                                    <Link href="tel:727-555-0123">
+                                        <Phone className="mr-2 h-5 w-5" />
+                                        (727) 555-0123
+                                    </Link>
                                 </Button>
                             </div>
 
-                            {/* Stats */}
-                            <div className="grid grid-cols-3 gap-6 text-center">
-                                <div>
-                                    <div className="text-3xl font-bold text-white mb-1">10+</div>
-                                    <div className="text-sm text-gray-400">Years Backup</div>
+                            {/* Clean Stats */}
+                            <div className="grid grid-cols-3 gap-8 pt-8">
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-red-600 mb-1">10+</div>
+                                    <div className="text-sm text-gray-600">Years Backup</div>
                                 </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-white mb-1">24/7</div>
-                                    <div className="text-sm text-gray-400">Monitoring</div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-green-600 mb-1">24/7</div>
+                                    <div className="text-sm text-gray-600">Monitoring</div>
                                 </div>
-                                <div>
-                                    <div className="text-3xl font-bold text-white mb-1">99%</div>
-                                    <div className="text-sm text-gray-400">Efficiency</div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-blue-600 mb-1">99%</div>
+                                    <div className="text-sm text-gray-600">Efficiency</div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Right Column - Visual */}
+                        {/* Right Content - Clean Image */}
                         <div className="relative">
-                            <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                                <div className="text-center mb-6">
-                                    <Battery className="w-24 h-24 text-red-400 mx-auto mb-4" />
-                                    <h3 className="text-2xl font-bold text-white mb-2">Tesla Powerwall</h3>
-                                    <p className="text-gray-300">13.5 kWh Capacity</p>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <div className="flex items-center justify-between text-white">
-                                        <span>Battery Level</span>
-                                        <span className="text-green-400">95%</span>
-                                    </div>
-                                    <div className="w-full bg-gray-700 rounded-full h-3">
-                                        <div className="bg-gradient-to-r from-green-400 to-green-500 h-3 rounded-full w-[95%]"></div>
+                            <div className="rounded-2xl overflow-hidden shadow-xl">
+                                <div className="relative z-10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-gray-200">
+                                    <div className="text-center mb-6">
+                                        <Battery className="w-24 h-24 text-red-500 mx-auto mb-4" />
+                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">Tesla Powerwall</h3>
+                                        <p className="text-gray-600">13.5 kWh Capacity</p>
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-4 mt-6">
-                                        <div className="text-center p-4 bg-white/5 rounded-xl">
-                                            <Zap className="w-8 h-8 text-yellow-400 mx-auto mb-2" />
-                                            <div className="text-white font-semibold">5.2 kW</div>
-                                            <div className="text-gray-400 text-sm">Output</div>
+                                    <div className="space-y-4">
+                                        <div className="flex items-center justify-between text-gray-900">
+                                            <span>Battery Level</span>
+                                            <span className="text-green-600 font-semibold">95%</span>
                                         </div>
-                                        <div className="text-center p-4 bg-white/5 rounded-xl">
-                                            <Clock className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                                            <div className="text-white font-semibold">12 hrs</div>
-                                            <div className="text-gray-400 text-sm">Runtime</div>
+                                        <div className="w-full bg-gray-200 rounded-full h-3">
+                                            <div className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full w-[95%]"></div>
+                                        </div>
+
+                                        <div className="grid grid-cols-2 gap-4 mt-6">
+                                            <div className="text-center p-4 bg-gray-50 rounded-xl border">
+                                                <Zap className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
+                                                <div className="text-gray-900 font-semibold">5.2 kW</div>
+                                                <div className="text-gray-600 text-sm">Output</div>
+                                            </div>
+                                            <div className="text-center p-4 bg-gray-50 rounded-xl border">
+                                                <Clock className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+                                                <div className="text-gray-900 font-semibold">12 hrs</div>
+                                                <div className="text-gray-600 text-sm">Runtime</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Floating badges */}
-                            <div className="absolute -top-4 -right-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                                ✓ Grid Independent
+                            {/* Simple floating badge */}
+                            <div className="absolute -top-4 -right-4 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg z-20">
+                                <div className="text-sm font-semibold">Grid Independent</div>
                             </div>
-                            <div className="absolute -bottom-4 -left-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                                💰 Save $2,000+/year
+
+                            {/* Simple savings indicator */}
+                            <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-4 shadow-lg border z-20">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                                        <DollarSign className="h-5 w-5 text-green-600" />
+                                    </div>
+                                    <div>
+                                        <div className="text-lg font-bold text-gray-900">$2,000+</div>
+                                        <div className="text-sm text-gray-600">Annual Savings</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
