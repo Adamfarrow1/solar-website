@@ -87,7 +87,7 @@ export default function SolarPergolaPage() {
                     <div className="absolute bottom-40 left-16 w-12 h-12 sm:w-20 sm:h-20 border border-blue-100 rounded-full opacity-30"></div>
                 </div>
 
-                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12 sm:pb-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
                         {/* Left Content */}
                         <div className="space-y-6 sm:space-y-8">
@@ -179,7 +179,7 @@ export default function SolarPergolaPage() {
                                 </div>
 
                                 {/* Simple value indicator */}
-                                <div className="absolute -bottom-6 -left-6 bg-white rounded-lg p-3 sm:p-4 shadow-lg border">
+                                <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white rounded-lg p-3 sm:p-4 shadow-lg border">
                                     <div className="flex items-center gap-3">
                                         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-lg flex items-center justify-center">
                                             <Home className="h-4 w-4 sm:h-5 sm:w-5 text-green-600" />
