@@ -41,50 +41,50 @@ export default function HomeBatteryBackupPage() {
                 {/* Animated Background Elements */}
                 <div className="absolute inset-0">
                     {/* Large Animated Gradient Orbs */}
-                    <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-blue-400/30 to-purple-400/30 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-r from-red-400/30 to-orange-400/30 rounded-full blur-3xl animate-pulse"></div>
                     <div
-                        className="absolute bottom-1/3 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-purple-400/20 to-red-400/20 rounded-full blur-3xl animate-pulse"
+                        className="absolute bottom-1/3 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-r from-orange-400/20 to-yellow-400/20 rounded-full blur-3xl animate-pulse"
                         style={{ animationDelay: "1s" }}
                     ></div>
                     <div
-                        className="absolute top-1/2 right-1/3 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-r from-red-400/25 to-orange-400/25 rounded-full blur-3xl animate-pulse"
+                        className="absolute top-1/2 right-1/3 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-r from-yellow-400/25 to-red-400/25 rounded-full blur-3xl animate-pulse"
                         style={{ animationDelay: "0.5s" }}
                     ></div>
 
                     {/* Medium Floating Orbs */}
                     <div
-                        className="absolute top-20 right-20 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-r from-blue-300/20 to-purple-300/20 rounded-full blur-2xl animate-bounce"
+                        className="absolute top-20 right-20 w-20 h-20 sm:w-32 sm:h-32 bg-gradient-to-r from-red-300/20 to-orange-300/20 rounded-full blur-2xl animate-bounce"
                         style={{ animationDuration: "3s", animationDelay: "0.2s" }}
                     ></div>
                     <div
-                        className="absolute bottom-20 left-20 w-24 h-24 sm:w-40 sm:h-40 bg-gradient-to-r from-purple-300/15 to-red-300/15 rounded-full blur-2xl animate-bounce"
+                        className="absolute bottom-20 left-20 w-24 h-24 sm:w-40 sm:h-40 bg-gradient-to-r from-orange-300/15 to-yellow-300/15 rounded-full blur-2xl animate-bounce"
                         style={{ animationDuration: "4s", animationDelay: "1.5s" }}
                     ></div>
                     <div
-                        className="absolute top-3/4 left-1/3 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-r from-red-300/25 to-orange-300/25 rounded-full blur-xl animate-bounce"
+                        className="absolute top-3/4 left-1/3 w-16 h-16 sm:w-24 sm:h-24 bg-gradient-to-r from-yellow-300/25 to-red-300/25 rounded-full blur-xl animate-bounce"
                         style={{ animationDuration: "2.5s", animationDelay: "0.8s" }}
                     ></div>
 
                     {/* Small Floating Particles */}
                     <div
-                        className="absolute top-32 left-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-blue-400/40 rounded-full animate-ping"
+                        className="absolute top-32 left-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-red-400/40 rounded-full animate-ping"
                         style={{ animationDelay: "0.3s" }}
                     ></div>
                     <div
-                        className="absolute bottom-40 right-1/3 w-2 h-2 sm:w-3 sm:h-3 bg-purple-400/50 rounded-full animate-ping"
+                        className="absolute bottom-40 right-1/3 w-2 h-2 sm:w-3 sm:h-3 bg-orange-400/50 rounded-full animate-ping"
                         style={{ animationDelay: "1.2s" }}
                     ></div>
                     <div
-                        className="absolute top-2/3 left-16 w-2 h-2 bg-red-400/60 rounded-full animate-ping"
+                        className="absolute top-2/3 left-16 w-2 h-2 bg-yellow-400/60 rounded-full animate-ping"
                         style={{ animationDelay: "0.7s" }}
                     ></div>
 
                     {/* Subtle grid pattern */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.04)_1px,transparent_0)] bg-[length:40px_40px]"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(239,68,68,0.04)_1px,transparent_0)] bg-[length:40px_40px]"></div>
 
                     {/* Minimal geometric shapes */}
-                    <div className="absolute top-32 right-20 w-16 h-16 sm:w-28 sm:h-28 border border-blue-100 rounded-lg rotate-12 opacity-40"></div>
-                    <div className="absolute bottom-40 left-16 w-12 h-12 sm:w-20 sm:h-20 border border-purple-100 rounded-full opacity-30"></div>
+                    <div className="absolute top-32 right-20 w-16 h-16 sm:w-24 sm:h-24 border border-red-100 rounded-full opacity-40"></div>
+                    <div className="absolute bottom-40 left-16 w-12 h-12 sm:w-16 sm:h-16 border border-orange-100 rotate-45 opacity-30"></div>
                 </div>
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-12 sm:pb-16">
@@ -93,9 +93,9 @@ export default function HomeBatteryBackupPage() {
                         <div className="space-y-6 sm:space-y-8">
                             {/* Simple Badge */}
                             <ScrollReveal direction="up">
-                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
-                                    <Battery className="w-4 h-4 text-blue-500" />
-                                    <span className="text-sm font-medium text-blue-700">Home Battery Backup</span>
+                                <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full">
+                                    <Battery className="w-4 h-4 text-red-500" />
+                                    <span className="text-sm font-medium text-red-700">Home Battery Backup</span>
                                 </div>
                             </ScrollReveal>
 
@@ -104,7 +104,7 @@ export default function HomeBatteryBackupPage() {
                                 <div className="space-y-4 sm:space-y-6">
                                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                                         Never Lose Power
-                                        <span className="text-blue-500 block">Again</span>
+                                        <span className="text-red-500 block">Again</span>
                                     </h1>
                                     <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg">
                                         Keep your lights on during outages with Tesla Powerwall and home battery backup systems. Tesla
@@ -119,7 +119,7 @@ export default function HomeBatteryBackupPage() {
                                     <Button
                                         asChild
                                         size="lg"
-                                        className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold"
+                                        className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold"
                                     >
                                         <Link href="/free-quote">
                                             Get Battery Quote
@@ -144,7 +144,7 @@ export default function HomeBatteryBackupPage() {
                             <ScrollReveal direction="up" delay={300}>
                                 <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-6 sm:pt-8">
                                     <div className="text-center">
-                                        <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">13.5</div>
+                                        <div className="text-2xl sm:text-3xl font-bold text-red-600 mb-1">13.5</div>
                                         <div className="text-xs sm:text-sm text-gray-600">kWh Capacity</div>
                                     </div>
                                     <div className="text-center">
@@ -152,7 +152,7 @@ export default function HomeBatteryBackupPage() {
                                         <div className="text-xs sm:text-sm text-gray-600">Year Warranty</div>
                                     </div>
                                     <div className="text-center">
-                                        <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1">24/7</div>
+                                        <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">24/7</div>
                                         <div className="text-xs sm:text-sm text-gray-600">Monitoring</div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ export default function HomeBatteryBackupPage() {
                                 </div>
 
                                 {/* Simple floating badge */}
-                                <div className="absolute -top-4 -right-4 bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg">
+                                <div className="absolute -top-4 -right-4 bg-red-600 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg">
                                     <div className="text-xs sm:text-sm font-semibold">Tesla Certified</div>
                                 </div>
 
@@ -284,9 +284,9 @@ export default function HomeBatteryBackupPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ScrollReveal direction="up">
                         <div className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 border border-blue-100 rounded-full">
-                                <Battery className="w-4 h-4 text-blue-500" />
-                                <span className="text-sm font-medium text-blue-700">Tesla Powerwall</span>
+                            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 border border-red-100 rounded-full">
+                                <Battery className="w-4 h-4 text-red-500" />
+                                <span className="text-sm font-medium text-red-700">Tesla Powerwall</span>
                             </div>
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
                                 The World&apos;s Most Advanced Home Battery
@@ -308,13 +308,13 @@ export default function HomeBatteryBackupPage() {
                                             icon: Battery,
                                             title: "13.5 kWh Capacity",
                                             description: "Store enough energy to power your essential appliances for hours or even days.",
-                                            color: "bg-blue-100 text-blue-600",
+                                            color: "bg-red-100 text-red-600",
                                         },
                                         {
                                             icon: Zap,
                                             title: "Seamless Backup",
                                             description: "Automatically switches to battery power in milliseconds when the grid goes down.",
-                                            color: "bg-yellow-100 text-yellow-600",
+                                            color: "bg-blue-100 text-blue-600",
                                         },
                                         {
                                             icon: Smartphone,
@@ -343,12 +343,12 @@ export default function HomeBatteryBackupPage() {
                                     ))}
                                 </div>
 
-                                <div className="bg-blue-50 p-4 sm:p-6 rounded-2xl border border-blue-100">
+                                <div className="bg-red-50 p-4 sm:p-6 rounded-2xl border border-red-100">
                                     <div className="flex items-center gap-3 mb-3">
-                                        <Award className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
-                                        <h4 className="text-base sm:text-lg font-semibold text-blue-900">Tesla Certified Installation</h4>
+                                        <Award className="h-5 w-5 sm:h-6 sm:w-6 text-red-600" />
+                                        <h4 className="text-base sm:text-lg font-semibold text-red-900">Tesla Certified Installation</h4>
                                     </div>
-                                    <p className="text-sm sm:text-base text-blue-700">
+                                    <p className="text-sm sm:text-base text-red-700">
                                         As a Tesla Certified installer, we ensure your Powerwall is installed to Tesla&apos;s exact
                                         specifications with full warranty coverage.
                                     </p>
@@ -372,7 +372,7 @@ export default function HomeBatteryBackupPage() {
                                 {/* Floating spec cards */}
                                 <div className="absolute -top-4 -left-4 bg-white rounded-lg p-3 shadow-lg border">
                                     <div className="text-center">
-                                        <div className="text-lg sm:text-xl font-bold text-blue-600">13.5</div>
+                                        <div className="text-lg sm:text-xl font-bold text-red-600">13.5</div>
                                         <div className="text-xs text-gray-600">kWh Storage</div>
                                     </div>
                                 </div>
@@ -439,7 +439,7 @@ export default function HomeBatteryBackupPage() {
                                         </li>
                                     </ul>
                                     <div className="pt-4 mt-auto">
-                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">Starting at $12,000</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-red-600">Starting at $12,000</div>
                                         <div className="text-xs sm:text-sm text-gray-500">Installed with solar</div>
                                     </div>
                                 </CardContent>
@@ -447,9 +447,9 @@ export default function HomeBatteryBackupPage() {
                         </ScrollReveal>
 
                         <ScrollReveal direction="up">
-                            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border-blue-200 h-full flex flex-col">
+                            <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border-red-200 h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
-                                    <Badge className="bg-blue-600 text-white w-fit mb-2">Most Popular</Badge>
+                                    <Badge className="bg-red-600 text-white w-fit mb-2">Most Popular</Badge>
                                     <Image
                                         src="/images/dual-powerwall.png"
                                         alt="Dual Tesla Powerwall installation"
@@ -482,7 +482,7 @@ export default function HomeBatteryBackupPage() {
                                         </li>
                                     </ul>
                                     <div className="pt-4 mt-auto">
-                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">Starting at $22,000</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-red-600">Starting at $22,000</div>
                                         <div className="text-xs sm:text-sm text-gray-500">Installed with solar</div>
                                     </div>
                                 </CardContent>
@@ -524,7 +524,7 @@ export default function HomeBatteryBackupPage() {
                                         </li>
                                     </ul>
                                     <div className="pt-4 mt-auto">
-                                        <div className="text-xl sm:text-2xl font-bold text-blue-600">Custom Pricing</div>
+                                        <div className="text-xl sm:text-2xl font-bold text-red-600">Custom Pricing</div>
                                         <div className="text-xs sm:text-sm text-gray-500">Based on home requirements</div>
                                     </div>
                                 </CardContent>
@@ -554,28 +554,28 @@ export default function HomeBatteryBackupPage() {
                                 title: "Home Assessment",
                                 description: "Evaluate your home's electrical system and energy needs",
                                 icon: Users,
-                                color: "bg-blue-100 text-blue-600",
+                                color: "bg-red-100 text-red-600",
                             },
                             {
                                 step: "2",
                                 title: "Custom Design",
                                 description: "Design the optimal battery backup system for your home",
                                 icon: FileText,
-                                color: "bg-green-100 text-green-600",
+                                color: "bg-blue-100 text-blue-600",
                             },
                             {
                                 step: "3",
                                 title: "Professional Installation",
                                 description: "Tesla Certified installation in 4-6 hours",
                                 icon: Wrench,
-                                color: "bg-purple-100 text-purple-600",
+                                color: "bg-green-100 text-green-600",
                             },
                             {
                                 step: "4",
                                 title: "System Activation",
                                 description: "Connect to Tesla app and begin monitoring",
                                 icon: Smartphone,
-                                color: "bg-orange-100 text-orange-600",
+                                color: "bg-purple-100 text-purple-600",
                             },
                         ].map((item, index) => (
                             <ScrollReveal key={index} direction="up" delay={index * 100}>
@@ -586,7 +586,7 @@ export default function HomeBatteryBackupPage() {
                                         >
                                             <item.icon className="h-8 w-8 sm:h-10 sm:w-10" />
                                         </div>
-                                        <div className="absolute -top-2 -right-2 bg-blue-600 text-white w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
+                                        <div className="absolute -top-2 -right-2 bg-red-600 text-white w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-bold">
                                             {item.step}
                                         </div>
                                     </div>
@@ -652,9 +652,9 @@ export default function HomeBatteryBackupPage() {
                                         <p className="text-sm sm:text-base text-gray-600 italic flex-grow">
                                             &quot;{testimonial.text}&quot;
                                         </p>
-                                        <div className="bg-blue-50 p-3 rounded-lg mt-auto">
-                                            <div className="text-sm sm:text-base font-semibold text-blue-600">{testimonial.system}</div>
-                                            <div className="text-xs text-blue-700">System Configuration</div>
+                                        <div className="bg-red-50 p-3 rounded-lg mt-auto">
+                                            <div className="text-sm sm:text-base font-semibold text-red-600">{testimonial.system}</div>
+                                            <div className="text-xs text-red-700">System Configuration</div>
                                         </div>
                                     </CardContent>
                                 </Card>
@@ -665,14 +665,14 @@ export default function HomeBatteryBackupPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-600 to-blue-700">
+            <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-red-600 to-red-700">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <ScrollReveal direction="up">
                         <div className="space-y-6 sm:space-y-8">
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                                 Ready for Reliable Backup Power?
                             </h2>
-                            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+                            <p className="text-lg sm:text-xl text-red-100 max-w-3xl mx-auto">
                                 Don&apos;t let the next storm leave you in the dark. Get Tesla Powerwall installed by Florida&apos;s
                                 certified experts and enjoy peace of mind year-round.
                             </p>
@@ -680,7 +680,7 @@ export default function HomeBatteryBackupPage() {
                                 <Button
                                     asChild
                                     size="lg"
-                                    className="bg-white text-blue-600 hover:bg-gray-100 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto font-semibold group"
+                                    className="bg-white text-red-600 hover:bg-gray-100 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto font-semibold group"
                                 >
                                     <Link href="/free-quote">
                                         Get Your Battery Quote
@@ -691,7 +691,7 @@ export default function HomeBatteryBackupPage() {
                                     asChild
                                     size="lg"
                                     variant="outline"
-                                    className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto bg-transparent"
+                                    className="border-2 border-white text-white hover:bg-white hover:text-red-600 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto bg-transparent"
                                 >
                                     <Link href="tel:727-555-0123">
                                         <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
