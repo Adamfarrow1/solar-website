@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react"
+import { Menu, X, ChevronDown, Phone, Mail, ChevronRight } from "lucide-react"
 import Image from "next/image"
 
 const navigation = [
@@ -29,7 +29,7 @@ const navigation = [
     },
     {
         name: "Incentives",
-        href: "/solar-incentives",
+        href: "/incentives",
         children: [
             { name: "Electricity Savings", href: "/solar-incentives/electricity-savings" },
             { name: "Federal Tax Credits", href: "/solar-incentives/federal-tax-credits" },
@@ -65,6 +65,7 @@ const navigation = [
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [expandedItems, setExpandedItems] = useState<string[]>([])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -74,6 +75,27 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
+    // Prevent body scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "unset"
+            setExpandedItems([]) // Reset expanded items when menu closes
+        }
+
+        // Cleanup on unmount
+        return () => {
+            document.body.style.overflow = "unset"
+        }
+    }, [mobileMenuOpen])
+
+    const toggleExpanded = (itemName: string) => {
+        setExpandedItems((prev) =>
+            prev.includes(itemName) ? prev.filter((item) => item !== itemName) : [...prev, itemName],
+        )
+    }
+
     return (
         <header
             className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100" : "bg-white/90 backdrop-blur-sm"
@@ -82,40 +104,40 @@ export default function Header() {
             {/* Top bar with contact info */}
             <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-2 px-4 text-sm">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center space-x-6">
+                    <div className="flex items-center space-x-3 sm:space-x-6">
                         <div className="flex items-center space-x-2">
                             <Phone className="h-3 w-3" />
-                            <span className="font-medium">(727) 555-0123</span>
+                            <span className="font-medium text-xs sm:text-sm">(727) 555-0123</span>
                         </div>
                         <div className="hidden sm:flex items-center space-x-2">
                             <Mail className="h-3 w-3" />
-                            <span>info@relentlessenergy.org</span>
+                            <span className="text-xs sm:text-sm">info@relentlessenergy.org</span>
                         </div>
                     </div>
-                    <div className="text-xs font-medium">⚡ Tesla Certified Installer | Licensed & Insured</div>
+                    <div className="text-xs font-medium hidden md:block">⚡ Tesla Certified Installer | Licensed & Insured</div>
                 </div>
             </div>
 
             {/* Main navigation */}
             <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex h-20 items-center justify-between">
+                <div className="flex h-16 sm:h-20 items-center justify-between">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center space-x-3 group">
-                            <div className="relative p-2 rounded-xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                        <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+                            <div className="relative p-1.5 sm:p-2 rounded-xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                                 <Image
                                     src="/images/relentless-energy-logo.png"
                                     alt="Relentless Energy Logo"
-                                    width={44}
-                                    height={44}
-                                    className="transition-transform duration-300"
+                                    width={36}
+                                    height={36}
+                                    className="sm:w-11 sm:h-11 transition-transform duration-300"
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+                                <span className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
                                     Relentless Energy
                                 </span>
-                                <span className="text-xs text-gray-500 font-medium -mt-1">Solar Excellence</span>
+                                <span className="text-xs text-gray-500 font-medium -mt-1 hidden sm:block">Solar Excellence</span>
                             </div>
                         </Link>
                     </div>
@@ -173,7 +195,7 @@ export default function Header() {
                     <div className="flex lg:hidden">
                         <button
                             type="button"
-                            className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200"
+                            className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 relative z-50"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -185,62 +207,112 @@ export default function Header() {
 
             {/* Mobile menu */}
             {mobileMenuOpen && (
-                <div className="lg:hidden fixed inset-0 z-50">
-                    <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
-                    <div className="fixed right-0 top-0 h-full w-full max-w-sm bg-white shadow-2xl">
-                        <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                            <Link href="/" className="flex items-center space-x-3">
-                                <div className="relative p-1.5 rounded-lg bg-white shadow-md">
+                <div className="lg:hidden fixed inset-0 z-[100]">
+                    {/* Backdrop */}
+                    <div
+                        className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300 ease-out"
+                        onClick={() => setMobileMenuOpen(false)}
+                    />
+
+                    {/* Menu Panel - Full Screen Height */}
+                    <div className="fixed top-0 right-0 w-full max-w-sm h-screen bg-white shadow-2xl transform transition-all duration-300 ease-out border-l border-gray-100">
+                        {/* Header */}
+                        <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-white to-gray-50">
+                            <Link href="/" className="flex items-center space-x-3 group" onClick={() => setMobileMenuOpen(false)}>
+                                <div className="relative p-2 rounded-xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100">
                                     <Image src="/images/relentless-energy-logo.png" alt="Relentless Energy Logo" width={32} height={32} />
                                 </div>
-                                <span className="text-xl font-bold text-gray-900">Relentless Energy</span>
+                                <div className="flex flex-col">
+                                    <span className="text-xl font-bold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent">
+                                        Relentless Energy
+                                    </span>
+                                    <span className="text-xs text-gray-500 font-medium -mt-0.5">Solar Excellence</span>
+                                </div>
                             </Link>
                             <button
                                 type="button"
-                                className="rounded-lg p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors duration-200"
+                                className="rounded-xl p-2.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-all duration-200 hover:scale-105"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <X className="h-6 w-6" />
                             </button>
                         </div>
 
-                        <div className="px-6 py-4 space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
-                            {navigation.map((item) => (
+                        {/* Navigation Items */}
+                        <div className="px-6 py-6 space-y-2 h-[calc(100vh-240px)] overflow-y-auto bg-white">
+                            {navigation.map((item, index) => (
                                 <div key={item.name} className="space-y-1">
-                                    <Link
-                                        href={item.href}
-                                        className="block px-4 py-3 text-base font-semibold text-gray-900 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
-                                        onClick={() => setMobileMenuOpen(false)}
-                                    >
-                                        {item.name}
-                                    </Link>
-                                    {item.children && (
-                                        <div className="ml-4 space-y-1">
-                                            {item.children.map((child) => (
-                                                <Link
-                                                    key={child.name}
-                                                    href={child.href}
-                                                    className="block px-4 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
-                                                    onClick={() => setMobileMenuOpen(false)}
-                                                >
-                                                    {child.name}
-                                                </Link>
-                                            ))}
+                                    <div className="flex items-center">
+                                        <Link
+                                            href={item.href}
+                                            className="flex-1 flex items-center px-4 py-4 text-base font-semibold text-gray-900 hover:text-red-600 hover:bg-gradient-to-r hover:from-red-50 hover:to-red-50/50 rounded-xl transition-all duration-300 min-h-[52px] group border border-transparent hover:border-red-100 hover:shadow-sm"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                        >
+                                            <span className="flex-1">{item.name}</span>
+                                        </Link>
+                                        {item.children && (
+                                            <button
+                                                onClick={() => toggleExpanded(item.name)}
+                                                className="ml-2 p-2 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition-all duration-200"
+                                            >
+                                                <ChevronRight
+                                                    className={`h-4 w-4 transition-transform duration-300 ${expandedItems.includes(item.name) ? "rotate-90" : ""
+                                                        }`}
+                                                />
+                                            </button>
+                                        )}
+                                    </div>
+
+                                    {item.children && expandedItems.includes(item.name) && (
+                                        <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-300">
+                                            <div className="border-l-2 border-red-200 pl-4 space-y-1">
+                                                {item.children.map((child, childIndex) => (
+                                                    <Link
+                                                        key={child.name}
+                                                        href={child.href}
+                                                        className="block px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-gradient-to-r hover:from-red-50/80 hover:to-transparent rounded-lg transition-all duration-200 min-h-[44px] flex items-center group border border-transparent hover:border-red-100/50"
+                                                        onClick={() => setMobileMenuOpen(false)}
+                                                        style={{
+                                                            animationDelay: `${childIndex * 50}ms`,
+                                                        }}
+                                                    >
+                                                        <span className="flex-1">{child.name}</span>
+                                                        <ChevronRight className="h-3 w-3 text-gray-300 group-hover:text-red-400 transition-colors duration-200" />
+                                                    </Link>
+                                                ))}
+                                            </div>
                                         </div>
+                                    )}
+
+                                    {/* Subtle separator */}
+                                    {index < navigation.length - 1 && (
+                                        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-2" />
                                     )}
                                 </div>
                             ))}
                         </div>
 
-                        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100 bg-gray-50">
+                        {/* Footer CTA - Fixed at Bottom */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
                             <Button
                                 asChild
-                                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-3 rounded-xl shadow-lg"
+                                className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:via-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-base min-h-[52px] transition-all duration-300 hover:scale-[1.02] border border-red-500/20"
                             >
                                 <Link href="/free-quote" onClick={() => setMobileMenuOpen(false)}>
-                                    Get Free Quote
+                                    <span className="flex items-center justify-center space-x-2">
+                                        <span>Get Free Quote</span>
+                                        <ChevronRight className="h-4 w-4" />
+                                    </span>
                                 </Link>
                             </Button>
+
+                            {/* Contact info */}
+                            <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-500">
+                                <div className="flex items-center space-x-1">
+                                    <Phone className="h-3 w-3" />
+                                    <span className="font-medium">(727) 555-0123</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

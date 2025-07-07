@@ -8,7 +8,6 @@ import CountUpStats from "@/components/count-up-stats"
 import ScrollReveal from "@/components/scroll-reveal"
 import Image from "next/image"
 
-
 export const metadata: Metadata = {
   title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
   description:
@@ -36,18 +35,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
-    description:
-      "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
+    description: "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
     images: ["https://relentlessenergy.netlify.app/images/residential-solar.jpg"], // ✅ Replace with your real OG image URL
   },
-};
-
+}
 
 export default function HomePage() {
   return (
     <>
       {/* Video Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-[108px]">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -74,20 +71,20 @@ export default function HomePage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <Badge className="bg-red-600 text-white hover:bg-red-700 text-lg px-4 py-2 hover:scale-105 transition-all duration-300">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-12">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6">
+              <Badge className="bg-red-600 text-white hover:bg-red-700 text-sm sm:text-lg px-3 py-1 sm:px-4 sm:py-2 hover:scale-105 transition-all duration-300">
                 Tesla Certified Solar Installer
               </Badge>
               <ScrollReveal direction="up">
-                <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
                   Power Your Home with
                   <span className="text-red-500"> Florida Sunshine</span>
                 </h1>
               </ScrollReveal>
               <ScrollReveal direction="up" delay={200}>
-                <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto px-4">
                   Save thousands on electricity bills with premium solar panel installation in Tampa Bay. Get a free
                   quote today and join 10,000+ satisfied Florida homeowners who&apos;ve gone solar.
                 </p>
@@ -95,25 +92,25 @@ export default function HomePage() {
             </div>
 
             <ScrollReveal direction="up" delay={400}>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-red-600 hover:bg-red-700 text-lg px-10 py-4 h-auto hover:scale-105 transition-all duration-300 group"
+                  className="bg-red-600 hover:bg-red-700 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto hover:scale-105 transition-all duration-300 group"
                 >
                   <Link href="/free-quote">
                     Get Your Free Quote
-                    <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-lg px-10 py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
+                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
                 >
                   <Link href="tel:727-555-0123">
-                    <Phone className="mr-2 h-6 w-6" />
+                    <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                     (727) 555-0123
                   </Link>
                 </Button>
@@ -121,18 +118,18 @@ export default function HomePage() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={600}>
-              <div className="flex flex-wrap items-center justify-center gap-8 pt-8">
-                <div className="flex items-center space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-opacity-20 transition-all duration-300">
-                  <CheckCircle className="h-6 w-6 text-green-400" />
-                  <span className="text-white font-medium">25-Year Warranty</span>
+              <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-8 pt-6 sm:pt-8 px-4">
+                <div className="flex items-center space-x-2 sm:space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-2 hover:bg-opacity-20 transition-all duration-300">
+                  <CheckCircle className="h-4 w-4 sm:h-6 sm:w-6 text-green-400 flex-shrink-0" />
+                  <span className="text-white font-medium text-sm sm:text-base">25-Year Warranty</span>
                 </div>
-                <div className="flex items-center space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-opacity-20 transition-all duration-300">
-                  <CheckCircle className="h-6 w-6 text-green-400" />
-                  <span className="text-white font-medium">$0 Down Available</span>
+                <div className="flex items-center space-x-2 sm:space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-2 hover:bg-opacity-20 transition-all duration-300">
+                  <CheckCircle className="h-4 w-4 sm:h-6 sm:w-6 text-green-400 flex-shrink-0" />
+                  <span className="text-white font-medium text-sm sm:text-base">$0 Down Available</span>
                 </div>
-                <div className="flex items-center space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-opacity-20 transition-all duration-300">
-                  <CheckCircle className="h-6 w-6 text-green-400" />
-                  <span className="text-white font-medium">Licensed & Insured</span>
+                <div className="flex items-center space-x-2 sm:space-x-3 bg-white bg-opacity-10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-2 hover:bg-opacity-20 transition-all duration-300">
+                  <CheckCircle className="h-4 w-4 sm:h-6 sm:w-6 text-green-400 flex-shrink-0" />
+                  <span className="text-white font-medium text-sm sm:text-base">Licensed & Insured</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -140,9 +137,9 @@ export default function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-          <div className="w-6 h-10 border-2 border-red-500 rounded-full flex justify-center hover:border-white transition-colors duration-300">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+          <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-red-500 rounded-full flex justify-center hover:border-white transition-colors duration-300">
+            <div className="w-1 h-2 sm:h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
@@ -159,8 +156,8 @@ export default function HomePage() {
                 Why Tampa Bay Homeowners Choose Relentless Energy
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                As Florida&apos;s premier Tesla Certified solar installer, we deliver unmatched quality, service, and savings
-                for your solar energy investment.
+                As Florida&apos;s premier Tesla Certified solar installer, we deliver unmatched quality, service, and
+                savings for your solar energy investment.
               </p>
             </div>
           </ScrollReveal>
@@ -383,8 +380,8 @@ export default function HomePage() {
             <div className="space-y-8">
               <h2 className="text-4xl lg:text-5xl font-bold text-white">Ready to Start Saving with Solar Energy?</h2>
               <p className="text-xl text-red-100 max-w-3xl mx-auto">
-                Join thousands of satisfied Florida homeowners who&apos;ve made the switch to clean, renewable solar energy.
-                Get your free quote today and start saving immediately.
+                Join thousands of satisfied Florida homeowners who&apos;ve made the switch to clean, renewable solar
+                energy. Get your free quote today and start saving immediately.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button
