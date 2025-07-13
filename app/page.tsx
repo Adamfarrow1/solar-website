@@ -12,8 +12,14 @@ export const metadata: Metadata = {
   title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
   description:
     "Get solar panels installed by Florida's #1 Tesla Certified solar company. Serving St Petersburg, Clearwater, Largo & Tampa Bay. Free quotes, 25-year warranty, $0 down financing available.",
-  keywords:
-    "solar panels Tampa Bay, solar installation Florida, Tesla solar installer St Petersburg, residential solar panels Clearwater, commercial solar Largo, solar financing Florida",
+  keywords: [
+    "solar panels Tampa Bay",
+    "solar installation Florida",
+    "Tesla solar installer St Petersburg",
+    "residential solar panels Clearwater",
+    "commercial solar Largo",
+    "solar financing Florida",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -56,7 +62,6 @@ export default function HomePage() {
             poster="/images/home-poster.webp"
             preload="none"
           >
-
             <source src="/videos/solar-installation-hero.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <Image
