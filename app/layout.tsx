@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  other: {
+    "google-site-verification": "soK-lmlmX9TjTGO1xqPZ5mNUh8j1unrECUh1ZbvfxiA"
+  },
   metadataBase: new URL("https://relentlessenergy.org"),
   alternates: {
     canonical: "/",
