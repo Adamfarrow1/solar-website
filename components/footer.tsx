@@ -10,8 +10,8 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold text-red-500">Relentless Energy</h3>
                         <p className="text-gray-300">
-                            Florida&apos;s premier Tesla Certified solar installation company serving the Tampa Bay area with reliable,
-                            efficient solar energy solutions.
+                            Florida&apos;s premier Tesla Certified solar installation company serving the Tampa Bay area with
+                            reliable, efficient solar energy solutions.
                         </p>
                         <div className="flex space-x-4">
                             <Link href="#" className="text-gray-400 hover:text-red-400">
@@ -53,6 +53,11 @@ export default function Footer() {
                             <li>
                                 <Link href="/solutions/home-battery-backup" className="text-gray-300 hover:text-white">
                                     Battery Backup Systems
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/solar-incentives/electricity-savings" className="text-gray-300 hover:text-white">
+                                    Electricity Savings
                                 </Link>
                             </li>
                         </ul>

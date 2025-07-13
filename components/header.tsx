@@ -29,7 +29,7 @@ const navigation = [
     },
     {
         name: "Incentives",
-        href: "/incentives",
+        href: "/solar-incentives",
         children: [
             { name: "Electricity Savings", href: "/solar-incentives/electricity-savings" },
             { name: "Federal Tax Credits", href: "/solar-incentives/federal-tax-credits" },
@@ -41,8 +41,8 @@ const navigation = [
         name: "About",
         href: "/about",
         children: [
-            { name: "Our Team", href: "/about/team" },
-            { name: "Our Process", href: "/about/process" },
+            { name: "Our Team", href: "/about/our-team" },
+            { name: "Our Process", href: "/about/our-process" },
             { name: "Guarantee", href: "/about/guarantee" },
             { name: "Testimonials", href: "/about/testimonials" },
             { name: "FAQ", href: "/about/faq" },

@@ -307,7 +307,7 @@ export default function SolutionsPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/images/residential-solar-installation.jpg"
+                                            src="/placeholder.svg?height=400&width=600&text=Residential+Solar+Installation"
                                             alt="Residential solar installation"
                                             width={600}
                                             height={400}
@@ -325,7 +325,7 @@ export default function SolutionsPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/images/commercial-solar-installation.jpg"
+                                            src="/placeholder.svg?height=400&width=600&text=Commercial+Solar+Installation"
                                             alt="Commercial solar installation"
                                             width={600}
                                             height={400}
