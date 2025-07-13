@@ -54,7 +54,9 @@ export default function HomePage() {
             loop
             playsInline
             poster="/images/home-poster.webp"
+            preload="none"
           >
+
             <source src="/videos/solar-installation-hero.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <Image
