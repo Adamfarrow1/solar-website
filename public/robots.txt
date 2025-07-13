@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://relentlessenergy.netlify.app/api/sitemap
+Sitemap: https://relentlessenergy.netlify.app/sitemap.xml
