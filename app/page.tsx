@@ -251,7 +251,7 @@ export default function HomePage() {
               <Card className="hover:shadow-xl transition-all duration-300 border-gray-200 hover:-translate-y-2 group">
                 <CardHeader>
                   <Image
-                    src="/images/residential-solar.jpg"
+                    src="/images/residential-solar.webp"
                     alt="Residential solar panel installation on Florida home roof"
                     width={400}
                     height={200}
@@ -292,7 +292,7 @@ export default function HomePage() {
               <Card className="hover:shadow-xl transition-all duration-300 border-gray-200 hover:-translate-y-2 group">
                 <CardHeader>
                   <Image
-                    src="/images/tesla-charge.jpg"
+                    src="/images/tesla-charge.webp"
                     alt="Tesla Powerwall home battery backup system for energy storage"
                     width={400}
                     height={200}
@@ -333,7 +333,7 @@ export default function HomePage() {
               <Card className="hover:shadow-xl transition-all duration-300 border-gray-200 hover:-translate-y-2 group">
                 <CardHeader>
                   <Image
-                    src="/images/commercial-solar.jpg"
+                    src="/images/commercial-solar.webp"
                     alt="Commercial solar panel installation on business building in Florida"
                     width={400}
                     height={200}
