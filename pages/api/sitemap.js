@@ -2,6 +2,41 @@ import { getPosts } from "@/lib/wordpress";
 
 export default async function handler(req, res) {
   const baseUrl = "https://relentlessenergy.netlify.app";
+  //TODO add other paths after adding new pages
+  const staticPages = [
+    "about",
+    "about/faq",
+    "about/guarantee",
+    "about/our-process",
+    "about/our-team",
+    "about/testimonials",
+    "free-quote",
+    "solar-incentives",
+    "solar-incentives/electricity-savings",
+    "solar-incentives/federal-tax-credits",
+    "solar-incentives/net-metering",
+    "solar-incentives/solar-financing",
+    "solutions",
+    "solutions/commercial-solar-panels",
+    "solutions/home-battery-backup",
+    "solutions/residential-solar-panels",
+    "solutions/solar-pergola",
+    "tesla-solar",
+    "tesla-solar/certified-installer",
+    "tesla-solar/powerwall",
+    "tesla-solar/solar-roof",
+    "",
+  ];
+
+  const staticUrls = staticPages
+    .map((page) => {
+      return `
+        <url>
+          <loc>${baseUrl}/${page}</loc>
+          <lastmod>${new Date().toISOString()}</lastmod>
+        </url>`;
+    })
+    .join("");
 
   let allPosts = [];
   let page = 1;
@@ -30,6 +65,7 @@ export default async function handler(req, res) {
         <loc>${baseUrl}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </url>
+      ${staticUrls}
       ${urls}
     </urlset>`;
 
