@@ -15,20 +15,20 @@ export async function POST(request: NextRequest) {
         if (path) {
             // Revalidate specific path
             revalidatePath(path)
-            console.log(`Revalidated path: ${path}`)
+
         }
 
         if (tag) {
             // Revalidate specific cache tag
             revalidateTag(tag)
-            console.log(`Revalidated tag: ${tag}`)
+
         }
 
         if (!path && !tag) {
             // Revalidate all blog-related content
             revalidateTag("posts")
             revalidatePath("/blog")
-            console.log("Revalidated all blog content")
+
         }
 
         return NextResponse.json({

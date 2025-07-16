@@ -36,14 +36,16 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
 
     const featuredImage = getFeaturedImage(post)
     const author = getAuthor(post)
-
+    const tags = getPostTags(post)
     // Use Yoast SEO data if available
     const yoastData = post.yoast_head_json
-
     return {
         title: yoastData?.title || stripHtml(post.title.rendered),
         description: yoastData?.description || stripHtml(post.excerpt.rendered).substring(0, 160),
-        keywords: yoastData?.schema?.["@graph"]?.[0]?.keywords || undefined,
+        keywords: yoastData?.schema?.["@graph"]?.[0]?.keywords
+            || tags.map((tag: any) => tag.name).join(", ")
+            || undefined,
+
         authors: author ? [{ name: author.name, url: author.url }] : undefined,
         openGraph: {
             title: yoastData?.og_title || stripHtml(post.title.rendered),
