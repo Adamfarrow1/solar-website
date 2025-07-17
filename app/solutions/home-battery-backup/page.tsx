@@ -164,7 +164,7 @@ export default function HomeBatteryBackupPage() {
                             <div className="relative order-first lg:order-last">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/images/tesla-powerwall-home.png"
+                                        src="/images/electric-car-charging.jpg"
                                         alt="Tesla Powerwall installed in modern home"
                                         width={600}
                                         height={400}
@@ -361,7 +361,7 @@ export default function HomeBatteryBackupPage() {
                             <div className="relative">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/images/tesla-powerwall-features.png"
+                                        src="/images/electric-car-charging2.jpg"
                                         alt="Tesla Powerwall features and specifications"
                                         width={600}
                                         height={500}
@@ -407,13 +407,6 @@ export default function HomeBatteryBackupPage() {
                         <ScrollReveal direction="left">
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
-                                    <Image
-                                        src="/images/single-powerwall.png"
-                                        alt="Single Tesla Powerwall installation"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Essential Backup</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
@@ -450,13 +443,6 @@ export default function HomeBatteryBackupPage() {
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border-red-200 h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
                                     <Badge className="bg-red-600 text-white w-fit mb-2">Most Popular</Badge>
-                                    <Image
-                                        src="/images/dual-powerwall.png"
-                                        alt="Dual Tesla Powerwall installation"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Whole Home Backup</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
@@ -492,13 +478,6 @@ export default function HomeBatteryBackupPage() {
                         <ScrollReveal direction="right">
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
-                                    <Image
-                                        src="/images/triple-powerwall.png"
-                                        alt="Triple Tesla Powerwall installation"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Extended Backup</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">

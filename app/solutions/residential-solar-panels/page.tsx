@@ -167,7 +167,7 @@ export default function ResidentialSolarPage() {
                             <div className="relative">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/placeholder.svg?height=400&width=600&text=Modern+Home+with+Solar+Panels"
+                                        src="/images/residential-solar-installation.jpg"
                                         alt="Modern home with solar panels"
                                         width={600}
                                         height={400}

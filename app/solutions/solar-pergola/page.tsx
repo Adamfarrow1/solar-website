@@ -164,7 +164,7 @@ export default function SolarPergolaPage() {
                             <div className="relative order-first lg:order-last">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/images/solar-pergola-hero.png"
+                                        src="/images/solar-pergola-solutions.jpg"
                                         alt="Beautiful solar pergola in Florida backyard"
                                         width={600}
                                         height={400}
@@ -294,13 +294,7 @@ export default function SolarPergolaPage() {
                         <ScrollReveal direction="left">
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
-                                    <Image
-                                        src="/images/attached-solar-pergola.png"
-                                        alt="Attached solar pergola design"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
+
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Attached Pergola</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
@@ -338,13 +332,7 @@ export default function SolarPergolaPage() {
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group border-red-200 h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
                                     <Badge className="bg-red-600 text-white w-fit mb-2">Most Popular</Badge>
-                                    <Image
-                                        src="/images/freestanding-solar-pergola.png"
-                                        alt="Freestanding solar pergola design"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
+
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Freestanding Pergola</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
@@ -380,13 +368,7 @@ export default function SolarPergolaPage() {
                         <ScrollReveal direction="right">
                             <Card className="hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group h-full flex flex-col">
                                 <CardHeader className="flex-shrink-0">
-                                    <Image
-                                        src="/images/custom-solar-pergola.png"
-                                        alt="Custom solar pergola design"
-                                        width={400}
-                                        height={250}
-                                        className="w-full h-40 sm:h-48 object-cover rounded-t-lg group-hover:scale-105 transition-transform duration-300"
-                                    />
+
                                     <CardTitle className="text-xl sm:text-2xl text-gray-900">Custom Design</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 flex-grow flex flex-col">
@@ -497,7 +479,7 @@ export default function SolarPergolaPage() {
                             <div className="relative">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/images/solar-pergola-materials.png"
+                                        src="/images/solar-pergola-materials.jpg"
                                         alt="Solar pergola construction materials and features"
                                         width={600}
                                         height={500}

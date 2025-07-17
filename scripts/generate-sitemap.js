@@ -48,6 +48,12 @@ async function generateSitemap() {
     "tesla-solar/certified-installer",
     "tesla-solar/powerwall",
     "tesla-solar/solar-roof",
+    "service-areas",
+    "service-areas/pinellas-county",
+    "service-areas/st-petersburg",
+    "service-areas/clearwater",
+    "service-areas/largo",
+    "service-areas/palm-harbor",
   ];
 
   const staticUrls = staticPages
@@ -55,7 +61,7 @@ async function generateSitemap() {
       return `
         <url>
           <loc>${BASE_URL}/${page}</loc>
-          <lastmod>${new Date().toISOString()}</lastmod>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>`;
     })
     .join("");

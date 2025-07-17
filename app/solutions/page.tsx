@@ -307,7 +307,7 @@ export default function SolutionsPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/placeholder.svg?height=400&width=600&text=Residential+Solar+Installation"
+                                            src="/images/residential-solar-solutions.jpg"
                                             alt="Residential solar installation"
                                             width={600}
                                             height={400}
@@ -325,7 +325,7 @@ export default function SolutionsPage() {
                                     <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                     <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                         <Image
-                                            src="/placeholder.svg?height=400&width=600&text=Commercial+Solar+Installation"
+                                            src="/images/commercial-solar-solutions.jpg"
                                             alt="Commercial solar installation"
                                             width={600}
                                             height={400}
@@ -433,7 +433,7 @@ export default function SolutionsPage() {
                             {
                                 title: "Tesla Solar Panels",
                                 description: "Revolutionary solar panels with industry-leading efficiency and sleek design",
-                                image: "/placeholder.svg?height=250&width=400&text=Tesla+Solar+Panels",
+                                image: "/images/tesla-solar-solutions.jpg",
                                 color: "from-red-500 to-orange-500",
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
@@ -443,7 +443,7 @@ export default function SolutionsPage() {
                             {
                                 title: "Tesla Powerwall",
                                 description: "Store solar energy for use during outages or peak hours with Tesla's home battery system",
-                                image: "/placeholder.svg?height=250&width=400&text=Tesla+Powerwall",
+                                image: "/images/tesla-charge.webp",
                                 color: "from-orange-500 to-red-500",
                                 bgColor: "from-orange-50 to-red-50",
                                 borderColor: "border-orange-200",
@@ -453,7 +453,7 @@ export default function SolutionsPage() {
                             {
                                 title: "Solar Pergola",
                                 description: "Combine outdoor living with solar energy generation in a beautiful, functional structure",
-                                image: "/placeholder.svg?height=250&width=400&text=Solar+Pergola",
+                                image: "/images/solar-pergola-solutions.jpg",
                                 color: "from-red-600 to-orange-500",
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",

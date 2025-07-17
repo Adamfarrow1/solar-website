@@ -53,7 +53,7 @@ const navigation = [
         name: "Service Areas",
         href: "/service-area",
         children: [
-            { name: "Pinellas County", href: "/service-area/pinellas" },
+            { name: "Pinellas County", href: "/service-area/pinellas-county" },
             { name: "St Petersburg", href: "/service-area/st-petersburg" },
             { name: "Clearwater", href: "/service-area/clearwater" },
             { name: "Largo", href: "/service-area/largo" },

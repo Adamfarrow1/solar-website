@@ -148,7 +148,7 @@ export default function CommercialSolarPage() {
                             <div className="relative order-first lg:order-last">
                                 <div className="rounded-2xl overflow-hidden shadow-xl">
                                     <Image
-                                        src="/placeholder.svg?height=400&width=600"
+                                        src="/images/commercial-solar-installation.jpg"
                                         alt="Commercial building with solar panel installation"
                                         width={600}
                                         height={400}

@@ -1,0 +1,506 @@
+{
+    "serviceAreas": [
+        {
+            "slug": "st-petersburg",
+            "name": "St. Petersburg",
+            "fullName": "St. Petersburg, Florida",
+            "title": "Solar Panel Installation in St. Petersburg, Florida | Relentless Energy",
+            "metaDescription": "Professional solar panel installation in St. Petersburg, FL. Tesla Certified installer serving downtown, Old Northeast, and surrounding areas. Free solar consultation and quotes!",
+            "keywords": [
+                "St Petersburg solar panels",
+                "St Pete solar installation",
+                "downtown St Petersburg solar",
+                "Old Northeast solar",
+                "Florida solar installer",
+                "Tesla Powerwall St Petersburg"
+            ],
+            "description": "St. Petersburg is leading Florida's solar revolution with abundant sunshine and progressive energy policies. Our Tesla Certified installation team serves all neighborhoods from downtown to the beaches, helping residents reduce energy costs and increase home values with premium solar solutions.",
+            "heroImage": "/placeholder.svg?height=600&width=800&text=St+Petersburg+Solar+Installation",
+            "population": "265,000",
+            "averageSunHours": "8.2 hours/day",
+            "solarPotential": "Excellent",
+            "neighborhoods": [
+                "Downtown St. Petersburg",
+                "Old Northeast",
+                "Kenwood",
+                "Historic Roser Park",
+                "Crescent Lake",
+                "Bayboro Harbor",
+                "Snell Isle",
+                "Venetian Isles",
+                "Lakewood Estates",
+                "Azalea"
+            ],
+            "landmarks": [
+                "The Pier District",
+                "Tropicana Field",
+                "Mahaffey Theater",
+                "Museum of Fine Arts",
+                "Vinoy Park",
+                "Albert Whitted Airport"
+            ],
+            "solarIncentives": [
+                "Federal Solar Tax Credit (30%)",
+                "Florida Solar Rights Act",
+                "Net Metering Program",
+                "Property Tax Exemption",
+                "Sales Tax Exemption"
+            ],
+            "averageElectricBill": "$145/month",
+            "averageSolarSavings": "$1,740/year",
+            "paybackPeriod": "6-8 years",
+            "coordinates": {
+                "latitude": 27.7676,
+                "longitude": -82.6403
+            },
+            "zipCodes": [
+                "33701",
+                "33702",
+                "33703",
+                "33704",
+                "33705",
+                "33706",
+                "33707",
+                "33708",
+                "33709",
+                "33710",
+                "33711",
+                "33712",
+                "33713",
+                "33714",
+                "33715",
+                "33716"
+            ],
+            "testimonials": [
+                {
+                    "name": "Sarah Johnson",
+                    "neighborhood": "Old Northeast",
+                    "text": "Our solar system has been fantastic! We're saving over $200 per month and love supporting clean energy in St. Pete.",
+                    "rating": 5,
+                    "systemSize": "8.5kW",
+                    "installDate": "2023"
+                },
+                {
+                    "name": "Mike Rodriguez",
+                    "neighborhood": "Downtown",
+                    "text": "The installation team was professional and completed everything in two days. Our condo association loves the reduced common area costs!",
+                    "rating": 5,
+                    "systemSize": "12kW",
+                    "installDate": "2023"
+                }
+            ],
+            "projects": [
+                {
+                    "type": "Residential",
+                    "size": "7.2kW",
+                    "location": "Kenwood Historic District",
+                    "savings": "$1,680/year"
+                },
+                {
+                    "type": "Commercial",
+                    "size": "45kW",
+                    "location": "Downtown Office Building",
+                    "savings": "$8,200/year"
+                }
+            ],
+            "localUtility": "Duke Energy Florida",
+            "netMeteringRate": "Full retail rate",
+            "permittingInfo": "City of St. Petersburg requires electrical permits for solar installations. We handle all permitting and inspections."
+        },
+        {
+            "slug": "clearwater",
+            "name": "Clearwater",
+            "fullName": "Clearwater, Florida",
+            "title": "Solar Panel Installation in Clearwater, Florida | Relentless Energy",
+            "metaDescription": "Expert solar panel installation in Clearwater, FL. Serving Clearwater Beach, downtown, and all neighborhoods. Tesla Certified installer with 25-year warranties. Free quotes!",
+            "keywords": [
+                "Clearwater solar panels",
+                "Clearwater Beach solar",
+                "downtown Clearwater solar",
+                "Florida solar installation",
+                "Tesla Powerwall Clearwater",
+                "solar energy Clearwater"
+            ],
+            "description": "Clearwater's beautiful beaches and year-round sunshine make it perfect for solar energy. Our certified installation team serves from Clearwater Beach to downtown, helping homeowners and businesses harness Florida's abundant solar resources while reducing energy costs and environmental impact.",
+            "heroImage": "/placeholder.svg?height=600&width=800&text=Clearwater+Solar+Installation",
+            "population": "117,000",
+            "averageSunHours": "8.1 hours/day",
+            "solarPotential": "Excellent",
+            "neighborhoods": [
+                "Clearwater Beach",
+                "Downtown Clearwater",
+                "Belcher",
+                "Cleveland Street District",
+                "Countryside",
+                "Dunedin Causeway",
+                "Harbor Oaks",
+                "Island Estates",
+                "Morningside",
+                "Safety Harbor"
+            ],
+            "landmarks": [
+                "Clearwater Beach",
+                "Pier 60",
+                "Coachman Park",
+                "Ruth Eckerd Hall",
+                "Clearwater Marine Aquarium",
+                "Sand Key Park"
+            ],
+            "solarIncentives": [
+                "Federal Solar Tax Credit (30%)",
+                "Florida Solar Rights Act",
+                "Net Metering Program",
+                "Property Tax Exemption",
+                "Sales Tax Exemption"
+            ],
+            "averageElectricBill": "$152/month",
+            "averageSolarSavings": "$1,824/year",
+            "paybackPeriod": "6-8 years",
+            "coordinates": {
+                "latitude": 27.9659,
+                "longitude": -82.8001
+            },
+            "zipCodes": [
+                "33755",
+                "33756",
+                "33757",
+                "33758",
+                "33759",
+                "33760",
+                "33761",
+                "33762",
+                "33763",
+                "33764",
+                "33765",
+                "33766",
+                "33767",
+                "33769"
+            ],
+            "testimonials": [
+                {
+                    "name": "Jennifer Adams",
+                    "neighborhood": "Clearwater Beach",
+                    "text": "Living on the beach, we get amazing sun exposure. Our solar panels generate more power than we use most months!",
+                    "rating": 5,
+                    "systemSize": "9.2kW",
+                    "installDate": "2023"
+                },
+                {
+                    "name": "Robert Kim",
+                    "neighborhood": "Downtown Clearwater",
+                    "text": "The Tesla Powerwall kept our power on during the last storm while our neighbors were out for days. Best investment ever!",
+                    "rating": 5,
+                    "systemSize": "6.8kW + Powerwall",
+                    "installDate": "2023"
+                }
+            ],
+            "projects": [
+                {
+                    "type": "Residential",
+                    "size": "8.4kW",
+                    "location": "Island Estates",
+                    "savings": "$1,920/year"
+                },
+                {
+                    "type": "Commercial",
+                    "size": "78kW",
+                    "location": "Cleveland Street Restaurant",
+                    "savings": "$14,200/year"
+                }
+            ],
+            "localUtility": "Duke Energy Florida",
+            "netMeteringRate": "Full retail rate",
+            "permittingInfo": "City of Clearwater requires building and electrical permits. Our team manages all permits and city inspections."
+        },
+        {
+            "slug": "largo",
+            "name": "Largo",
+            "fullName": "Largo, Florida",
+            "title": "Solar Panel Installation in Largo, Florida | Relentless Energy",
+            "metaDescription": "Professional solar installation in Largo, FL. Serving all Largo neighborhoods with Tesla Certified solar panels and Powerwall systems. Free consultation and quotes available!",
+            "keywords": [
+                "Largo solar panels",
+                "Largo Florida solar",
+                "solar installation Largo",
+                "Tesla Powerwall Largo",
+                "residential solar Largo",
+                "commercial solar Largo"
+            ],
+            "description": "Largo residents are discovering the benefits of solar energy with our professional installation services. From established neighborhoods to new developments, we help Largo homeowners and businesses reduce energy costs while contributing to Florida's clean energy future.",
+            "heroImage": "/placeholder.svg?height=600&width=800&text=Largo+Solar+Installation",
+            "population": "85,000",
+            "averageSunHours": "8.0 hours/day",
+            "solarPotential": "Excellent",
+            "neighborhoods": [
+                "Belcher Elementary Area",
+                "Largo Central Park",
+                "Ridgecrest",
+                "Seminole",
+                "West Bay Drive",
+                "Ulmerton Road Corridor",
+                "Highland Lakes",
+                "Bardmoor",
+                "Feather Sound",
+                "Cross Bayou"
+            ],
+            "landmarks": [
+                "Largo Central Park",
+                "Pinellas Trail",
+                "Highland Family Aquatic Center",
+                "Largo Cultural Center",
+                "John S. Taylor Park",
+                "Ridgecrest Park"
+            ],
+            "solarIncentives": [
+                "Federal Solar Tax Credit (30%)",
+                "Florida Solar Rights Act",
+                "Net Metering Program",
+                "Property Tax Exemption",
+                "Sales Tax Exemption"
+            ],
+            "averageElectricBill": "$138/month",
+            "averageSolarSavings": "$1,656/year",
+            "paybackPeriod": "6-8 years",
+            "coordinates": {
+                "latitude": 27.9095,
+                "longitude": -82.7873
+            },
+            "zipCodes": [
+                "33770",
+                "33771",
+                "33773",
+                "33774",
+                "33777",
+                "33778",
+                "33779",
+                "33781",
+                "33782",
+                "33785"
+            ],
+            "testimonials": [
+                {
+                    "name": "Carol Williams",
+                    "neighborhood": "Highland Lakes",
+                    "text": "Our solar system and battery backup kept our home comfortable during the last hurricane. Couldn't be happier with the investment!",
+                    "rating": 5,
+                    "systemSize": "7.6kW + Battery",
+                    "installDate": "2023"
+                },
+                {
+                    "name": "Steve Davis",
+                    "neighborhood": "Ridgecrest",
+                    "text": "The installation was seamless and the monthly savings are exactly what they promised. Great experience from start to finish!",
+                    "rating": 5,
+                    "systemSize": "8.8kW",
+                    "installDate": "2023"
+                }
+            ],
+            "projects": [
+                {
+                    "type": "Residential",
+                    "size": "6.9kW",
+                    "location": "Bardmoor",
+                    "savings": "$1,580/year"
+                },
+                {
+                    "type": "Commercial",
+                    "size": "52kW",
+                    "location": "Ulmerton Road Medical Center",
+                    "savings": "$9,800/year"
+                }
+            ],
+            "localUtility": "Duke Energy Florida",
+            "netMeteringRate": "Full retail rate",
+            "permittingInfo": "City of Largo requires electrical permits for solar installations. We coordinate all permits and inspections."
+        },
+        {
+            "slug": "palm-harbor",
+            "name": "Palm Harbor",
+            "fullName": "Palm Harbor, Florida",
+            "title": "Solar Panel Installation in Palm Harbor, Florida | Relentless Energy",
+            "metaDescription": "Premium solar installation in Palm Harbor, FL. Tesla Certified installer serving Innisbrook, Ozona, and all Palm Harbor communities. Custom solar solutions with 25-year warranties!",
+            "keywords": [
+                "Palm Harbor solar panels",
+                "Innisbrook solar",
+                "Ozona solar installation",
+                "Palm Harbor Tesla Powerwall",
+                "luxury home solar Palm Harbor",
+                "Florida solar installer"
+            ],
+            "description": "Palm Harbor's upscale communities and beautiful homes are perfect for premium solar installations. We serve from Innisbrook to Ozona, providing custom solar solutions that complement your home's architecture while delivering exceptional energy savings and environmental benefits.",
+            "heroImage": "/placeholder.svg?height=600&width=800&text=Palm+Harbor+Solar+Installation",
+            "population": "62,000",
+            "averageSunHours": "8.1 hours/day",
+            "solarPotential": "Excellent",
+            "neighborhoods": [
+                "Innisbrook",
+                "Ozona",
+                "Alderman Elementary Area",
+                "Carrollwood",
+                "Countryside",
+                "Crystal Beach",
+                "Dunedin",
+                "East Lake",
+                "Oldsmar",
+                "Tarpon Springs"
+            ],
+            "landmarks": [
+                "Innisbrook Golf Resort",
+                "Wall Springs Park",
+                "John Chesnut Sr. Park",
+                "Ozona Blue Heron Park",
+                "Palm Harbor Library",
+                "Pinellas Trail"
+            ],
+            "solarIncentives": [
+                "Federal Solar Tax Credit (30%)",
+                "Florida Solar Rights Act",
+                "Net Metering Program",
+                "Property Tax Exemption",
+                "Sales Tax Exemption"
+            ],
+            "averageElectricBill": "$165/month",
+            "averageSolarSavings": "$1,980/year",
+            "paybackPeriod": "6-8 years",
+            "coordinates": {
+                "latitude": 28.0784,
+                "longitude": -82.7618
+            },
+            "zipCodes": [
+                "34683",
+                "34684",
+                "34685",
+                "34695"
+            ],
+            "testimonials": [
+                {
+                    "name": "Amanda Foster",
+                    "neighborhood": "Innisbrook",
+                    "text": "The Tesla Solar Roof on our home is absolutely stunning and generates more power than we expected. Neighbors constantly ask about it!",
+                    "rating": 5,
+                    "systemSize": "11.2kW Solar Roof",
+                    "installDate": "2023"
+                },
+                {
+                    "name": "Mark Thompson",
+                    "neighborhood": "Ozona",
+                    "text": "Professional installation and excellent customer service. Our system has been performing flawlessly for over a year now.",
+                    "rating": 5,
+                    "systemSize": "9.6kW",
+                    "installDate": "2022"
+                }
+            ],
+            "projects": [
+                {
+                    "type": "Residential",
+                    "size": "10.4kW",
+                    "location": "East Lake",
+                    "savings": "$2,280/year"
+                },
+                {
+                    "type": "Luxury Home",
+                    "size": "15.8kW Tesla Solar Roof",
+                    "location": "Innisbrook",
+                    "savings": "$3,200/year"
+                }
+            ],
+            "localUtility": "Duke Energy Florida",
+            "netMeteringRate": "Full retail rate",
+            "permittingInfo": "Pinellas County requires building permits for solar installations. We handle all county permits and inspections."
+        },
+        {
+            "slug": "pinellas-county",
+            "name": "Pinellas County",
+            "fullName": "Pinellas County, Florida",
+            "title": "Solar Panel Installation in Pinellas County, Florida | Relentless Energy",
+            "metaDescription": "Comprehensive solar installation throughout Pinellas County, FL. Tesla Certified installer serving all cities and unincorporated areas. Commercial and residential solar solutions!",
+            "keywords": [
+                "Pinellas County solar",
+                "Tampa Bay solar installation",
+                "Florida solar panels",
+                "Tesla Certified Pinellas",
+                "commercial solar Pinellas County",
+                "residential solar Florida"
+            ],
+            "description": "Pinellas County leads Florida in solar adoption with progressive policies and abundant sunshine. We serve all 24 municipalities and unincorporated areas, from residential installations to large commercial projects, helping the entire county transition to clean, renewable energy.",
+            "heroImage": "/placeholder.svg?height=600&width=800&text=Pinellas+County+Solar+Installation",
+            "population": "975,000",
+            "averageSunHours": "8.1 hours/day",
+            "solarPotential": "Excellent",
+            "neighborhoods": [
+                "All 24 Municipalities",
+                "Unincorporated Areas",
+                "Coastal Communities",
+                "Urban Centers",
+                "Suburban Developments",
+                "Commercial Districts",
+                "Industrial Areas",
+                "Beach Communities",
+                "Historic Districts",
+                "New Developments"
+            ],
+            "landmarks": [
+                "Tampa Bay",
+                "Gulf of Mexico Beaches",
+                "Pinellas Trail",
+                "Brooker Creek Preserve",
+                "Weedon Island Preserve",
+                "Multiple State Parks"
+            ],
+            "solarIncentives": [
+                "Federal Solar Tax Credit (30%)",
+                "Florida Solar Rights Act",
+                "Net Metering Program",
+                "Property Tax Exemption",
+                "Sales Tax Exemption",
+                "PACE Financing Available"
+            ],
+            "averageElectricBill": "$148/month",
+            "averageSolarSavings": "$1,776/year",
+            "paybackPeriod": "6-8 years",
+            "coordinates": {
+                "latitude": 27.8661,
+                "longitude": -82.6797
+            },
+            "zipCodes": [
+                "33701-33785",
+                "34677-34698"
+            ],
+            "testimonials": [
+                {
+                    "name": "Lisa Martinez",
+                    "neighborhood": "Pinellas Park",
+                    "text": "As a county employee, I'm proud to support Pinellas County's clean energy goals with my home solar system. Great investment!",
+                    "rating": 5,
+                    "systemSize": "8.2kW",
+                    "installDate": "2023"
+                },
+                {
+                    "name": "David Chen",
+                    "neighborhood": "Seminole",
+                    "text": "Our business solar installation has exceeded expectations. The county's permitting process was smooth with Relentless Energy handling everything.",
+                    "rating": 5,
+                    "systemSize": "125kW Commercial",
+                    "installDate": "2023"
+                }
+            ],
+            "projects": [
+                {
+                    "type": "Residential",
+                    "size": "8.1kW Average",
+                    "location": "County-wide",
+                    "savings": "$1,850/year Average"
+                },
+                {
+                    "type": "Commercial",
+                    "size": "85kW Average",
+                    "location": "Various Municipalities",
+                    "savings": "$16,500/year Average"
+                }
+            ],
+            "localUtility": "Duke Energy Florida",
+            "netMeteringRate": "Full retail rate",
+            "permittingInfo": "Permit requirements vary by municipality. We handle all local permits and inspections throughout Pinellas County."
+        }
+    ]
+}

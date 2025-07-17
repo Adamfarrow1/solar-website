@@ -59,10 +59,10 @@ export default function HomePage() {
             muted
             loop
             playsInline
-            poster="/images/home-poster.webp"
+            poster="/images/home-poster.png"
             preload="none"
           >
-            <source src="/videos/solar-installation-hero.mp4" type="video/mp4" />
+            <source src="/videos/solar-neighborhood.mov" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <Image
               src="/images/home-poster.webp"
