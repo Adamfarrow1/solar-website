@@ -7,6 +7,7 @@ import { Sun, Shield, Award, Phone, ArrowRight, CheckCircle, Star, Zap } from "l
 import CountUpStats from "@/components/count-up-stats"
 import ScrollReveal from "@/components/scroll-reveal"
 import Image from "next/image"
+import LeadChatbot from "@/components/lead-chatbot"
 
 export const metadata: Metadata = {
   title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
@@ -59,10 +60,10 @@ export default function HomePage() {
             muted
             loop
             playsInline
-            poster="/images/home-poster.png"
+            poster="/images/home-poster.webp"
             preload="none"
           >
-            <source src="/videos/solar-neighborhood.mov" type="video/mp4" />
+            <source src="/videos/solar-neighborhood.mp4" type="video/mp4" />
             {/* Fallback image if video doesn't load */}
             <Image
               src="/images/home-poster.webp"
@@ -418,6 +419,8 @@ export default function HomePage() {
           </ScrollReveal>
         </div>
       </section>
+
+
     </>
   )
 }

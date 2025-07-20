@@ -4,7 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-
+import LeadChatbot from "@/components/lead-chatbot"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
@@ -69,6 +69,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
+        {/* Lead Generation Chatbot */}
+        <LeadChatbot />
         <Footer />
       </body>
     </html>

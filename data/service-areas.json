@@ -15,7 +15,7 @@
                 "Tesla Powerwall St Petersburg"
             ],
             "description": "St. Petersburg is leading Florida's solar revolution with abundant sunshine and progressive energy policies. Our Tesla Certified installation team serves all neighborhoods from downtown to the beaches, helping residents reduce energy costs and increase home values with premium solar solutions.",
-            "heroImage": "/placeholder.svg?height=600&width=800&text=St+Petersburg+Solar+Installation",
+            "heroImage": "/images/st-petersburg-florida.jpg",
             "population": "265,000",
             "averageSunHours": "8.2 hours/day",
             "solarPotential": "Excellent",
@@ -122,7 +122,7 @@
                 "solar energy Clearwater"
             ],
             "description": "Clearwater's beautiful beaches and year-round sunshine make it perfect for solar energy. Our certified installation team serves from Clearwater Beach to downtown, helping homeowners and businesses harness Florida's abundant solar resources while reducing energy costs and environmental impact.",
-            "heroImage": "/placeholder.svg?height=600&width=800&text=Clearwater+Solar+Installation",
+            "heroImage": "/images/clearwater-fl.jpg",
             "population": "117,000",
             "averageSunHours": "8.1 hours/day",
             "solarPotential": "Excellent",
@@ -227,7 +227,7 @@
                 "commercial solar Largo"
             ],
             "description": "Largo residents are discovering the benefits of solar energy with our professional installation services. From established neighborhoods to new developments, we help Largo homeowners and businesses reduce energy costs while contributing to Florida's clean energy future.",
-            "heroImage": "/placeholder.svg?height=600&width=800&text=Largo+Solar+Installation",
+            "heroImage": "/images/key-largo.jpg",
             "population": "85,000",
             "averageSunHours": "8.0 hours/day",
             "solarPotential": "Excellent",
@@ -328,7 +328,7 @@
                 "Florida solar installer"
             ],
             "description": "Palm Harbor's upscale communities and beautiful homes are perfect for premium solar installations. We serve from Innisbrook to Ozona, providing custom solar solutions that complement your home's architecture while delivering exceptional energy savings and environmental benefits.",
-            "heroImage": "/placeholder.svg?height=600&width=800&text=Palm+Harbor+Solar+Installation",
+            "heroImage": "/images/palmharbor.jpg",
             "population": "62,000",
             "averageSunHours": "8.1 hours/day",
             "solarPotential": "Excellent",
@@ -423,7 +423,7 @@
                 "residential solar Florida"
             ],
             "description": "Pinellas County leads Florida in solar adoption with progressive policies and abundant sunshine. We serve all 24 municipalities and unincorporated areas, from residential installations to large commercial projects, helping the entire county transition to clean, renewable energy.",
-            "heroImage": "/placeholder.svg?height=600&width=800&text=Pinellas+County+Solar+Installation",
+            "heroImage": "/images/pinella.jpg",
             "population": "975,000",
             "averageSunHours": "8.1 hours/day",
             "solarPotential": "Excellent",

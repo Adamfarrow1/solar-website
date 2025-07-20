@@ -67,19 +67,19 @@ export default function ServiceAreasPage() {
             "Tesla Certified solar installation company serving Tampa Bay and Pinellas County with residential and commercial solar solutions.",
         url: "https://relentlessenergy.org",
         telephone: "(727) 555-0123",
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: "123 Solar Street",
-            addressLocality: "St Petersburg",
-            addressRegion: "FL",
-            postalCode: "33701",
-            addressCountry: "US",
-        },
-        geo: {
-            "@type": "GeoCoordinates",
-            latitude: 27.7676,
-            longitude: -82.6403,
-        },
+        // address: {
+        //     "@type": "PostalAddress",
+        //     streetAddress: "123 Solar Street",
+        //     addressLocality: "St Petersburg",
+        //     addressRegion: "FL",
+        //     postalCode: "33701",
+        //     addressCountry: "US",
+        // },
+        // geo: {
+        //     "@type": "GeoCoordinates",
+        //     latitude: 27.7676,
+        //     longitude: -82.6403,
+        // },
         areaServed: serviceAreas.map((area) => ({
             "@type": "City",
             name: area.fullName,

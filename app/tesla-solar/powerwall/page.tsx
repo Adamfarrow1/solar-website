@@ -4,27 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-    Phone,
-    CheckCircle,
-    Zap,
-    Shield,
-    Award,
-    Sparkles,
-    Target,
-    Battery,
-    Smartphone,
-    DollarSign,
-    Building,
-    Wrench,
-    MapPin,
-    Power,
-    Sun,
-    Moon,
-    Wifi,
-    BarChart3,
-    AlertTriangle,
-} from "lucide-react"
+import { Phone, CheckCircle, Zap, Shield, Award, Sparkles, Target, Battery, Smartphone, DollarSign, Building, Wrench, MapPin, Power, Sun, Moon, Wifi, BarChart3, AlertTriangle } from 'lucide-react'
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata: Metadata = {
@@ -218,7 +198,7 @@ export default function TeslaPowerwallPage() {
                                 <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                 <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                     <Image
-                                        src="/placeholder.svg?height=500&width=600&text=Tesla+Powerwall+Installation"
+                                        src="/images/ev-charger-wall.jpg"
                                         alt="Tesla Powerwall installation"
                                         width={600}
                                         height={500}
@@ -302,7 +282,7 @@ export default function TeslaPowerwallPage() {
                                                 <phase.icon className="w-10 h-10 text-white" />
                                             </div>
                                             <CardTitle className="text-2xl font-bold text-gray-900">{phase.title}</CardTitle>
-                                            <Badge className={`bg-gradient-to-r ${phase.color} text-white`}>{phase.subtitle}</Badge>
+                                            <Badge className={`bg-gradient-to-r ${phase.color} text-white mx-auto`}>{phase.subtitle}</Badge>
                                         </CardHeader>
 
                                         <CardContent className="flex-grow flex flex-col justify-center">

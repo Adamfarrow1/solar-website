@@ -157,16 +157,16 @@ export default function Footer() {
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <Mail className="h-4 w-4 text-red-500" />
-                                    <span className="text-gray-300 text-sm">info@relentlessenergy.org</span>
+                                    <span className="text-gray-300 text-sm">jfeliz@relentlessenergy.com</span>
                                 </div>
-                                <div className="flex items-start space-x-3">
+                                {/* <div className="flex items-start space-x-3">
                                     <MapPin className="h-4 w-4 text-red-500 mt-1" />
                                     <span className="text-gray-300 text-sm">
                                         123 Solar Street
                                         <br />
                                         St Petersburg, FL 33701
                                     </span>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -177,7 +177,7 @@ export default function Footer() {
                         <p className="text-gray-400 text-sm">
                             © 2024 Relentless Energy. All rights reserved.
                         </p>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
+                        {/* <div className="flex space-x-6 mt-4 md:mt-0">
                             <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
                                 Privacy Policy
                             </Link>
@@ -187,7 +187,7 @@ export default function Footer() {
                             <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm">
                                 Sitemap
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

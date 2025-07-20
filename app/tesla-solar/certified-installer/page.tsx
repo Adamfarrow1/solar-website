@@ -163,8 +163,8 @@ export default function TeslaCertifiedInstallerPage() {
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                Tesla certification isn&apos;t just a badge—it&apos;s a commitment to excellence, ongoing training, and adherence
-                                to the highest installation standards in the solar industry.
+                                Tesla certification isn&apos;t just a badge—it&apos;s a commitment to excellence, ongoing training, and
+                                adherence to the highest installation standards in the solar industry.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -277,176 +277,185 @@ export default function TeslaCertifiedInstallerPage() {
                                 </span>
                             </h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                                As a Tesla Certified installer, we&apos;re authorized to install the complete range of Tesla energy products
-                                with factory-backed warranties and support.
+                                As a Tesla Certified installer, we&apos;re authorized to install the complete range of Tesla energy
+                                products with factory-backed warranties and support.
                             </p>
                         </div>
                     </ScrollReveal>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        {/* Tesla Solar Roof */}
                         <ScrollReveal direction="left" delay={0}>
-                            <Card className="hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:-translate-y-2 group h-full bg-white rounded-3xl overflow-hidden">
-                                <CardHeader className="p-0">
-                                    <div className="relative overflow-hidden rounded-t-3xl">
-                                        <Image
-                                            src="/placeholder.svg?height=200&width=400"
-                                            alt="Tesla Solar Roof installation"
-                                            width={400}
-                                            height={200}
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                                    </div>
-                                    <div className="p-6">
-                                        <div className="flex items-center justify-between mb-4">
-                                            <CardTitle className="text-2xl text-gray-900">Tesla Solar Roof</CardTitle>
-                                            <Badge className="bg-gradient-to-r from-red-600 to-orange-600 text-white">
-                                                <Home className="mr-1 h-3 w-3" />
-                                                Integrated
-                                            </Badge>
+                            <div className="group relative">
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+
+                                <div className="relative bg-white rounded-2xl p-8 h-full flex flex-col">
+                                    {/* Header with Icon and Badge */}
+                                    <div className="flex items-start justify-between mb-6">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <Home className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
+                                                    Tesla Solar Roof
+                                                </h3>
+                                                <Badge className="bg-gradient-to-r from-red-100 to-orange-100 text-red-700 border-red-200 mt-1">
+                                                    <Home className="mr-1 h-3 w-3" />
+                                                    Integrated
+                                                </Badge>
+                                            </div>
                                         </div>
                                     </div>
-                                </CardHeader>
-                                <CardContent className="space-y-4 flex-1 px-6 pb-6">
-                                    <CardDescription className="text-base text-gray-600">
+
+                                    {/* Description */}
+                                    <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
                                         Beautiful solar roof tiles that generate clean energy while protecting your home. Combines solar
                                         cells with premium roofing materials for a seamless aesthetic.
-                                    </CardDescription>
-                                    <ul className="space-y-2 text-sm">
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            Integrated solar technology
-                                        </li>
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            Weather-resistant design
-                                        </li>
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            25-year warranty
-                                        </li>
-                                    </ul>
+                                    </p>
+
+                                    {/* Features */}
+                                    <div className="space-y-3 mb-8">
+                                        {[
+                                            { icon: CheckCircle, text: "Integrated solar technology", color: "text-green-600" },
+                                            { icon: Shield, text: "Weather-resistant design", color: "text-blue-600" },
+                                            { icon: Award, text: "25-year warranty", color: "text-purple-600" },
+                                        ].map((feature, index) => (
+                                            <div key={index} className="flex items-center space-x-3">
+                                                <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                                                <span className="text-gray-700 font-medium">{feature.text}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* CTA Button */}
                                     <Button
                                         asChild
-                                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 group mt-4"
+                                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group/btn"
                                     >
-                                        <Link href="/tesla-solar/solar-roof">
-                                            Learn More
-                                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                        <Link href="/tesla-solar/solar-roof" className="flex items-center justify-center">
+                                            <span>Learn More</span>
+                                            <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                         </Link>
                                     </Button>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         </ScrollReveal>
 
+                        {/* Tesla Powerwall */}
                         <ScrollReveal direction="up" delay={100}>
-                            <Card className="hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:-translate-y-2 group h-full bg-white rounded-3xl overflow-hidden">
-                                <CardHeader className="p-0">
-                                    <div className="relative overflow-hidden rounded-t-3xl">
-                                        <Image
-                                            src="/placeholder.svg?height=200&width=400"
-                                            alt="Tesla Powerwall installation"
-                                            width={400}
-                                            height={200}
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                                    </div>
-                                    <div className="p-6">
-                                        <div className="flex items-center justify-between mb-4">
-                                            <CardTitle className="text-2xl text-gray-900">Tesla Powerwall</CardTitle>
-                                            <Badge className="bg-gradient-to-r from-red-600 to-orange-600 text-white">
-                                                <Battery className="mr-1 h-3 w-3" />
-                                                Storage
-                                            </Badge>
+                            <div className="group relative">
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+
+                                <div className="relative bg-white rounded-2xl p-8 h-full flex flex-col">
+                                    {/* Header with Icon and Badge */}
+                                    <div className="flex items-start justify-between mb-6">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <Battery className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                                                    Tesla Powerwall
+                                                </h3>
+                                                <Badge className="bg-gradient-to-r from-orange-100 to-red-100 text-orange-700 border-orange-200 mt-1">
+                                                    <Battery className="mr-1 h-3 w-3" />
+                                                    Storage
+                                                </Badge>
+                                            </div>
                                         </div>
                                     </div>
-                                </CardHeader>
-                                <CardContent className="space-y-4 flex-1 px-6 pb-6">
-                                    <CardDescription className="text-base text-gray-600">
+
+                                    {/* Description */}
+                                    <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
                                         Home battery system that stores solar energy for use during outages or peak hours. Provides energy
                                         independence and backup power protection.
-                                    </CardDescription>
-                                    <ul className="space-y-2 text-sm">
-                                        <li className="flex items-center">
-                                            <Zap className="h-4 w-4 text-yellow-500 mr-2" />
-                                            13.5 kWh capacity
-                                        </li>
-                                        <li className="flex items-center">
-                                            <Zap className="h-4 w-4 text-yellow-500 mr-2" />
-                                            Seamless backup power
-                                        </li>
-                                        <li className="flex items-center">
-                                            <Zap className="h-4 w-4 text-yellow-500 mr-2" />
-                                            Mobile app control
-                                        </li>
-                                    </ul>
+                                    </p>
+
+                                    {/* Features */}
+                                    <div className="space-y-3 mb-8">
+                                        {[
+                                            { icon: Zap, text: "13.5 kWh capacity", color: "text-yellow-600" },
+                                            { icon: Shield, text: "Seamless backup power", color: "text-blue-600" },
+                                            { icon: Star, text: "Mobile app control", color: "text-purple-600" },
+                                        ].map((feature, index) => (
+                                            <div key={index} className="flex items-center space-x-3">
+                                                <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                                                <span className="text-gray-700 font-medium">{feature.text}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* CTA Button */}
                                     <Button
                                         asChild
-                                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 group mt-4"
+                                        className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group/btn"
                                     >
-                                        <Link href="/tesla-solar/powerwall">
-                                            Learn More
-                                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                        <Link href="/tesla-solar/powerwall" className="flex items-center justify-center">
+                                            <span>Learn More</span>
+                                            <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                         </Link>
                                     </Button>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         </ScrollReveal>
 
+                        {/* Tesla Solar Panels */}
                         <ScrollReveal direction="right" delay={200}>
-                            <Card className="hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:-translate-y-2 group h-full bg-white rounded-3xl overflow-hidden">
-                                <CardHeader className="p-0">
-                                    <div className="relative overflow-hidden rounded-t-3xl">
-                                        <Image
-                                            src="/placeholder.svg?height=200&width=400"
-                                            alt="Tesla solar panels installation"
-                                            width={400}
-                                            height={200}
-                                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                                    </div>
-                                    <div className="p-6">
-                                        <div className="flex items-center justify-between mb-4">
-                                            <CardTitle className="text-2xl text-gray-900">Tesla Solar Panels</CardTitle>
-                                            <Badge className="bg-gradient-to-r from-red-600 to-orange-600 text-white">
-                                                <Star className="mr-1 h-3 w-3" />
-                                                Premium
-                                            </Badge>
+                            <div className="group relative">
+                                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+
+                                <div className="relative bg-white rounded-2xl p-8 h-full flex flex-col">
+                                    {/* Header with Icon and Badge */}
+                                    <div className="flex items-start justify-between mb-6">
+                                        <div className="flex items-center space-x-4">
+                                            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                                <Zap className="w-8 h-8 text-white" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-300">
+                                                    Tesla Solar Panels
+                                                </h3>
+                                                <Badge className="bg-gradient-to-r from-red-100 to-orange-100 text-red-700 border-red-200 mt-1">
+                                                    <Star className="mr-1 h-3 w-3" />
+                                                    Premium
+                                                </Badge>
+                                            </div>
                                         </div>
                                     </div>
-                                </CardHeader>
-                                <CardContent className="space-y-4 flex-1 px-6 pb-6">
-                                    <CardDescription className="text-base text-gray-600">
+
+                                    {/* Description */}
+                                    <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
                                         High-efficiency solar panels designed and manufactured by Tesla. Sleek, low-profile design with
                                         industry-leading performance and durability.
-                                    </CardDescription>
-                                    <ul className="space-y-2 text-sm">
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            High efficiency rating
-                                        </li>
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            Low-profile design
-                                        </li>
-                                        <li className="flex items-center">
-                                            <CheckCircle className="h-4 w-4 text-green-600 mr-2" />
-                                            25-year warranty
-                                        </li>
-                                    </ul>
+                                    </p>
+
+                                    {/* Features */}
+                                    <div className="space-y-3 mb-8">
+                                        {[
+                                            { icon: TrendingUp, text: "High efficiency rating", color: "text-green-600" },
+                                            { icon: CheckCircle, text: "Low-profile design", color: "text-blue-600" },
+                                            { icon: Award, text: "25-year warranty", color: "text-purple-600" },
+                                        ].map((feature, index) => (
+                                            <div key={index} className="flex items-center space-x-3">
+                                                <feature.icon className={`h-5 w-5 ${feature.color}`} />
+                                                <span className="text-gray-700 font-medium">{feature.text}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* CTA Button */}
                                     <Button
                                         asChild
-                                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 group mt-4"
+                                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group/btn"
                                     >
-                                        <Link href="/solutions/residential-solar-panels">
-                                            Learn More
-                                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                        <Link href="/solutions/residential-solar-panels" className="flex items-center justify-center">
+                                            <span>Learn More</span>
+                                            <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                                         </Link>
                                     </Button>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         </ScrollReveal>
                     </div>
                 </div>
@@ -525,7 +534,7 @@ export default function TeslaCertifiedInstallerPage() {
                                 <div className="absolute -inset-4 bg-gradient-to-r from-red-400 to-orange-400 rounded-3xl blur opacity-20"></div>
                                 <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white">
                                     <Image
-                                        src="/placeholder.svg?height=500&width=600"
+                                        src="/images/tesla-installation-image.JPG"
                                         alt="Tesla certified installation team"
                                         width={600}
                                         height={500}
@@ -571,8 +580,8 @@ export default function TeslaCertifiedInstallerPage() {
                                     </span>
                                 </h2>
                                 <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                                    Experience the difference of working with Florida&apos;s premier Tesla Certified installer. Get your free
-                                    consultation and discover how Tesla energy products can transform your home.
+                                    Experience the difference of working with Florida&apos;s premier Tesla Certified installer. Get your
+                                    free consultation and discover how Tesla energy products can transform your home.
                                 </p>
                             </div>
 

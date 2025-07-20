@@ -190,7 +190,7 @@ export default function AboutPage() {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-3xl transform rotate-3 opacity-10"></div>
                                 <Image
-                                    src="/images/team-installation.jpg"
+                                    src="/images/aerial-view-solar-panels.jpg"
                                     alt="Relentless Energy team installing solar panels on Florida home"
                                     width={600}
                                     height={400}
@@ -538,7 +538,7 @@ export default function AboutPage() {
                                 </div>
                                 <div>
                                     <div className="font-semibold mb-1">Email Us</div>
-                                    <div className="text-sm opacity-90">info@relentlessenergy.com</div>
+                                    <div className="text-sm opacity-90">jfeliz@relentlessenergy.com</div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-3">
