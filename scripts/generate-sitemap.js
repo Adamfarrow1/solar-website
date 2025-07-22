@@ -4,7 +4,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 
 
-const BASE_URL = "https://relentlessenergy.netlify.app";
+const BASE_URL = "https://relentlessenergy.org";
 
 async function getPosts() {
   const allPosts = [];

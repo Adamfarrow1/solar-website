@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         title: "About Relentless Energy | Tesla Certified Solar Installer Tampa Bay",
         description:
             "Florida's premier Tesla Certified solar installation company with 10+ years experience serving Tampa Bay.",
-        url: "https://relentlessenergy.netlify.app/about",
+        url: "https://relentlessenergy.org/about",
         type: "website",
     },
 }
