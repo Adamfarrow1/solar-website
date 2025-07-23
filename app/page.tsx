@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
     description:
       "Get solar panels installed by Florida's #1 Tesla Certified solar company. Serving St Petersburg, Clearwater, Largo & Tampa Bay.",
-    url: "https://relentlessenergy.org/", // Replace with your real domain
+    url: "/",
     type: "website",
     images: [
       {
-        url: "https://relentlessenergy.org/images/residential-solar.jpg", // ✅ Replace with your real OG image URL
+        url: "/images/residential-solar.jpg", // ✅ Replace with your real OG image URL
         width: 1200,
         height: 630,
         alt: "Solar panels installed by Relentless Energy",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
     description: "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
-    images: ["https://relentlessenergy.org/images/residential-solar.jpg"], // ✅ Replace with your real OG image URL
+    images: ["/images/residential-solar.jpg"], // ✅ Replace with your real OG image URL
   },
 }
 

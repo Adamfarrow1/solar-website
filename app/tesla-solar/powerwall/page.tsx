@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     keywords:
         "Tesla Powerwall Tampa Bay, Tesla Powerwall installation Florida, home battery backup, Tesla certified installer, solar battery storage, backup power system, Tesla Powerwall St Petersburg",
     alternates: {
-        canonical: "/solutions/tesla-powerwall",
+        canonical: "/tesla-solar/powerwall",
     },
 }
 

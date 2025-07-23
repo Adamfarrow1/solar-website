@@ -5,6 +5,14 @@ export const metadata: Metadata = {
     title: "Frequently Asked Questions | Relentless Energy",
     description:
         "Get answers to common questions about solar panels, installation, financing, and more from Tampa Bay's premier Tesla-certified solar installer.",
+    alternates: {
+        canonical: "/about/faq",
+    },
+    openGraph: {
+        title: "Frequently Asked Questions | Relentless Energy",
+        description: "Get answers to common questions about solar panels, installation, financing, and more.",
+        url: "/about/faq",
+    },
 }
 
 export default function FAQPage() {

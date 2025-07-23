@@ -5,12 +5,14 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import LeadChatbot from "@/components/lead-chatbot"
+import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.relentlessenergy.org"),
   title: {
-    default: "Relentless Energy - Premier Solar Installation in Tampa Bay, Florida",
-    template: "%s | Relentless Energy - Solar Installation Florida",
+    default: "Relentless Energy | Premier Solar Panel Installation in Tampa Bay",
+    template: "%s | Relentless Energy",
   },
   description:
     "Leading solar panel installation company in Tampa Bay, Florida. Tesla Certified installer offering residential & commercial solar solutions, Powerwall batteries, and solar financing options.",
@@ -27,14 +29,12 @@ export const metadata: Metadata = {
   other: {
     "google-site-verification": "soK-lmlmX9TjTGO1xqPZ5mNUh8j1unrECUh1ZbvfxiA"
   },
-  metadataBase: new URL("https://relentlessenergy.org"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://relentlessenergy.org",
     title: "Relentless Energy - Premier Solar Installation in Tampa Bay, Florida",
     description:
       "Leading solar panel installation company in Tampa Bay, Florida. Tesla Certified installer offering residential & commercial solar solutions.",
@@ -72,6 +72,7 @@ export default function RootLayout({
         {/* Lead Generation Chatbot */}
         <LeadChatbot />
         <Footer />
+        <Analytics />
       </body>
     </html>
   )

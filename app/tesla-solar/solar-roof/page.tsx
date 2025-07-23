@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     keywords:
         "Tesla Solar Roof Tampa Bay, Tesla Solar Roof installation Florida, Tesla certified installer, solar roof tiles, integrated solar roofing, Tesla Solar Roof St Petersburg, solar roof replacement",
     alternates: {
-        canonical: "/solutions/tesla-solar-roof",
+        canonical: "/tesla-solar/solar-roof",
     },
 }
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     keywords:
         "solar tax credit Florida, solar incentives Tampa Bay, federal solar tax credit, net metering Florida, solar financing, solar rebates, ITC tax credit, solar ROI",
     alternates: {
-        canonical: "/incentives",
+        canonical: "/solar-incentives",
     },
     openGraph: {
         title: "Solar Incentives & Tax Credits Florida | Relentless Energy",

@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     title: "Our Solar Installation Process | Relentless Energy",
     description:
         "Learn about our proven 7-step solar installation process. From consultation to activation, we make going solar simple and stress-free.",
+    alternates: {
+        canonical: "/about/our-process",
+    },
+    openGraph: {
+        title: "Our Solar Installation Process | Relentless Energy",
+        description: "Learn about our proven 7-step solar installation process.",
+        url: "/about/our-process",
+    },
 }
 
 export default function OurProcessPage() {

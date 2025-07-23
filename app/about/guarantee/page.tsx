@@ -12,6 +12,14 @@ export const metadata: Metadata = {
     title: "Solar Guarantee & Warranties | Relentless Energy",
     description:
         "Learn about our comprehensive solar guarantees and warranties. We stand behind our work with industry-leading protection for your investment.",
+    alternates: {
+        canonical: "/about/guarantee",
+    },
+    openGraph: {
+        title: "Solar Guarantee & Warranties | Relentless Energy",
+        description: "We stand behind our work with industry-leading protection for your investment.",
+        url: "/about/guarantee",
+    },
 }
 
 export default function GuaranteePage() {

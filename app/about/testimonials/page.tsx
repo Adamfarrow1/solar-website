@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     title: "Customer Testimonials & Reviews | Relentless Energy",
     description:
         "Read real customer testimonials and success stories from Tampa Bay homeowners who chose Relentless Energy for their solar installation.",
+    alternates: {
+        canonical: "/about/testimonials",
+    },
+    openGraph: {
+        title: "Customer Testimonials & Reviews | Relentless Energy",
+        description: "Read real customer testimonials and success stories.",
+        url: "/about/testimonials",
+    },
 }
 
 export default function TestimonialsPage() {

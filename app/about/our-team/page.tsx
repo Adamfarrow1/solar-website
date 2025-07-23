@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     title: "Our Team - Expert Solar Professionals | Relentless Energy",
     description:
         "Meet the dedicated team of solar experts at Relentless Energy. From certified installers to customer support, we're committed to your solar success.",
+    alternates: {
+        canonical: "/about/our-team",
+    },
+    openGraph: {
+        title: "Our Team - Expert Solar Professionals | Relentless Energy",
+        description: "Meet the dedicated team of solar experts at Relentless Energy.",
+        url: "/about/our-team",
+    },
 }
 
 export default function OurTeamPage() {
