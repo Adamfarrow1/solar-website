@@ -314,7 +314,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(generatePostStructuredData(post, "https://relentlessenergy.com")),
+                    __html: JSON.stringify(generatePostStructuredData(post, "https://www.relentlessenergy.org")),
                 }}
             />
         </div>

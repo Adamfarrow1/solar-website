@@ -177,13 +177,13 @@ export default function BlogPage({ searchParams }: BlogPageProps) {
                         name: "Relentless Energy Solar Blog",
                         description:
                             "Expert solar energy news, tips, and insights from Florida's premier Tesla Certified installer",
-                        url: "https://relentlessenergy.com/blog",
+                        url: "https://www.relentlessenergy.org/blog",
                         publisher: {
                             "@type": "Organization",
                             name: "Relentless Energy",
                             logo: {
                                 "@type": "ImageObject",
-                                url: "https://relentlessenergy.com/logo.png",
+                                url: "https://www.relentlessenergy.org/logo.png",
                             },
                         },
                     }),
