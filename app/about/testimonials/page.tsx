@@ -32,7 +32,6 @@ export default function TestimonialsPage() {
             rating: 5,
             quote:
                 "Relentless Energy exceeded our expectations in every way. From the initial consultation to system activation, their team was professional, knowledgeable, and transparent. Our electric bills went from $280/month to just $15! The installation was completed in one day with zero mess left behind.",
-            image: "/placeholder.svg?height=80&width=80",
             highlights: ["Professional team", "One-day installation", "Huge savings", "Clean work"],
         },
         {
@@ -44,7 +43,6 @@ export default function TestimonialsPage() {
             rating: 5,
             quote:
                 "As an engineer, I was very particular about the installation quality. The Relentless Energy team demonstrated exceptional technical expertise and attention to detail. The Tesla Powerwall integration was flawless, and we've had zero issues in 6 months. Highly recommend!",
-            image: "/placeholder.svg?height=80&width=80",
             highlights: ["Technical expertise", "Perfect integration", "Zero issues", "Engineer approved"],
         },
         {
@@ -56,7 +54,6 @@ export default function TestimonialsPage() {
             rating: 5,
             quote:
                 "The entire process was seamless from start to finish. They handled all the permits, utility coordination, and even helped us navigate the federal tax credits. Our system has been producing more energy than projected. Couldn't be happier with our decision!",
-            image: "/placeholder.svg?height=80&width=80",
             highlights: ["Seamless process", "Handled everything", "Exceeding projections", "Great support"],
         },
     ]

@@ -26,7 +26,6 @@ export default function OurTeamPage() {
         {
             name: "Michael Johnson",
             role: "Co-Founder & CEO",
-            image: "/placeholder.svg?height=200&width=200",
             bio: "With over 15 years in renewable energy, Michael leads our vision of making solar accessible to every Florida family. Tesla-certified master installer with 2,000+ successful installations.",
             certifications: ["Tesla Certified Installer", "NABCEP Certified", "Master Electrician"],
             initials: "MJ",
@@ -34,7 +33,6 @@ export default function OurTeamPage() {
         {
             name: "David Thompson",
             role: "Co-Founder & CTO",
-            image: "/placeholder.svg?height=200&width=200",
             bio: "David brings 12 years of electrical engineering expertise to every project. Specializes in complex commercial installations and cutting-edge battery storage solutions.",
             certifications: ["Licensed Electrical Engineer", "Tesla Powerwall Certified", "Commercial Solar Specialist"],
             initials: "DT",

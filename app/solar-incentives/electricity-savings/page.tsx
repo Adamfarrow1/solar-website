@@ -655,7 +655,7 @@ export default function ElectricitySavingsPage() {
                                     className="group border-2 border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 px-10 py-4 rounded-2xl bg-transparent shadow-lg hover:shadow-xl transition-all duration-300"
                                     asChild
                                 >
-                                    <Link href="/incentives">
+                                    <Link href="/solar-incentives">
                                         View All Incentives
                                         <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                                     </Link>

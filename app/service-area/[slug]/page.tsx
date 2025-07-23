@@ -398,7 +398,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                 </section>
 
                 {/* Recent Projects */}
-                <section className="py-20">
+                {/* <section className="py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
                             <div className="text-center mb-16">
@@ -412,40 +412,30 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {area.projects.map((project, index) => (
                                 <ScrollReveal key={index} delay={index * 150}>
-                                    <Card className="group overflow-hidden bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0">
-                                        <div className="relative h-56">
-                                            <Image
-                                                src={`/placeholder.svg?height=300&width=500&text=${project.type}+in+${project.location}`}
-                                                alt={`${project.type} solar installation in ${project.location}`}
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                                            <div className="absolute top-4 left-4">
-                                                <Badge className="bg-white/90 text-red-600 border-0 font-semibold">
-                                                    {project.type === "Residential" ? (
-                                                        <Home className="h-3 w-3 mr-1" />
-                                                    ) : (
-                                                        <Building className="h-3 w-3 mr-1" />
-                                                    )}
-                                                    {project.type}
-                                                </Badge>
-                                            </div>
-                                            <div className="absolute bottom-4 left-4 right-4">
-                                                <h3 className="text-xl font-bold text-white mb-1">{project.location}</h3>
-                                                <div className="text-green-400 font-semibold">{project.savings}</div>
-                                            </div>
-                                        </div>
-                                        <CardContent className="p-6">
-                                            <div className="grid grid-cols-2 gap-4">
+                                    <Card className="group flex flex-col bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0">
+                                        <CardHeader className="p-6">
+                                            <div className="flex justify-between items-start">
                                                 <div>
-                                                    <div className="text-sm text-gray-500 mb-1">System Size</div>
-                                                    <div className="font-bold text-gray-900">{project.size}</div>
+                                                    <h3 className="text-xl font-bold text-gray-900 mb-1">{project.location}</h3>
+                                                    <Badge className="bg-red-100 text-red-700 border-red-200 font-semibold">
+                                                        {project.type === "Residential" ? (
+                                                            <Home className="h-3 w-3 mr-1.5" />
+                                                        ) : (
+                                                            <Building className="h-3 w-3 mr-1.5" />
+                                                        )}
+                                                        {project.type}
+                                                    </Badge>
                                                 </div>
-                                                <div>
-                                                    <div className="text-sm text-gray-500 mb-1">Annual Savings</div>
-                                                    <div className="font-bold text-green-600">{project.savings}</div>
+                                                <div className="text-right">
+                                                    <div className="text-green-600 font-bold text-lg">{project.savings}</div>
+                                                    <div className="text-sm text-gray-500">Annual Savings</div>
                                                 </div>
+                                            </div>
+                                        </CardHeader>
+                                        <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-end">
+                                            <div className="mt-4 pt-4 border-t border-gray-100">
+                                                <div className="text-sm text-gray-500 mb-1">System Size</div>
+                                                <div className="font-bold text-gray-900">{project.size}</div>
                                             </div>
                                         </CardContent>
                                     </Card>
@@ -453,7 +443,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                             ))}
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 {/* Local Solar Information - REDESIGNED (Coverage Area Removed) */}
                 <section className="py-20 relative overflow-hidden">

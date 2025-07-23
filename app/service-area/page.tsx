@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
         description:
             "Professional solar installation throughout Tampa Bay and Pinellas County. Tesla Certified installer serving all major cities.",
-        images: ["/placeholder.svg?height=630&width=1200&text=Tampa+Bay+Solar+Service+Areas"],
+        images: ["/images/st-petersburg-florida.jpg"],
         type: "website",
     },
     twitter: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
         description:
             "Professional solar installation throughout Tampa Bay and Pinellas County. Tesla Certified installer serving all major cities.",
-        images: ["/placeholder.svg?height=630&width=1200&text=Tampa+Bay+Solar+Service+Areas"],
+        images: ["/images/st-petersburg.jps"],
     },
     alternates: {
         canonical: "https://relentlessenergy.org/service-area",
@@ -343,7 +343,7 @@ export default function ServiceAreasPage() {
                                     type: "Residential",
                                     size: "8.5kW",
                                     savings: "$1,920/year",
-                                    image: "/placeholder.svg?height=300&width=400&text=St+Pete+Residential+Solar",
+                                    image: "/images/st-petersburg-florida.jpg",
                                     badge: "Residential",
                                     icon: Home,
                                 },
@@ -352,7 +352,7 @@ export default function ServiceAreasPage() {
                                     type: "Commercial",
                                     size: "78kW",
                                     savings: "$14,200/year",
-                                    image: "/placeholder.svg?height=300&width=400&text=Clearwater+Commercial+Solar",
+                                    image: "/images/clearwater-fl.jpg",
                                     badge: "Commercial",
                                     icon: Building,
                                 },
@@ -361,7 +361,7 @@ export default function ServiceAreasPage() {
                                     type: "Tesla Solar Roof",
                                     size: "11.2kW",
                                     savings: "$2,400/year",
-                                    image: "/placeholder.svg?height=300&width=400&text=Palm+Harbor+Tesla+Solar+Roof",
+                                    image: "/images/palmharbor.jpg",
                                     badge: "Tesla Roof",
                                     icon: Zap,
                                 },
