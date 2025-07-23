@@ -1,5 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "relentlessenergy.org",
+          },
+        ],
+        destination: "https://www.relentlessenergy.org/:path*",
+        permanent: true,
+      },
+      {
+        source: "/solutions/tesla-solar",
+        destination: "/tesla-solar",
+        permanent: true,
+      },
+    ]
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "solar financing Florida",
   ],
   alternates: {
-    canonical: "/",
+    canonical: "https://www.relentlessenergy.org/",
   },
   openGraph: {
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     title: "Premier Solar Panel Installation in Tampa Bay, Florida | Relentless Energy",
     description: "Florida's #1 Tesla Certified solar company. Free quotes and $0 down financing in Tampa Bay.",
     images: ["/images/residential-solar.jpg"], // ✅ Replace with your real OG image URL
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

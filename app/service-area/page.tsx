@@ -49,10 +49,14 @@ export const metadata: Metadata = {
         title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
         description:
             "Professional solar installation throughout Tampa Bay and Pinellas County. Tesla Certified installer serving all major cities.",
-        images: ["/images/st-petersburg.jps"],
+        images: ["/images/st-petersburg-florida.jpg"],
     },
     alternates: {
-        canonical: "https://relentlessenergy.org/service-area",
+        canonical: "https://www.relentlessenergy.org/service-area",
+    },
+    robots: {
+        index: true,
+        follow: true,
     },
 }
 

@@ -73,7 +73,11 @@ export async function generateMetadata({ params }: ServiceAreaPageProps): Promis
             images: [area.heroImage],
         },
         alternates: {
-            canonical: `https://relentlessenergy.org/service-area/${area.slug}`,
+            canonical: `https://www.relentlessenergy.org/service-area/${area.slug}`,
+        },
+        robots: {
+            index: true,
+            follow: true,
         },
     }
 }
