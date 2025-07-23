@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         title: "Solar Energy Blog | Latest News & Insights - Relentless Energy",
         description:
             "Stay updated with the latest solar energy news, tips, and insights from Florida's premier Tesla Certified solar installer.",
-        url: "/blog",
+        url: "https://www.relentlessenergy.org/blog",
         siteName: "Relentless Energy",
         type: "website",
         images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         images: ["/images/blog-og.jpg"],
     },
     alternates: {
-        canonical: "/blog",
+        canonical: "https://www.relentlessenergy.org/blog",
         types: {
             "application/rss+xml": [
                 {

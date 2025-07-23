@@ -51,31 +51,29 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
             title: yoastData?.og_title || stripHtml(post.title.rendered),
             description: yoastData?.og_description || stripHtml(post.excerpt.rendered).substring(0, 160),
             type: "article",
-            url: yoastData?.canonical || `/blog/${post.slug}`,
+            url: yoastData?.canonical || `https://www.relentlessenergy.org/blog/${post.slug}`,
             siteName: yoastData?.og_site_name || "Relentless Energy",
             publishedTime: yoastData?.article_published_time || post.date,
             modifiedTime: yoastData?.article_modified_time || post.modified,
-            images:
-                yoastData?.og_image ||
-                (featuredImage
-                    ? [
-                        {
-                            url: featuredImage.url,
-                            width: featuredImage.width,
-                            height: featuredImage.height,
-                            alt: featuredImage.alt,
-                        },
-                    ]
-                    : []),
+            images: featuredImage
+                ? [
+                    {
+                        url: featuredImage.url,
+                        width: featuredImage.width,
+                        height: featuredImage.height,
+                        alt: featuredImage.alt,
+                    },
+                ]
+                : [],
         },
         twitter: {
-            card: yoastData?.twitter_card || "summary_large_image",
+            card: (yoastData?.twitter_card as "summary_large_image" | "summary") || "summary_large_image",
             creator: yoastData?.twitter_creator || undefined,
             site: yoastData?.twitter_site || undefined,
             images: featuredImage ? [featuredImage.url] : [],
         },
         alternates: {
-            canonical: yoastData?.canonical || `/blog/${post.slug}`,
+            canonical: yoastData?.canonical || `https://www.relentlessenergy.org/blog/${post.slug}`,
         },
         robots: yoastData?.robots
             ? {
@@ -85,7 +83,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
                     index: yoastData.robots.index === "index",
                     follow: yoastData.robots.follow === "follow",
                     "max-snippet": Number.parseInt(yoastData.robots["max-snippet"] || "-1"),
-                    "max-image-preview": yoastData.robots["max-image-preview"] || "large",
+                    "max-image-preview": (yoastData.robots["max-image-preview"] as "large" | "none" | "standard") || "large",
                     "max-video-preview": Number.parseInt(yoastData.robots["max-video-preview"] || "-1"),
                 },
             }
