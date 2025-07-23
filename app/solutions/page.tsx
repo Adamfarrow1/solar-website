@@ -438,7 +438,7 @@ export default function SolutionsPage() {
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
                                 features: ["22.8% efficiency rating", "25-year warranty", "Sleek low-profile design"],
-                                link: "/solutions/tesla-solar",
+                                link: "/tesla-solar",
                             },
                             {
                                 title: "Tesla Powerwall",

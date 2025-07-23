@@ -26,20 +26,20 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL("https://www.relentlessenergy.com"),
+    metadataBase: new URL("https://www.relentlessenergy.org"),
     alternates: {
-        canonical: "https://www.relentlessenergy.com/free-quote",
+        canonical: "https://www.relentlessenergy.org/free-quote",
     },
     openGraph: {
         title: "Free Solar Quote | Get Your Custom Solar Proposal Today",
         description: "Get your free solar quote from Tesla Certified installers. Custom proposals with $0 down financing, 25-year warranty, and guaranteed savings.",
-        url: "https://www.relentlessenergy.com/free-quote",
+        url: "https://www.relentlessenergy.org/free-quote",
         siteName: "Relentless Energy",
         type: "website",
         locale: "en_US",
         images: [
             {
-                url: "https://www.relentlessenergy.com/images/residential-solar-solutions.jpg",
+                url: "https://www.relentlessenergy.org/images/residential-solar-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Free Solar Quote - Relentless Energy Tesla Certified Solar Installer",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Free Solar Quote | Get Your Custom Solar Proposal Today",
         description: "Get your free solar quote from Tesla Certified installers. Custom proposals with $0 down financing, 25-year warranty, and guaranteed savings.",
-        images: ["https://www.relentlessenergy.com/images/residential-solar-solutions.jpg"],
+        images: ["https://www.relentlessenergy.org/images/residential-solar-solutions.jpg"],
         creator: "@RelentlessEnergy",
         site: "@RelentlessEnergy",
     },

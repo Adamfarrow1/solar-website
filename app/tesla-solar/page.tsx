@@ -24,20 +24,20 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL("https://www.relentlessenergy.com"),
+    metadataBase: new URL("https://www.relentlessenergy.org"),
     alternates: {
-        canonical: "https://www.relentlessenergy.com/tesla-solar",
+        canonical: "https://www.relentlessenergy.org/tesla-solar",
     },
     openGraph: {
         title: "Tesla Solar Panels Installation | Certified Tesla Solar Installer",
         description: "Experience Tesla solar excellence with 22.8% peak efficiency panels, 25-year warranty, and seamless Powerwall integration. Get your free Tesla solar quote today.",
-        url: "https://www.relentlessenergy.com/tesla-solar",
+        url: "https://www.relentlessenergy.org/tesla-solar",
         siteName: "Relentless Energy",
         type: "website",
         locale: "en_US",
         images: [
             {
-                url: "https://www.relentlessenergy.com/images/tesla-solar-solutions.jpg",
+                url: "https://www.relentlessenergy.org/images/tesla-solar-solutions.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Tesla Solar Panels Installation by Relentless Energy - Certified Tesla Installer",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Tesla Solar Panels Installation | Certified Tesla Solar Installer",
         description: "Experience Tesla solar excellence with 22.8% peak efficiency panels, 25-year warranty, and seamless Powerwall integration.",
-        images: ["https://www.relentlessenergy.com/images/tesla-solar-solutions.jpg"],
+        images: ["https://www.relentlessenergy.org/images/tesla-solar-solutions.jpg"],
         creator: "@RelentlessEnergy",
         site: "@RelentlessEnergy",
     },

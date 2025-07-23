@@ -13,11 +13,6 @@ const nextConfig = {
         destination: "https://www.relentlessenergy.org/:path*",
         permanent: true,
       },
-      {
-        source: "/solutions/tesla-solar",
-        destination: "/tesla-solar",
-        permanent: true,
-      },
     ]
   },
   eslint: {
