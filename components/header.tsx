@@ -111,7 +111,7 @@ export default function Header() {
                         </div>
                         <div className="hidden sm:flex items-center space-x-2">
                             <Mail className="h-3 w-3" />
-                            <span className="text-xs sm:text-sm">jfeliz@relentlessenergy.com</span>
+                            <span className="text-xs sm:text-sm">jfeliz@relentlessenergy.org</span>
                         </div>
                     </div>
                     <div className="text-xs font-medium hidden md:block">⚡ Tesla Certified Installer | Licensed & Insured</div>

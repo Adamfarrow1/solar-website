@@ -538,7 +538,7 @@ export default function AboutPage() {
                                 </div>
                                 <div>
                                     <div className="font-semibold mb-1">Email Us</div>
-                                    <div className="text-sm opacity-90">jfeliz@relentlessenergy.com</div>
+                                    <div className="text-sm opacity-90">jfeliz@relentlessenergy.org</div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-3">

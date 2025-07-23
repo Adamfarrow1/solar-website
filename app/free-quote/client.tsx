@@ -639,7 +639,7 @@ export default function FreeQuoteClient() {
                                         <div className="flex items-center space-x-3">
                                             <Mail className="h-5 w-5 text-red-600" />
                                             <div>
-                                                <p className="font-semibold text-gray-900">jfeliz@relentlessenergy.com</p>
+                                                <p className="font-semibold text-gray-900">jfeliz@relentlessenergy.org</p>
                                                 <p className="text-sm text-gray-600">Email response within 2 hours</p>
                                             </div>
                                         </div>
