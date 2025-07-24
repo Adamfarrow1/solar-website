@@ -1,5 +1,16 @@
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
 import FreeQuoteClient from "./client"
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+    colorScheme: "light",
+    themeColor: [
+        { media: "(prefers-color-scheme: light)", color: "#dc2626" },
+        { media: "(prefers-color-scheme: dark)", color: "#b91c1c" },
+    ],
+}
 
 export const metadata: Metadata = {
     title: "Free Solar Quote | Get Your Custom Solar Proposal Today | Relentless Energy",
@@ -71,16 +82,6 @@ export const metadata: Metadata = {
     category: "Solar Energy",
     classification: "Solar Quote Form",
     referrer: "origin-when-cross-origin",
-    colorScheme: "light",
-    themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#dc2626" },
-        { media: "(prefers-color-scheme: dark)", color: "#b91c1c" },
-    ],
-    viewport: {
-        width: "device-width",
-        initialScale: 1,
-        maximumScale: 5,
-    },
     other: {
         "apple-mobile-web-app-capable": "yes",
         "apple-mobile-web-app-status-bar-style": "default",
