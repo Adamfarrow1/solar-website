@@ -46,7 +46,7 @@ export function generateServiceAreaStructuredData(area: ServiceArea): ServiceAre
             "@type": "LocalBusiness",
             name: "Relentless Energy",
             url: "https://relentlessenergy.org",
-            telephone: "(727) 555-0123",
+            telephone: "(386) 832-1119",
         },
     }
 }

@@ -132,9 +132,9 @@ export default function SolarPergolaPage() {
                                         size="lg"
                                         className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold bg-transparent"
                                     >
-                                        <Link href="tel:727-555-0123">
+                                        <Link href="tel:386-832-1119">
                                             <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                                            (727) 555-0123
+                                            (386) 832-1119
                                         </Link>
                                     </Button>
                                 </div>
@@ -674,9 +674,9 @@ export default function SolarPergolaPage() {
                                     variant="outline"
                                     className="border-2 border-white text-white hover:bg-white hover:text-red-600 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto bg-transparent"
                                 >
-                                    <Link href="tel:727-555-0123">
+                                    <Link href="tel:386-832-1119">
                                         <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
-                                        Call (727) 555-0123
+                                        Call (386) 832-1119
                                     </Link>
                                 </Button>
                             </div>
@@ -701,3 +701,4 @@ export default function SolarPergolaPage() {
         </>
     )
 }
+

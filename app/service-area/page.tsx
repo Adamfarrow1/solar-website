@@ -70,7 +70,7 @@ export default function ServiceAreasPage() {
         description:
             "Tesla Certified solar installation company serving Tampa Bay and Pinellas County with residential and commercial solar solutions.",
         url: "https://relentlessenergy.org",
-        telephone: "(727) 555-0123",
+        telephone: "(386) 832-1119",
         // address: {
         //     "@type": "PostalAddress",
         //     streetAddress: "123 Solar Street",
@@ -148,9 +148,9 @@ export default function ServiceAreasPage() {
                                     size="lg"
                                     className="border-2 border-gray-300 hover:border-red-600 text-gray-700 hover:text-red-600 font-semibold px-8 py-4 rounded-2xl bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300"
                                 >
-                                    <Link href="tel:(727)555-0123">
+                                    <Link href="tel:(386)832-1119">
                                         <Phone className="h-5 w-5 mr-2" />
-                                        Call (727) 555-0123
+                                        Call (386) 832-1119
                                     </Link>
                                 </Button>
                             </div>
@@ -446,9 +446,9 @@ export default function ServiceAreasPage() {
                                     size="lg"
                                     className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold px-10 py-4 rounded-2xl bg-transparent backdrop-blur-sm transition-all duration-300"
                                 >
-                                    <Link href="tel:(727)555-0123">
+                                    <Link href="tel:(386) 832-1119">
                                         <Phone className="h-5 w-5 mr-2" />
-                                        Call (727) 555-0123
+                                        Call (386) 832-1119
                                     </Link>
                                 </Button>
                             </div>

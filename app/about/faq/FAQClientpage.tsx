@@ -338,7 +338,7 @@ export default function FAQClientPage() {
                                 size="lg"
                                 className="border-red-200 text-red-600 hover:bg-red-50 px-8 py-3 bg-transparent"
                             >
-                                <a href="tel:+1-813-555-0123">Call (813) 555-0123</a>
+                                <a href="tel:+1-386-832-1119">Call (386) 832-1119</a>
                             </Button>
                         </div>
                     </ScrollReveal>

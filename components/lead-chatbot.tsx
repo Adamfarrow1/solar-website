@@ -116,10 +116,10 @@ export default function LeadChatbot() {
                 addBotMessage("Got it! A solar expert will be in touch soon to discuss your savings ☀️")
                 setCurrentStep(CONVERSATION_STEPS.COMPLETE)
             } else {
-                addBotMessage("Sorry, there was an issue. Please try calling us at (727) 555-0123")
+                addBotMessage("Sorry, there was an issue. Please try calling us at (386) 832-1119")
             }
         } catch (error) {
-            addBotMessage("Sorry, there was an issue. Please try calling us at (727) 555-0123")
+            addBotMessage("Sorry, there was an issue. Please try calling us at (386) 832-1119")
         } finally {
             setIsSubmitting(false)
         }
@@ -138,7 +138,7 @@ export default function LeadChatbot() {
                     setCurrentStep(CONVERSATION_STEPS.ZIP_CODE)
                 } else {
                     addBotMessage(
-                        "No problem! If you change your mind, we're here to help you save on energy costs. Feel free to call us at (727) 555-0123 ☀️",
+                        "No problem! If you change your mind, we're here to help you save on energy costs. Feel free to call us at (386) 832-1119 ☀️",
                     )
                     setCurrentStep(CONVERSATION_STEPS.COMPLETE)
                 }

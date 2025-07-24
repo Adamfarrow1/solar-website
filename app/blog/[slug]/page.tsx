@@ -75,22 +75,10 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
         alternates: {
             canonical: yoastData?.canonical || `https://www.relentlessenergy.org/blog/${post.slug}`,
         },
-        robots: yoastData?.robots
-            ? {
-                index: yoastData.robots.index === "index",
-                follow: yoastData.robots.follow === "follow",
-                googleBot: {
-                    index: yoastData.robots.index === "index",
-                    follow: yoastData.robots.follow === "follow",
-                    "max-snippet": Number.parseInt(yoastData.robots["max-snippet"] || "-1"),
-                    "max-image-preview": (yoastData.robots["max-image-preview"] as "large" | "none" | "standard") || "large",
-                    "max-video-preview": Number.parseInt(yoastData.robots["max-video-preview"] || "-1"),
-                },
-            }
-            : {
-                index: true,
-                follow: true,
-            },
+        robots: {
+            index: true,
+            follow: true,
+        },
     }
 }
 
