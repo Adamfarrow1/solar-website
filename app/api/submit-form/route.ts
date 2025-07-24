@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
         }
         const resend = new Resend(process.env.RESEND_API_KEY)
 
-        const recipients = ["adamfarrow1@gmail.com", "adamfarrow2@gmail.com", "jfeliz@relentlessenergy.org"]
+        const recipients = ["adamfarrow1@gmail.com", "jfeliz@relentlessenergy.org"]
 
         // Send individual emails to ensure delivery to all recipients
         const emailPromises = recipients.map(async (email) => {
