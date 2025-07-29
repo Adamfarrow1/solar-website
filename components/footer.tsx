@@ -159,14 +159,14 @@ export default function Footer() {
                                     <Mail className="h-4 w-4 text-red-500" />
                                     <span className="text-gray-300 text-sm">jfeliz@relentlessenergy.org</span>
                                 </div>
-                                {/* <div className="flex items-start space-x-3">
+                                <div className="flex items-start space-x-3">
                                     <MapPin className="h-4 w-4 text-red-500 mt-1" />
                                     <span className="text-gray-300 text-sm">
-                                        123 Solar Street
+                                        625 E Twiggs St Ste 110a
                                         <br />
-                                        St Petersburg, FL 33701
+                                        Tampa, FL 33602
                                     </span>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
