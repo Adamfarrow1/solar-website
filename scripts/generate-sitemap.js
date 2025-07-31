@@ -27,33 +27,39 @@ async function generateSitemap() {
   const posts = await getPosts();
 
   const staticPages = [
-    "about",
-    "about/faq",
-    "about/guarantee",
-    "about/our-process",
-    "about/our-team",
-    "about/testimonials",
-    "free-quote",
-    "solar-incentives",
-    "solar-incentives/electricity-savings",
-    "solar-incentives/federal-tax-credits",
-    "solar-incentives/net-metering",
-    "solar-incentives/solar-financing",
-    "solutions",
-    "solutions/commercial-solar-panels",
+    "about-us",
+    "about-us/faq",
+    "about-us/our-guarantee",
+    "about-us/our-process",
+    "about-us/our-team",
+    "about-us/testimonials",
+    "about-us/careers",
+    "free-solar-quote",
+    "solar-power-electricity-savings",
+    "solar-power-electricity-savings/solar-power-electricity-savings",
+    "solar-power-electricity-savings/solar-federal-tax-credit",
+    "solar-power-electricity-savings/net-metering-florida",
+    "solar-power-electricity-savings/solar-panel-financing",
+    "solutions/solar-power-systems",
+    "solutions/commercial-solar-panel-installation",
     "solutions/home-battery-backup",
-    "solutions/residential-solar-panels",
-    "solutions/solar-pergola",
-    "tesla-solar",
-    "tesla-solar/certified-installer",
-    "tesla-solar/powerwall",
-    "tesla-solar/solar-roof",
-    "service-areas",
-    "service-areas/pinellas-county",
-    "service-areas/st-petersburg",
-    "service-areas/clearwater",
-    "service-areas/largo",
-    "service-areas/palm-harbor",
+    "solutions/home-solar-panel-installation",
+    "solutions/solar-pergolas",
+    "tesla-certified-solar-installer",
+    "tesla-certified-solar-installer/certified-installer",
+    "tesla-certified-solar-installer/tesla-powerwall-installation",
+    "tesla-certified-solar-installer/solar-roof-installation",
+    "pinellas-fl",
+    "pinellas-fl/st-petersburg-solar-installer",
+    "pinellas-fl/clearwater-solar-installer",
+    "pinellas-fl/largo-solar-installer",
+    "pinellas-fl/palm-harbour-solar-installer",
+    "pinellas-fl/service-areas",
+    "pinellas-fl/service-areas/pinellas-county",
+    "pinellas-fl/service-areas/st-petersburg",
+    "pinellas-fl/service-areas/clearwater",
+    "pinellas-fl/service-areas/largo",
+    "pinellas-fl/service-areas/palm-harbor",
   ];
 
   const staticUrls = staticPages
@@ -70,7 +76,7 @@ async function generateSitemap() {
     .map(post => {
       return `
         <url>
-          <loc>${BASE_URL}/blog/${post.slug}</loc>
+          <loc>${BASE_URL}/about-us/solar-power-company-blog/${post.slug}</loc>
           <lastmod>${new Date(post.modified).toISOString()}</lastmod>
         </url>`;
     })

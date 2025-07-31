@@ -8,7 +8,7 @@ interface BlogPaginationProps {
     basePath?: string
 }
 
-export default function BlogPagination({ currentPage, totalPages, basePath = "/blog" }: BlogPaginationProps) {
+export default function BlogPagination({ currentPage, totalPages, basePath = "/about-us/solar-power-company-blog" }: BlogPaginationProps) {
     if (totalPages <= 1) return null
 
     const getPageUrl = (page: number) => {

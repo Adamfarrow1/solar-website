@@ -31,17 +31,17 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-red-500">Solutions</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/solutions/residential-solar-panels" className="text-gray-300 hover:text-white">
+                                <Link href="/solutions/home-solar-panel-installation" className="text-gray-300 hover:text-white">
                                     Residential Solar Panels
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solutions/commercial-solar-panels" className="text-gray-300 hover:text-white">
+                                <Link href="/solutions/commercial-solar-panel-installation" className="text-gray-300 hover:text-white">
                                     Commercial Solar Panels
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solutions/solar-pergola" className="text-gray-300 hover:text-white">
+                                <Link href="/solutions/solar-pergolas" className="text-gray-300 hover:text-white">
                                     Solar Pergola
                                 </Link>
                             </li>
@@ -54,17 +54,17 @@ export default function Footer() {
                         <h4 className="text-md font-semibold text-red-400 mt-6">Tesla Solar</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/tesla-solar/certified-installer" className="text-gray-300 hover:text-white">
+                                <Link href="/tesla-certified-solar-installer/certified-installer" className="text-gray-300 hover:text-white">
                                     Certified Installer
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/tesla-solar/solar-roof" className="text-gray-300 hover:text-white">
+                                <Link href="/tesla-certified-solar-installer/solar-roof-installation" className="text-gray-300 hover:text-white">
                                     Solar Roof
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/tesla-solar/powerwall" className="text-gray-300 hover:text-white">
+                                <Link href="/tesla-certified-solar-installer/tesla-powerwall-installation" className="text-gray-300 hover:text-white">
                                     Powerwall
                                 </Link>
                             </li>
@@ -76,22 +76,22 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-red-500">Incentives</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/solar-incentives/electricity-savings" className="text-gray-300 hover:text-white">
+                                <Link href="/solar-power-electricity-savings/solar-power-electricity-savings" className="text-gray-300 hover:text-white">
                                     Electricity Savings
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solar-incentives/federal-tax-credits" className="text-gray-300 hover:text-white">
+                                <Link href="/solar-power-electricity-savings/solar-federal-tax-credit" className="text-gray-300 hover:text-white">
                                     Federal Tax Credits
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solar-incentives/net-metering" className="text-gray-300 hover:text-white">
+                                <Link href="/solar-power-electricity-savings/net-metering-florida" className="text-gray-300 hover:text-white">
                                     Net Metering
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/solar-incentives/solar-financing" className="text-gray-300 hover:text-white">
+                                <Link href="/solar-power-electricity-savings/solar-panel-financing" className="text-gray-300 hover:text-white">
                                     Solar Financing
                                 </Link>
                             </li>
@@ -99,22 +99,22 @@ export default function Footer() {
                         <h4 className="text-md font-semibold text-red-400 mt-6">About</h4>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/about/our-team" className="text-gray-300 hover:text-white">
+                                <Link href="/about-us/our-team" className="text-gray-300 hover:text-white">
                                     Our Team
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about/testimonials" className="text-gray-300 hover:text-white">
+                                <Link href="/about-us/testimonials" className="text-gray-300 hover:text-white">
                                     Testimonials
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/about/careers" className="text-gray-300 hover:text-white">
+                                <Link href="/about-us/careers" className="text-gray-300 hover:text-white">
                                     Careers
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/blog" className="text-gray-300 hover:text-white">
+                                <Link href="/about-us/solar-power-company-blog" className="text-gray-300 hover:text-white">
                                     Blog
                                 </Link>
                             </li>
@@ -126,27 +126,27 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-red-500">Service Areas</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/service-area/pinellas-county" className="text-gray-300 hover:text-white">
+                                <Link href="/pinellas-fl" className="text-gray-300 hover:text-white">
                                     Pinellas County
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/service-area/st-petersburg" className="text-gray-300 hover:text-white">
+                                <Link href="/pinellas-fl/st-petersburg-solar-installer" className="text-gray-300 hover:text-white">
                                     St Petersburg
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/service-area/clearwater" className="text-gray-300 hover:text-white">
+                                <Link href="/pinellas-fl/clearwater-solar-installer" className="text-gray-300 hover:text-white">
                                     Clearwater
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/service-area/largo" className="text-gray-300 hover:text-white">
+                                <Link href="/pinellas-fl/largo-solar-installer" className="text-gray-300 hover:text-white">
                                     Largo
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/service-area/palm-harbor" className="text-gray-300 hover:text-white">
+                                <Link href="/pinellas-fl/palm-harbour-solar-installer" className="text-gray-300 hover:text-white">
                                     Palm Harbor
                                 </Link>
                             </li>

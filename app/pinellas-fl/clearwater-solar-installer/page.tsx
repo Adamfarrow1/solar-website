@@ -1,14 +1,7 @@
 import type { Metadata } from "next"
-import { notFound } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import {
-    getServiceAreaBySlug,
-    getServiceAreaSlugs,
-    getRelatedServiceAreas,
-    generateServiceAreaStructuredData,
-} from "@/lib/service-areas"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import ScrollReveal from "@/components/scroll-reveal"
@@ -33,65 +26,113 @@ import {
     Info,
 } from "lucide-react"
 
-interface ServiceAreaPageProps {
-    params: Promise<{
-        slug: string
-    }>
+export const metadata: Metadata = {
+    title: "Clearwater Solar Installer | Tesla Certified | Relentless Energy",
+    description: "Expert solar panel installation in Clearwater, FL. Serving Clearwater Beach, downtown, and all neighborhoods. Tesla Certified installer with 25-year warranties. Free quotes!",
+    keywords: [
+        "Clearwater solar panels",
+        "Clearwater Beach solar",
+        "downtown Clearwater solar",
+        "Florida solar installation",
+        "Tesla Powerwall Clearwater",
+        "solar energy Clearwater",
+        "Clearwater solar installer",
+        "Pinellas County solar"
+    ],
+    openGraph: {
+        title: "Clearwater Solar Installer | Tesla Certified | Relentless Energy",
+        description: "Expert solar panel installation in Clearwater, FL. Tesla Certified installer serving all neighborhoods.",
+        images: ["/images/clearwater-fl.jpg"],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Clearwater Solar Installer | Tesla Certified | Relentless Energy", 
+        description: "Expert solar panel installation in Clearwater, FL. Tesla Certified installer serving all neighborhoods.",
+        images: ["/images/clearwater-fl.jpg"],
+    },
+    alternates: {
+        canonical: "https://www.relentlessenergy.org/pinellas-fl/clearwater-solar-installer",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
 }
 
-export async function generateStaticParams() {
-    const slugs = getServiceAreaSlugs()
-    return slugs.map((slug) => ({
-        slug,
-    }))
-}
-
-export async function generateMetadata({ params }: ServiceAreaPageProps): Promise<Metadata> {
-    const { slug } = await params
-    const area = getServiceAreaBySlug(slug)
-
-    if (!area) {
-        return {
-            title: "Service Area Not Found",
-        }
+export default function ClearwaterSolarInstallerPage() {
+    const areaData = {
+        name: "Clearwater",
+        fullName: "Clearwater, Florida",
+        description: "Clearwater's beautiful beaches and year-round sunshine make it perfect for solar energy. Our certified installation team serves from Clearwater Beach to downtown, helping homeowners and businesses harness Florida's abundant solar resources while reducing energy costs and environmental impact.",
+        heroImage: "/images/clearwater-fl.jpg",
+        population: "117,000",
+        averageSunHours: "8.1 hours/day",
+        solarPotential: "Excellent",
+        neighborhoods: [
+            "Clearwater Beach",
+            "Downtown Clearwater",
+            "Belcher", 
+            "Cleveland Street District",
+            "Countryside",
+            "Dunedin Causeway",
+            "Harbor Oaks",
+            "Island Estates",
+            "Morningside",
+            "Safety Harbor"
+        ],
+        solarIncentives: [
+            "Federal Solar Tax Credit (30%)",
+            "Florida Solar Rights Act",
+            "Net Metering Program", 
+            "Property Tax Exemption",
+            "Sales Tax Exemption"
+        ],
+        averageElectricBill: "$152/month",
+        averageSolarSavings: "$1,824/year",
+        paybackPeriod: "6-8 years",
+        testimonials: [
+            {
+                name: "Jennifer Adams",
+                neighborhood: "Clearwater Beach",
+                text: "Living on the beach, we get amazing sun exposure. Our solar panels generate more power than we use most months!",
+                rating: 5,
+                systemSize: "9.2kW",
+                installDate: "2023"
+            },
+            {
+                name: "Robert Kim", 
+                neighborhood: "Downtown Clearwater",
+                text: "The Tesla Powerwall kept our power on during the last storm while our neighbors were out for days. Best investment ever!",
+                rating: 5,
+                systemSize: "6.8kW + Powerwall",
+                installDate: "2023"
+            }
+        ],
+        localUtility: "Duke Energy Florida",
+        netMeteringRate: "Full retail rate",
+        permittingInfo: "City of Clearwater requires building and electrical permits. Our team manages all permits and city inspections."
     }
 
-    return {
-        title: area.title,
-        description: area.metaDescription,
-        keywords: area.keywords,
-        openGraph: {
-            title: area.title,
-            description: area.metaDescription,
-            images: [area.heroImage],
-            type: "website",
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "Relentless Energy - Clearwater Solar Installer",
+        description: "Tesla Certified solar installation company serving Clearwater, Florida with residential and commercial solar solutions.",
+        url: "https://relentlessenergy.org/pinellas-fl/clearwater-solar-installer",
+        telephone: "(386) 832-1119",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Clearwater",
+            addressRegion: "FL",
+            addressCountry: "US",
         },
-        twitter: {
-            card: "summary_large_image",
-            title: area.title,
-            description: area.metaDescription,
-            images: [area.heroImage],
+        areaServed: {
+            "@type": "City",
+            name: "Clearwater, Florida",
         },
-        alternates: {
-            canonical: `https://www.relentlessenergy.org/pinellas-fl/service-areas/${area.slug}`,
-        },
-        robots: {
-            index: true,
-            follow: true,
-        },
+        serviceType: "Solar Installation",
     }
-}
-
-export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) {
-    const { slug } = await params
-    const area = getServiceAreaBySlug(slug)
-
-    if (!area) {
-        notFound()
-    }
-
-    const relatedAreas = getRelatedServiceAreas(area.slug)
-    const structuredData = generateServiceAreaStructuredData(area)
 
     return (
         <>
@@ -107,10 +148,10 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                             </Link>
                             <ChevronRight className="h-4 w-4 text-gray-400" />
                             <Link href="/pinellas-fl" className="hover:text-red-600 transition-colors duration-200">
-                                Service Areas
+                                Pinellas County
                             </Link>
                             <ChevronRight className="h-4 w-4 text-gray-400" />
-                            <span className="text-gray-900 font-medium">{area.name}</span>
+                            <span className="text-gray-900 font-medium">Clearwater Solar Installer</span>
                         </div>
                     </div>
                 </nav>
@@ -130,17 +171,17 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                     <div className="flex items-center gap-4 mb-6">
                                         <Badge className="bg-white/90 text-red-600 border-0 font-semibold px-4 py-2">
                                             <MapPin className="h-4 w-4 mr-2" />
-                                            {area.solarPotential} Solar Potential
+                                            {areaData.solarPotential} Solar Potential
                                         </Badge>
                                         <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-0 font-semibold px-4 py-2">
                                             <Sun className="h-4 w-4 mr-2" />
-                                            {area.averageSunHours}
+                                            {areaData.averageSunHours}
                                         </Badge>
                                     </div>
                                     <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-red-700 to-red-600 bg-clip-text text-transparent mb-6">
-                                        Solar in {area.name}
+                                        Clearwater Solar Installer
                                     </h1>
-                                    <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">{area.description}</p>
+                                    <p className="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed">{areaData.description}</p>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <Button
                                             asChild
@@ -170,8 +211,8 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                 <div className="relative">
                                     <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                         <Image
-                                            src={area.heroImage || "/placeholder.svg"}
-                                            alt={`Solar installation in ${area.name}`}
+                                            src={areaData.heroImage}
+                                            alt={`Solar installation in ${areaData.name}`}
                                             width={600}
                                             height={400}
                                             className="w-full h-auto"
@@ -181,7 +222,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                     <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-xl border border-gray-100">
                                         <div className="text-center">
                                             <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">
-                                                {area.averageSolarSavings}
+                                                {areaData.averageSolarSavings}
                                             </div>
                                             <div className="text-sm text-gray-600 font-medium">Average Savings</div>
                                         </div>
@@ -198,20 +239,20 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                         <ScrollReveal>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                                 {[
-                                    { icon: Users, value: area.population, label: "Population", color: "from-blue-500 to-blue-600" },
+                                    { icon: Users, value: areaData.population, label: "Population", color: "from-blue-500 to-blue-600" },
                                     {
                                         icon: Sun,
-                                        value: area.averageSunHours,
+                                        value: areaData.averageSunHours,
                                         label: "Daily Sun Hours",
                                         color: "from-yellow-500 to-orange-500",
                                     },
                                     {
                                         icon: DollarSign,
-                                        value: area.averageElectricBill,
+                                        value: areaData.averageElectricBill,
                                         label: "Avg. Electric Bill",
                                         color: "from-green-500 to-green-600",
                                     },
-                                    { icon: Clock, value: area.paybackPeriod, label: "Payback Period", color: "from-red-500 to-red-600" },
+                                    { icon: Clock, value: areaData.paybackPeriod, label: "Payback Period", color: "from-red-500 to-red-600" },
                                 ].map((stat, index) => (
                                     <div key={index} className="group">
                                         <div className="relative p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">
@@ -229,7 +270,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                     </div>
                 </section>
 
-                {/* Neighborhoods We Serve - CONDENSED */}
+                {/* Neighborhoods We Serve */}
                 <section className="py-16 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20"></div>
                     <div className="absolute top-10 right-10 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl"></div>
@@ -243,18 +284,17 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                     <span className="text-xs font-medium text-blue-700">Service Coverage</span>
                                 </div>
                                 <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 to-blue-700 bg-clip-text text-transparent mb-4">
-                                    Neighborhoods We Serve
+                                    Clearwater Neighborhoods We Serve
                                 </h2>
                                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                                     Professional solar installation throughout{" "}
-                                    <span className="font-semibold text-blue-600">{area.name}</span>
+                                    <span className="font-semibold text-blue-600">Clearwater</span>
                                 </p>
                             </div>
                         </ScrollReveal>
 
-                        {/* Compact Grid Layout */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-12">
-                            {area.neighborhoods.map((neighborhood, index) => (
+                            {areaData.neighborhoods.map((neighborhood, index) => (
                                 <ScrollReveal key={index} delay={index * 30}>
                                     <div className="group relative">
                                         <div className="bg-white/90 backdrop-blur-sm border border-gray-200/50 hover:border-blue-300/50 rounded-2xl p-4 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
@@ -275,33 +315,6 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                 </ScrollReveal>
                             ))}
                         </div>
-
-                        {/* Compact Call to Action */}
-                        <ScrollReveal delay={200}>
-                            <div className="text-center">
-                                <div className="inline-flex items-center justify-center p-6 bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200/50 max-w-xl mx-auto">
-                                    <div className="text-center">
-                                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
-                                            <MapPin className="h-6 w-6 text-white" />
-                                        </div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-2">Don't see your area?</h3>
-                                        <p className="text-sm text-gray-600 mb-4">
-                                            We serve the entire {area.name} region. Contact us to confirm availability.
-                                        </p>
-                                        <Button
-                                            asChild
-                                            size="sm"
-                                            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-2 rounded-xl transition-all duration-300"
-                                        >
-                                            <Link href="/free-solar-quote">
-                                                Check Your Area
-                                                <ArrowRight className="h-4 w-4 ml-1" />
-                                            </Link>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </ScrollReveal>
                     </div>
                 </section>
 
@@ -313,10 +326,10 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                 <div>
                                     <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Solar Incentives</h2>
                                     <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                        Take advantage of these valuable incentives available to {area.name} residents and businesses.
+                                        Take advantage of these valuable incentives available to {areaData.name} residents and businesses.
                                     </p>
                                     <div className="space-y-4">
-                                        {area.solarIncentives.map((incentive, index) => (
+                                        {areaData.solarIncentives.map((incentive, index) => (
                                             <div
                                                 key={index}
                                                 className="flex items-start space-x-4 p-4 bg-green-50 rounded-2xl border border-green-100"
@@ -334,15 +347,15 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                     <div className="space-y-6">
                                         <div className="flex justify-between items-center p-6 bg-gray-50 rounded-2xl">
                                             <span className="text-gray-600 font-medium">Current Electric Bill:</span>
-                                            <span className="font-bold text-gray-900 text-lg">{area.averageElectricBill}</span>
+                                            <span className="font-bold text-gray-900 text-lg">{areaData.averageElectricBill}</span>
                                         </div>
                                         <div className="flex justify-between items-center p-6 bg-gradient-to-r from-green-50 to-green-100 rounded-2xl">
                                             <span className="text-gray-600 font-medium">Annual Solar Savings:</span>
-                                            <span className="font-bold text-green-600 text-lg">{area.averageSolarSavings}</span>
+                                            <span className="font-bold text-green-600 text-lg">{areaData.averageSolarSavings}</span>
                                         </div>
                                         <div className="flex justify-between items-center p-6 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl">
                                             <span className="text-gray-600 font-medium">System Payback:</span>
-                                            <span className="font-bold text-blue-600 text-lg">{area.paybackPeriod}</span>
+                                            <span className="font-bold text-blue-600 text-lg">{areaData.paybackPeriod}</span>
                                         </div>
                                     </div>
                                     <Button
@@ -367,13 +380,13 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                             <div className="text-center mb-16">
                                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Customer Success Stories</h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    Real reviews from satisfied customers in {area.name} who chose our solar installation services.
+                                    Real reviews from satisfied customers in {areaData.name} who chose our solar installation services.
                                 </p>
                             </div>
                         </ScrollReveal>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {area.testimonials.map((testimonial, index) => (
+                            {areaData.testimonials.map((testimonial, index) => (
                                 <ScrollReveal key={index} delay={index * 150}>
                                     <Card className="p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0">
                                         <CardContent className="p-0">
@@ -401,55 +414,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                     </div>
                 </section>
 
-                {/* Recent Projects */}
-                {/* <section className="py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <ScrollReveal>
-                            <div className="text-center mb-16">
-                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Recent Projects</h2>
-                                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    See how we're helping {area.name} residents and businesses save money with solar energy.
-                                </p>
-                            </div>
-                        </ScrollReveal>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {area.projects.map((project, index) => (
-                                <ScrollReveal key={index} delay={index * 150}>
-                                    <Card className="group flex flex-col bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0">
-                                        <CardHeader className="p-6">
-                                            <div className="flex justify-between items-start">
-                                                <div>
-                                                    <h3 className="text-xl font-bold text-gray-900 mb-1">{project.location}</h3>
-                                                    <Badge className="bg-red-100 text-red-700 border-red-200 font-semibold">
-                                                        {project.type === "Residential" ? (
-                                                            <Home className="h-3 w-3 mr-1.5" />
-                                                        ) : (
-                                                            <Building className="h-3 w-3 mr-1.5" />
-                                                        )}
-                                                        {project.type}
-                                                    </Badge>
-                                                </div>
-                                                <div className="text-right">
-                                                    <div className="text-green-600 font-bold text-lg">{project.savings}</div>
-                                                    <div className="text-sm text-gray-500">Annual Savings</div>
-                                                </div>
-                                            </div>
-                                        </CardHeader>
-                                        <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-end">
-                                            <div className="mt-4 pt-4 border-t border-gray-100">
-                                                <div className="text-sm text-gray-500 mb-1">System Size</div>
-                                                <div className="font-bold text-gray-900">{project.size}</div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </ScrollReveal>
-                            ))}
-                        </div>
-                    </div>
-                </section> */}
-
-                {/* Local Solar Information - REDESIGNED (Coverage Area Removed) */}
+                {/* Local Solar Information */}
                 <section className="py-20 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100"></div>
                     <div className="absolute top-10 left-10 w-72 h-72 bg-slate-400/10 rounded-full blur-3xl"></div>
@@ -467,168 +432,78 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                 </h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                                     Essential details about solar installation requirements and processes in{" "}
-                                    <span className="font-semibold text-slate-600">{area.name}</span>
+                                    <span className="font-semibold text-slate-600">{areaData.name}</span>
                                 </p>
                             </div>
                         </ScrollReveal>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                            {/* Utility Information Card */}
                             <ScrollReveal>
                                 <div className="group relative h-full">
                                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                                     <Card className="relative bg-white/90 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden h-full">
                                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-                                        <CardHeader className="p-8 pb-6">
-                                            <div className="flex items-center space-x-4 mb-4">
+                                        <div className="p-8">
+                                            <div className="flex items-center space-x-4 mb-6">
                                                 <div className="flex-shrink-0">
                                                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center">
                                                         <Zap className="h-6 w-6 text-white" />
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <CardTitle className="text-xl font-bold text-gray-900">Utility Information</CardTitle>
+                                                    <h3 className="text-xl font-bold text-gray-900">Utility Information</h3>
                                                     <p className="text-sm text-gray-500">Power company details</p>
                                                 </div>
                                             </div>
-                                        </CardHeader>
-                                        <CardContent className="px-8 pb-8">
-                                            <div className="space-y-6 min-h-[200px] flex flex-col justify-center">
+                                            <div className="space-y-6">
                                                 <div className="flex items-center justify-between p-4 bg-blue-50/50 rounded-2xl border border-blue-100/50">
                                                     <div className="flex items-center space-x-3">
                                                         <Building className="h-5 w-5 text-blue-600" />
                                                         <span className="text-gray-700 font-medium">Utility Company</span>
                                                     </div>
-                                                    <span className="font-bold text-gray-900">{area.localUtility}</span>
+                                                    <span className="font-bold text-gray-900">{areaData.localUtility}</span>
                                                 </div>
                                                 <div className="flex items-center justify-between p-4 bg-green-50/50 rounded-2xl border border-green-100/50">
                                                     <div className="flex items-center space-x-3">
                                                         <Info className="h-5 w-5 text-green-600" />
                                                         <span className="text-gray-700 font-medium">Net Metering</span>
                                                     </div>
-                                                    <span className="font-bold text-green-600">{area.netMeteringRate}</span>
+                                                    <span className="font-bold text-green-600">{areaData.netMeteringRate}</span>
                                                 </div>
                                             </div>
-                                        </CardContent>
+                                        </div>
                                     </Card>
                                 </div>
                             </ScrollReveal>
 
-                            {/* Permitting Information Card */}
                             <ScrollReveal delay={100}>
                                 <div className="group relative h-full">
                                     <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-3xl blur opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                                     <Card className="relative bg-white/90 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden h-full">
                                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
-                                        <CardHeader className="p-8 pb-6">
-                                            <div className="flex items-center space-x-4 mb-4">
+                                        <div className="p-8">
+                                            <div className="flex items-center space-x-4 mb-6">
                                                 <div className="flex-shrink-0">
                                                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
                                                         <Shield className="h-6 w-6 text-white" />
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <CardTitle className="text-xl font-bold text-gray-900">Permitting Process</CardTitle>
+                                                    <h3 className="text-xl font-bold text-gray-900">Permitting Process</h3>
                                                     <p className="text-sm text-gray-500">Local requirements</p>
                                                 </div>
                                             </div>
-                                        </CardHeader>
-                                        <CardContent className="px-8 pb-8">
-                                            <div className="min-h-[200px] flex flex-col justify-center">
-                                                <div className="p-6 bg-green-50/50 rounded-2xl border border-green-100/50">
-                                                    <p className="text-gray-700 leading-relaxed mb-4">{area.permittingInfo}</p>
-                                                    <div className="flex items-center text-sm text-green-700">
-                                                        <CheckCircle className="h-4 w-4 mr-2" />
-                                                        <span className="font-medium">We handle all permits</span>
-                                                    </div>
+                                            <div className="p-6 bg-green-50/50 rounded-2xl border border-green-100/50">
+                                                <p className="text-gray-700 leading-relaxed mb-4">{areaData.permittingInfo}</p>
+                                                <div className="flex items-center text-sm text-green-700">
+                                                    <CheckCircle className="h-4 w-4 mr-2" />
+                                                    <span className="font-medium">We handle all permits</span>
                                                 </div>
                                             </div>
-                                        </CardContent>
+                                        </div>
                                     </Card>
                                 </div>
                             </ScrollReveal>
-                        </div>
-
-                        {/* Additional Information Banner */}
-                        <ScrollReveal delay={200}>
-                            <div className="mt-16">
-                                <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/50 p-8 text-center">
-                                    <div className="flex items-center justify-center mb-4">
-                                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                                            <Award className="h-8 w-8 text-white" />
-                                        </div>
-                                    </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Tesla Certified Installer</h3>
-                                    <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                                        As a Tesla Certified installer, we ensure all local requirements and regulations are met for your{" "}
-                                        {area.name} solar installation.
-                                    </p>
-                                    <Button
-                                        asChild
-                                        className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105"
-                                    >
-                                        <Link href="/free-solar-quote">
-                                            Start Your Solar Journey
-                                            <ArrowRight className="h-5 w-5 ml-2" />
-                                        </Link>
-                                    </Button>
-                                </div>
-                            </div>
-                        </ScrollReveal>
-                    </div>
-                </section>
-
-                {/* Related Areas */}
-                <section className="py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-                </section>
-
-                {/* Related Areas */}
-                <section className="py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <ScrollReveal>
-                            <div className="text-center mb-16">
-                                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Other Areas We Serve</h2>
-                                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    We also provide professional solar installation services in these nearby communities.
-                                </p>
-                            </div>
-                        </ScrollReveal>
-
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {relatedAreas.map((relatedArea, index) => (
-                                <ScrollReveal key={relatedArea.slug} delay={index * 150}>
-                                    <Card className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 overflow-hidden">
-                                        <div className="relative h-48">
-                                            <Image
-                                                src={relatedArea.heroImage || "/placeholder.svg"}
-                                                alt={`Solar installation in ${relatedArea.name}`}
-                                                fill
-                                                className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                                            <div className="absolute bottom-4 left-4 right-4">
-                                                <h3 className="text-xl font-bold text-white mb-1">{relatedArea.name}</h3>
-                                                <div className="text-green-400 font-semibold">{relatedArea.averageSolarSavings}</div>
-                                            </div>
-                                        </div>
-                                        <CardContent className="p-6">
-                                            <CardDescription className="text-gray-600 mb-4 line-clamp-2 leading-relaxed">
-                                                {relatedArea.description}
-                                            </CardDescription>
-                                            <Button
-                                                asChild
-                                                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-3 rounded-2xl transition-all duration-300 transform hover:scale-105"
-                                            >
-                                                <Link href={`/pinellas-fl/service-areas/${relatedArea.slug}`}>
-                                                    Explore {relatedArea.name}
-                                                    <ArrowRight className="h-4 w-4 ml-2" />
-                                                </Link>
-                                            </Button>
-                                        </CardContent>
-                                    </Card>
-                                </ScrollReveal>
-                            ))}
                         </div>
                     </div>
                 </section>
@@ -647,10 +522,10 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                 <Award className="h-5 w-5 text-white mr-2" />
                                 <span className="font-medium text-white">Tesla Certified • 5-Star Rated • Local Experts</span>
                             </div>
-                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Go Solar in {area.name}?</h2>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Ready to Go Solar in {areaData.name}?</h2>
                             <p className="text-xl text-red-100 mb-12 leading-relaxed">
                                 Join your neighbors who are already saving money with clean solar energy. Get your free consultation and
-                                see how much you can save in {area.name}.
+                                see how much you can save in {areaData.name}.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-6 justify-center">
                                 <Button

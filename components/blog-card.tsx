@@ -27,7 +27,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
     return (
         <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg">
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/about-us/solar-power-company-blog/${post.slug}`}>
                 <div className="relative aspect-video overflow-hidden">
                     {featuredImage ? (
                         <Image
@@ -59,7 +59,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 )}
 
                 {/* Title */}
-                <Link href={`/blog/${post.slug}`} className="group">
+                <Link href={`/about-us/solar-power-company-blog/${post.slug}`} className="group">
                     <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors duration-200 line-clamp-2">
                         {stripHtml(post.title.rendered)}
                     </h3>
@@ -90,7 +90,7 @@ export default function BlogCard({ post }: BlogCardProps) {
 
                 {/* Read More Link */}
                 <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/about-us/solar-power-company-blog/${post.slug}`}
                     className="inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 transition-colors duration-200 group"
                 >
                     Read More

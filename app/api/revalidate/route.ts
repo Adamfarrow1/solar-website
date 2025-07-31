@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
         if (!path && !tag) {
             // Revalidate all blog-related content
             revalidateTag("posts")
-            revalidatePath("/blog")
+            revalidatePath("/about-us/solar-power-company-blog")
 
         }
 

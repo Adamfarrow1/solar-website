@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     keywords:
         "solar solutions Tampa Bay, residential solar panels Florida, commercial solar installation, Tesla Solar Roof, Tesla Powerwall, solar pergola, battery backup systems, solar energy solutions St Petersburg",
     alternates: {
-        canonical: "/solutions",
+        canonical: "/solutions/solar-power-systems",
     },
 }
 
@@ -175,7 +175,7 @@ export default function SolutionsPage() {
                                     size="lg"
                                     className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 text-base sm:text-lg lg:text-xl font-bold rounded-2xl shadow-2xl hover:shadow-orange-500/25 hover:scale-105 transition-all duration-300 border-2 border-orange-400/50"
                                 >
-                                    <Link href="/free-quote" className="flex items-center justify-center">
+                                    <Link href="/free-solar-quote" className="flex items-center justify-center">
                                         <Target className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 flex-shrink-0" />
                                         <span>Discover Your Solution</span>
                                     </Link>
@@ -296,7 +296,7 @@ export default function SolutionsPage() {
                                         asChild
                                         className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                                     >
-                                        <Link href="/solutions/residential-solar-panels">
+                                        <Link href="/solutions/home-solar-panel-installation">
                                             Explore Residential Solar
                                             <ArrowRight className="ml-2 h-5 w-5" />
                                         </Link>
@@ -381,7 +381,7 @@ export default function SolutionsPage() {
                                         asChild
                                         className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                                     >
-                                        <Link href="/solutions/commercial-solar-panels">
+                                        <Link href="/solutions/commercial-solar-panel-installation">
                                             Explore Commercial Solar
                                             <ArrowRight className="ml-2 h-5 w-5" />
                                         </Link>
@@ -438,7 +438,7 @@ export default function SolutionsPage() {
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
                                 features: ["22.8% efficiency rating", "25-year warranty", "Sleek low-profile design"],
-                                link: "/tesla-solar",
+                                link: "/tesla-certified-solar-installer",
                             },
                             {
                                 title: "Tesla Powerwall",
@@ -458,7 +458,7 @@ export default function SolutionsPage() {
                                 bgColor: "from-red-50 to-orange-50",
                                 borderColor: "border-red-200",
                                 features: ["Custom design", "Shade + energy", "Increases property value"],
-                                link: "/solutions/solar-pergola",
+                                link: "/solutions/solar-pergolas",
                             },
                         ].map((solution, index) => (
                             <ScrollReveal key={index} direction="up" delay={index * 200}>
@@ -640,7 +640,7 @@ export default function SolutionsPage() {
                                 asChild
                                 className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-6 py-3 font-bold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                             >
-                                <Link href="/free-quote">
+                                <Link href="/free-solar-quote">
                                     Discuss Your Industry
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
@@ -693,7 +693,7 @@ export default function SolutionsPage() {
                                     size="lg"
                                     className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold px-8 py-4 text-lg rounded-xl shadow-2xl hover:shadow-orange-500/25 hover:scale-105 transition-all duration-300 border-2 border-orange-400/50"
                                 >
-                                    <Link href="/free-quote">
+                                    <Link href="/free-solar-quote">
                                         <Target className="mr-2 h-5 w-5" />
                                         Get Free Quote
                                     </Link>

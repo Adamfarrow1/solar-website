@@ -2,63 +2,67 @@
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://relentlessenergy.org</loc>
-      <lastmod>2025-07-22T17:59:18.716Z</lastmod>
+      <lastmod>2025-07-31T22:24:35.077Z</lastmod>
     </url>
     
         <url>
-          <loc>https://relentlessenergy.org/about</loc>
+          <loc>https://relentlessenergy.org/about-us</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/about/faq</loc>
+          <loc>https://relentlessenergy.org/about-us/faq</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/about/guarantee</loc>
+          <loc>https://relentlessenergy.org/about-us/our-guarantee</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/about/our-process</loc>
+          <loc>https://relentlessenergy.org/about-us/our-process</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/about/our-team</loc>
+          <loc>https://relentlessenergy.org/about-us/our-team</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/about/testimonials</loc>
+          <loc>https://relentlessenergy.org/about-us/testimonials</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/free-quote</loc>
+          <loc>https://relentlessenergy.org/about-us/careers</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solar-incentives</loc>
+          <loc>https://relentlessenergy.org/free-solar-quote</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solar-incentives/electricity-savings</loc>
+          <loc>https://relentlessenergy.org/solar-power-electricity-savings</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solar-incentives/federal-tax-credits</loc>
+          <loc>https://relentlessenergy.org/solar-power-electricity-savings/solar-power-electricity-savings</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solar-incentives/net-metering</loc>
+          <loc>https://relentlessenergy.org/solar-power-electricity-savings/solar-federal-tax-credit</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solar-incentives/solar-financing</loc>
+          <loc>https://relentlessenergy.org/solar-power-electricity-savings/net-metering-florida</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solutions</loc>
+          <loc>https://relentlessenergy.org/solar-power-electricity-savings/solar-panel-financing</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solutions/commercial-solar-panels</loc>
+          <loc>https://relentlessenergy.org/solutions/solar-power-systems</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/solutions/commercial-solar-panel-installation</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
@@ -66,84 +70,96 @@
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solutions/residential-solar-panels</loc>
+          <loc>https://relentlessenergy.org/solutions/home-solar-panel-installation</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/solutions/solar-pergola</loc>
+          <loc>https://relentlessenergy.org/solutions/solar-pergolas</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/tesla-solar</loc>
+          <loc>https://relentlessenergy.org/tesla-certified-solar-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/tesla-solar/certified-installer</loc>
+          <loc>https://relentlessenergy.org/tesla-certified-solar-installer/certified-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/tesla-solar/powerwall</loc>
+          <loc>https://relentlessenergy.org/tesla-certified-solar-installer/tesla-powerwall-installation</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/tesla-solar/solar-roof</loc>
+          <loc>https://relentlessenergy.org/tesla-certified-solar-installer/solar-roof-installation</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas/pinellas-county</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl/st-petersburg-solar-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas/st-petersburg</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl/clearwater-solar-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas/clearwater</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl/largo-solar-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas/largo</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl/palm-harbour-solar-installer</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/service-areas/palm-harbor</loc>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas/pinellas-county</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas/st-petersburg</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas/clearwater</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas/largo</loc>
+          <lastmod>2025-07-17T00:00:00.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/pinellas-fl/service-areas/palm-harbor</loc>
           <lastmod>2025-07-17T00:00:00.000Z</lastmod>
         </url>
     
         <url>
-          <loc>https://relentlessenergy.org/blog/test-google-meet</loc>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/vercel-udated-webhook</loc>
+          <lastmod>2025-07-24T01:46:47.000Z</lastmod>
+        </url>
+        <url>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/test-google-meet</loc>
           <lastmod>2025-07-16T05:08:48.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/blog/webhook-test</loc>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/webhook-test</loc>
           <lastmod>2025-07-13T20:45:10.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/blog/commercial-solar</loc>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/commercial-solar</loc>
           <lastmod>2025-07-08T18:45:45.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/blog/last-test</loc>
-          <lastmod>2025-07-08T18:39:40.000Z</lastmod>
-        </url>
-        <url>
-          <loc>https://relentlessenergy.org/blog/testing-updated-blog</loc>
-          <lastmod>2025-07-08T18:33:32.000Z</lastmod>
-        </url>
-        <url>
-          <loc>https://relentlessenergy.org/blog/t5est-2</loc>
-          <lastmod>2025-07-08T17:11:05.000Z</lastmod>
-        </url>
-        <url>
-          <loc>https://relentlessenergy.org/blog/this-is-a-test-title</loc>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/this-is-a-test-title</loc>
           <lastmod>2025-07-08T16:55:03.000Z</lastmod>
         </url>
         <url>
-          <loc>https://relentlessenergy.org/blog/hello-world</loc>
+          <loc>https://relentlessenergy.org/about-us/solar-power-company-blog/hello-world</loc>
           <lastmod>2025-03-06T00:32:33.000Z</lastmod>
         </url>
   </urlset>

@@ -188,7 +188,7 @@ export function generatePostStructuredData(post: WordPressPost, baseUrl = "") {
         },
         mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": `${baseUrl}/blog/${post.slug}`,
+            "@id": `${baseUrl}/about-us/solar-power-company-blog/${post.slug}`,
         },
     }
 }

@@ -10,55 +10,55 @@ const navigation = [
     { name: "Home", href: "/" },
     {
         name: "Solutions",
-        href: "/solutions",
+        href: "/solutions/solar-power-systems",
         children: [
-            { name: "Residential Solar", href: "/solutions/residential-solar-panels" },
-            { name: "Commercial Solar", href: "/solutions/commercial-solar-panels" },
-            { name: "Solar Pergola", href: "/solutions/solar-pergola" },
+            { name: "Residential Solar", href: "/solutions/home-solar-panel-installation" },
+            { name: "Commercial Solar", href: "/solutions/commercial-solar-panel-installation" },
+            { name: "Solar Pergola", href: "/solutions/solar-pergolas" },
             { name: "Battery Backup", href: "/solutions/home-battery-backup" },
         ],
     },
     {
         name: "Tesla Solar",
-        href: "/tesla-solar",
+        href: "/tesla-certified-solar-installer",
         children: [
-            { name: "Certified Installer", href: "/tesla-solar/certified-installer" },
-            { name: "Solar Roof", href: "/tesla-solar/solar-roof" },
-            { name: "Powerwall", href: "/tesla-solar/powerwall" },
+            { name: "Certified Installer", href: "/tesla-certified-solar-installer/certified-installer" },
+            { name: "Solar Roof", href: "/tesla-certified-solar-installer/solar-roof-installation" },
+            { name: "Powerwall", href: "/tesla-certified-solar-installer/tesla-powerwall-installation" },
         ],
     },
     {
         name: "Incentives",
-        href: "/solar-incentives",
+        href: "/solar-power-electricity-savings",
         children: [
-            { name: "Electricity Savings", href: "/solar-incentives/electricity-savings" },
-            { name: "Federal Tax Credits", href: "/solar-incentives/federal-tax-credits" },
-            { name: "Net Metering", href: "/solar-incentives/net-metering" },
-            { name: "Solar Financing", href: "/solar-incentives/solar-financing" },
+            { name: "Electricity Savings", href: "/solar-power-electricity-savings/solar-power-electricity-savings" },
+            { name: "Federal Tax Credits", href: "/solar-power-electricity-savings/solar-federal-tax-credit" },
+            { name: "Net Metering", href: "/solar-power-electricity-savings/net-metering-florida" },
+            { name: "Solar Financing", href: "/solar-power-electricity-savings/solar-panel-financing" },
         ],
     },
     {
         name: "About",
-        href: "/about",
+        href: "/about-us",
         children: [
-            { name: "Our Team", href: "/about/our-team" },
-            { name: "Our Process", href: "/about/our-process" },
-            { name: "Guarantee", href: "/about/guarantee" },
-            { name: "Testimonials", href: "/about/testimonials" },
-            { name: "Careers", href: "/about/careers" },
-            { name: "FAQ", href: "/about/faq" },
-            { name: "Blog", href: "/blog" },
+            { name: "Our Team", href: "/about-us/our-team" },
+            { name: "Our Process", href: "/about-us/our-process" },
+            { name: "Guarantee", href: "/about-us/our-guarantee" },
+            { name: "Testimonials", href: "/about-us/testimonials" },
+            { name: "Careers", href: "/about-us/careers" },
+            { name: "FAQ", href: "/about-us/faq" },
+            { name: "Blog", href: "/about-us/solar-power-company-blog" },
         ],
     },
     {
         name: "Service Areas",
-        href: "/service-area",
+        href: "/pinellas-fl",
         children: [
-            { name: "Pinellas County", href: "/service-area/pinellas-county" },
-            { name: "St Petersburg", href: "/service-area/st-petersburg" },
-            { name: "Clearwater", href: "/service-area/clearwater" },
-            { name: "Largo", href: "/service-area/largo" },
-            { name: "Palm Harbor", href: "/service-area/palm-harbor" },
+            { name: "Pinellas County", href: "/pinellas-fl" },
+            { name: "St Petersburg", href: "/pinellas-fl/st-petersburg-solar-installer" },
+            { name: "Clearwater", href: "/pinellas-fl/clearwater-solar-installer" },
+            { name: "Largo", href: "/pinellas-fl/largo-solar-installer" },
+            { name: "Palm Harbor", href: "/pinellas-fl/palm-harbour-solar-installer" },
         ],
     },
 ]
@@ -188,7 +188,7 @@ export default function Header() {
                             asChild
                             className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                         >
-                            <Link href="/free-quote">Get Free Quote</Link>
+                                                        <Link href="/free-solar-quote">Get Free Quote</Link>
                         </Button>
                     </div>
 
@@ -299,7 +299,7 @@ export default function Header() {
                                 asChild
                                 className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:via-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-base min-h-[52px] transition-all duration-300 hover:scale-[1.02] border border-red-500/20"
                             >
-                                <Link href="/free-quote" onClick={() => setMobileMenuOpen(false)}>
+                                                                <Link href="/free-solar-quote" onClick={() => setMobileMenuOpen(false)}>
                                     <span className="flex items-center justify-center space-x-2">
                                         <span>Get Free Quote</span>
                                         <ChevronRight className="h-4 w-4" />

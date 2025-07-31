@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { getAllServiceAreas } from "@/lib/service-areas"
 import { Card, CardContent, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -24,35 +23,36 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
+    title: "Pinellas County Solar Installation | Tesla Certified | Relentless Energy",
     description:
-        "Professional solar installation throughout Tampa Bay and Pinellas County. Serving St. Petersburg, Clearwater, Largo, Palm Harbor, and surrounding areas. Tesla Certified installer.",
+        "Professional solar installation throughout Pinellas County, Florida. Tesla Certified installer serving St. Petersburg, Clearwater, Largo, Palm Harbor, and all county areas. Free quotes!",
     keywords: [
-        "Tampa Bay solar installation",
-        "Pinellas County solar",
-        "St Petersburg solar panels",
+        "Pinellas County solar installation",
+        "Tampa Bay solar panels",
+        "St Petersburg solar installer",
         "Clearwater solar installation",
         "Largo solar panels",
         "Palm Harbor solar",
         "Florida solar installer",
         "Tesla Certified installer",
+        "Pinellas FL solar",
     ],
     openGraph: {
-        title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
+        title: "Pinellas County Solar Installation | Tesla Certified | Relentless Energy",
         description:
-            "Professional solar installation throughout Tampa Bay and Pinellas County. Tesla Certified installer serving all major cities.",
-        images: ["/images/st-petersburg-florida.jpg"],
+            "Professional solar installation throughout Pinellas County, Florida. Tesla Certified installer serving all major cities.",
+        images: ["/images/pinella.jpg"],
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Solar Installation Service Areas | Tampa Bay | Relentless Energy",
+        title: "Pinellas County Solar Installation | Tesla Certified | Relentless Energy",
         description:
-            "Professional solar installation throughout Tampa Bay and Pinellas County. Tesla Certified installer serving all major cities.",
-        images: ["/images/st-petersburg-florida.jpg"],
+            "Professional solar installation throughout Pinellas County, Florida. Tesla Certified installer serving all major cities.",
+        images: ["/images/pinella.jpg"],
     },
     alternates: {
-        canonical: "https://www.relentlessenergy.org/pinellas-fl/service-areas",
+        canonical: "https://www.relentlessenergy.org/pinellas-fl",
     },
     robots: {
         index: true,
@@ -60,33 +60,69 @@ export const metadata: Metadata = {
     },
 }
 
-export default function ServiceAreasPage() {
-    const serviceAreas = getAllServiceAreas()
+export default function PinellasFLPage() {
+    const serviceAreas = [
+        {
+            name: "St. Petersburg",
+            slug: "st-petersburg-solar-installer",
+            description: "Florida's 'Sunshine City' with downtown skyline, waterfront districts, and historic neighborhoods perfect for solar energy.",
+            heroImage: "/images/st-petersburg-florida.jpg",
+            population: "265,000",
+            averageSolarSavings: "$1,740/year",
+            averageSunHours: "8.2 hours/day",
+            averageElectricBill: "$145/month",
+            paybackPeriod: "6-8 years",
+            solarPotential: "Excellent",
+        },
+        {
+            name: "Clearwater",
+            slug: "clearwater-solar-installer",
+            description: "Beautiful beach city with year-round sunshine, perfect for residential and commercial solar installations.",
+            heroImage: "/images/clearwater-fl.jpg",
+            population: "117,000",
+            averageSolarSavings: "$1,824/year",
+            averageSunHours: "8.1 hours/day",
+            averageElectricBill: "$152/month",
+            paybackPeriod: "6-8 years",
+            solarPotential: "Excellent",
+        },
+        {
+            name: "Largo",
+            slug: "largo-solar-installer",
+            description: "Growing community in central Pinellas County with excellent solar potential and established neighborhoods.",
+            heroImage: "/images/key-largo.jpg",
+            population: "85,000",
+            averageSolarSavings: "$1,656/year",
+            averageSunHours: "8.0 hours/day",
+            averageElectricBill: "$138/month",
+            paybackPeriod: "6-8 years",
+            solarPotential: "Excellent",
+        },
+        {
+            name: "Palm Harbor",
+            slug: "palm-harbour-solar-installer",
+            description: "Upscale communities and luxury homes perfect for premium solar installations and Tesla Solar Roofs.",
+            heroImage: "/images/palmharbor.jpg",
+            population: "62,000",
+            averageSolarSavings: "$1,980/year",
+            averageSunHours: "8.1 hours/day",
+            averageElectricBill: "$165/month",
+            paybackPeriod: "6-8 years",
+            solarPotential: "Excellent",
+        },
+    ]
 
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         name: "Relentless Energy",
         description:
-            "Tesla Certified solar installation company serving Tampa Bay and Pinellas County with residential and commercial solar solutions.",
+            "Tesla Certified solar installation company serving Pinellas County, Florida with residential and commercial solar solutions.",
         url: "https://relentlessenergy.org",
         telephone: "(386) 832-1119",
-        // address: {
-        //     "@type": "PostalAddress",
-        //     streetAddress: "123 Solar Street",
-        //     addressLocality: "St Petersburg",
-        //     addressRegion: "FL",
-        //     postalCode: "33701",
-        //     addressCountry: "US",
-        // },
-        // geo: {
-        //     "@type": "GeoCoordinates",
-        //     latitude: 27.7676,
-        //     longitude: -82.6403,
-        // },
         areaServed: serviceAreas.map((area) => ({
             "@type": "City",
-            name: area.fullName,
+            name: area.name,
         })),
         serviceType: "Solar Installation",
     }
@@ -104,7 +140,7 @@ export default function ServiceAreasPage() {
                                 Home
                             </Link>
                             <ChevronRight className="h-4 w-4 text-gray-400" />
-                            <span className="text-gray-900 font-medium">Service Areas</span>
+                            <span className="text-gray-900 font-medium">Pinellas County Solar</span>
                         </div>
                     </div>
                 </nav>
@@ -124,12 +160,11 @@ export default function ServiceAreasPage() {
                                 <span className="text-sm font-medium text-red-700">Tesla Certified Installer</span>
                             </div>
                             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-red-700 to-red-600 bg-clip-text text-transparent mb-6">
-                                Tampa Bay Solar
+                                Pinellas County Solar
                             </h1>
                             <p className="text-xl lg:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-                                Professional solar installation throughout Pinellas County and Tampa Bay.
-                                <span className="text-red-600 font-semibold"> Trusted by 1,000+ families</span> to deliver clean energy
-                                solutions.
+                                Professional solar installation throughout Pinellas County, Florida.
+                                <span className="text-red-600 font-semibold"> Trusted by 1,000+ families</span> across all cities and communities.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button
@@ -158,7 +193,7 @@ export default function ServiceAreasPage() {
                     </div>
                 </section>
 
-                {/* Service Area Stats */}
+                {/* County Stats */}
                 <section className="py-20">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ScrollReveal>
@@ -192,13 +227,13 @@ export default function ServiceAreasPage() {
                             <div className="text-center mb-20">
                                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Our Service Areas</h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    We proudly serve communities throughout Tampa Bay and Pinellas County with
+                                    We proudly serve all major cities and communities throughout Pinellas County with
                                     <span className="text-red-600 font-semibold"> premium solar installation services</span>.
                                 </p>
                             </div>
                         </ScrollReveal>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                             {serviceAreas.map((area, index) => (
                                 <ScrollReveal key={area.slug} delay={index * 150}>
                                     <Card className="group h-full bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 overflow-hidden">
@@ -256,7 +291,7 @@ export default function ServiceAreasPage() {
                                                 asChild
                                                 className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-3 rounded-2xl transition-all duration-300 transform hover:scale-105"
                                             >
-                                                <Link href={`/pinellas-fl/service-areas/${area.slug}`}>
+                                                <Link href={`/pinellas-fl/${area.slug}`}>
                                                     Explore {area.name}
                                                     <ArrowRight className="h-4 w-4 ml-2" />
                                                 </Link>
@@ -276,7 +311,7 @@ export default function ServiceAreasPage() {
                             <div className="text-center mb-20">
                                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Why Choose Local Solar?</h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    As your trusted Tampa Bay solar installer, we understand the unique needs and opportunities in our
+                                    As your trusted Pinellas County solar installer, we understand the unique needs and opportunities in our
                                     community.
                                 </p>
                             </div>
@@ -334,7 +369,7 @@ export default function ServiceAreasPage() {
                             <div className="text-center mb-20">
                                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Recent Success Stories</h2>
                                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                    See how we're helping homeowners and businesses throughout Tampa Bay
+                                    See how we're helping homeowners and businesses throughout Pinellas County
                                     <span className="text-red-600 font-semibold"> save thousands</span> with solar energy.
                                 </p>
                             </div>

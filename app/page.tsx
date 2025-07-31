@@ -110,7 +110,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto hover:scale-105 transition-all duration-300 group"
                 >
-                  <Link href="/free-quote">
+                  <Link href="/free-solar-quote">
                     Get Your Free Quote
                     <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -291,7 +291,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
-                    <Link href="/solutions/residential-solar-panels">
+                    <Link href="/solutions/home-solar-panel-installation">
                       Learn more about residential solar
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
@@ -332,7 +332,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
-                    <Link href="/tesla-solar/powerwall">
+                    <Link href="/tesla-certified-solar-installer/tesla-powerwall-installation">
                       Learn more about Tesla Powerwall
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
@@ -373,7 +373,7 @@ export default function HomePage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 group">
-                    <Link href="/solutions/commercial-solar-panels">
+                    <Link href="/solutions/commercial-solar-panel-installation">
                       Learn more about commercial solar
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
@@ -402,7 +402,7 @@ export default function HomePage() {
                   variant="secondary"
                   className="text-lg px-10 py-4 h-auto hover:scale-105 transition-all duration-300 group"
                 >
-                  <Link href="/free-quote">
+                  <Link href="/free-solar-quote">
                     Get Your Free Solar Quote
                     <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
