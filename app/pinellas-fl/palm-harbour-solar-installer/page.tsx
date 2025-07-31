@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Palm Harbor Solar Installer | Tesla Certified | Relentless Energy", 
+        title: "Palm Harbor Solar Installer | Tesla Certified | Relentless Energy",
         description: "Premium solar installation in Palm Harbor, FL. Tesla Certified installer serving all communities.",
         images: ["/images/palmharbor.jpg"],
     },
@@ -72,7 +72,7 @@ export default function PalmHarborSolarInstallerPage() {
         neighborhoods: [
             "Innisbrook",
             "Ozona",
-            "Alderman Elementary Area", 
+            "Alderman Elementary Area",
             "Carrollwood",
             "Countryside",
             "Crystal Beach",
@@ -84,7 +84,7 @@ export default function PalmHarborSolarInstallerPage() {
         solarIncentives: [
             "Federal Solar Tax Credit (30%)",
             "Florida Solar Rights Act",
-            "Net Metering Program", 
+            "Net Metering Program",
             "Property Tax Exemption",
             "Sales Tax Exemption"
         ],
@@ -101,7 +101,7 @@ export default function PalmHarborSolarInstallerPage() {
                 installDate: "2023"
             },
             {
-                name: "Mark Thompson", 
+                name: "Mark Thompson",
                 neighborhood: "Ozona",
                 text: "Professional installation and excellent customer service. Our system has been performing flawlessly for over a year now.",
                 rating: 5,

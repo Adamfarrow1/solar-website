@@ -188,7 +188,7 @@ export default function Header() {
                             asChild
                             className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                         >
-                                                        <Link href="/free-solar-quote">Get Free Quote</Link>
+                            <Link href="/free-solar-quote">Get Free Quote</Link>
                         </Button>
                     </div>
 
@@ -299,7 +299,7 @@ export default function Header() {
                                 asChild
                                 className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:via-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-base min-h-[52px] transition-all duration-300 hover:scale-[1.02] border border-red-500/20"
                             >
-                                                                <Link href="/free-solar-quote" onClick={() => setMobileMenuOpen(false)}>
+                                <Link href="/free-solar-quote" onClick={() => setMobileMenuOpen(false)}>
                                     <span className="flex items-center justify-center space-x-2">
                                         <span>Get Free Quote</span>
                                         <ChevronRight className="h-4 w-4" />

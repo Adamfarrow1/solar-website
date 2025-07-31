@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: "Professional solar panel installation in St. Petersburg, FL. Tesla Certified installer serving downtown, Old Northeast, and all neighborhoods. Free solar consultation and quotes!",
     keywords: [
         "St Petersburg solar panels",
-        "St Pete solar installation", 
+        "St Pete solar installation",
         "downtown St Petersburg solar",
         "Old Northeast solar",
         "Florida solar installer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "St. Petersburg Solar Installer | Tesla Certified | Relentless Energy", 
+        title: "St. Petersburg Solar Installer | Tesla Certified | Relentless Energy",
         description: "Professional solar panel installation in St. Petersburg, FL. Tesla Certified installer serving all neighborhoods.",
         images: ["/images/st-petersburg-florida.jpg"],
     },
@@ -71,7 +71,7 @@ export default function StPetersburgSolarInstallerPage() {
         solarPotential: "Excellent",
         neighborhoods: [
             "Downtown St. Petersburg",
-            "Old Northeast", 
+            "Old Northeast",
             "Kenwood",
             "Historic Roser Park",
             "Crescent Lake",
@@ -84,7 +84,7 @@ export default function StPetersburgSolarInstallerPage() {
         solarIncentives: [
             "Federal Solar Tax Credit (30%)",
             "Florida Solar Rights Act",
-            "Net Metering Program", 
+            "Net Metering Program",
             "Property Tax Exemption",
             "Sales Tax Exemption"
         ],
@@ -101,7 +101,7 @@ export default function StPetersburgSolarInstallerPage() {
                 installDate: "2023"
             },
             {
-                name: "Mike Rodriguez", 
+                name: "Mike Rodriguez",
                 neighborhood: "Downtown",
                 text: "The installation team was professional and completed everything in two days. Our condo association loves the reduced common area costs!",
                 rating: 5,

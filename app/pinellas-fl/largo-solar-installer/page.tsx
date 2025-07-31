@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Largo Solar Installer | Tesla Certified | Relentless Energy", 
+        title: "Largo Solar Installer | Tesla Certified | Relentless Energy",
         description: "Professional solar installation in Largo, FL. Tesla Certified installer serving all neighborhoods.",
         images: ["/images/key-largo.jpg"],
     },
@@ -72,7 +72,7 @@ export default function LargoSolarInstallerPage() {
         neighborhoods: [
             "Belcher Elementary Area",
             "Largo Central Park",
-            "Ridgecrest", 
+            "Ridgecrest",
             "Seminole",
             "West Bay Drive",
             "Ulmerton Road Corridor",
@@ -84,7 +84,7 @@ export default function LargoSolarInstallerPage() {
         solarIncentives: [
             "Federal Solar Tax Credit (30%)",
             "Florida Solar Rights Act",
-            "Net Metering Program", 
+            "Net Metering Program",
             "Property Tax Exemption",
             "Sales Tax Exemption"
         ],
@@ -101,7 +101,7 @@ export default function LargoSolarInstallerPage() {
                 installDate: "2023"
             },
             {
-                name: "Steve Davis", 
+                name: "Steve Davis",
                 neighborhood: "Ridgecrest",
                 text: "The installation was seamless and the monthly savings are exactly what they promised. Great experience from start to finish!",
                 rating: 5,

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Clearwater Solar Installer | Tesla Certified | Relentless Energy", 
+        title: "Clearwater Solar Installer | Tesla Certified | Relentless Energy",
         description: "Expert solar panel installation in Clearwater, FL. Tesla Certified installer serving all neighborhoods.",
         images: ["/images/clearwater-fl.jpg"],
     },
@@ -72,7 +72,7 @@ export default function ClearwaterSolarInstallerPage() {
         neighborhoods: [
             "Clearwater Beach",
             "Downtown Clearwater",
-            "Belcher", 
+            "Belcher",
             "Cleveland Street District",
             "Countryside",
             "Dunedin Causeway",
@@ -84,7 +84,7 @@ export default function ClearwaterSolarInstallerPage() {
         solarIncentives: [
             "Federal Solar Tax Credit (30%)",
             "Florida Solar Rights Act",
-            "Net Metering Program", 
+            "Net Metering Program",
             "Property Tax Exemption",
             "Sales Tax Exemption"
         ],
@@ -101,7 +101,7 @@ export default function ClearwaterSolarInstallerPage() {
                 installDate: "2023"
             },
             {
-                name: "Robert Kim", 
+                name: "Robert Kim",
                 neighborhood: "Downtown Clearwater",
                 text: "The Tesla Powerwall kept our power on during the last storm while our neighbors were out for days. Best investment ever!",
                 rating: 5,
