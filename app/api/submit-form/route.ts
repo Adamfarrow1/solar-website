@@ -14,18 +14,24 @@ export async function POST(req: NextRequest) {
 
         const recipients = ["adamfarrow1@gmail.com", "jfeliz@relentlessenergy.org"]
 
+        // Determine email subject and content based on form type
+        const isCareerForm = data.formType === "career"
+        const emailSubject = isCareerForm
+            ? `💼 New Job Application from ${data.firstName} ${data.lastName}`
+            : `🌞 New Solar Quote Request from ${data.firstName} ${data.lastName}`
+
         // Send individual emails to ensure delivery to all recipients
         const emailPromises = recipients.map(async (email) => {
             return resend.emails.send({
                 from: "Relentless Energy <leads@relentlessenergy.org>",
                 to: [email],
-                subject: `🌞 New Solar Quote Request from ${data.firstName} ${data.lastName}`,
+                subject: emailSubject,
                 replyTo: "jfeliz@relentlessenergy.org",
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9fafb;">
                         <div style="background-color: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                             <div style="text-align: center; margin-bottom: 30px;">
-                                <h1 style="color: #dc2626; margin: 0; font-size: 28px;">🌞 New Solar Quote Request</h1>
+                                <h1 style="color: #dc2626; margin: 0; font-size: 28px;">${isCareerForm ? '💼 New Job Application' : '🌞 New Solar Quote Request'}</h1>
                                 <p style="color: #666; margin: 10px 0 0 0;">Received: ${new Date().toLocaleString()}</p>
                             </div>
                             
@@ -34,34 +40,51 @@ export async function POST(req: NextRequest) {
                                 <p style="margin: 5px 0;"><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
                                 <p style="margin: 5px 0;"><strong>Email:</strong> <a href="mailto:${data.email}" style="color: #dc2626;">${data.email}</a></p>
                                 <p style="margin: 5px 0;"><strong>Phone:</strong> <a href="tel:${data.phone}" style="color: #dc2626;">${data.phone}</a></p>
-                                <p style="margin: 5px 0;"><strong>Address:</strong> ${data.address}</p>
+                                ${data.address ? `<p style="margin: 5px 0;"><strong>Address:</strong> ${data.address}</p>` : ''}
                             </div>
                             
-                            <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; border-left: 4px solid #0ea5e9; margin-bottom: 25px;">
-                                <h3 style="color: #0ea5e9; margin: 0 0 15px 0;">🏠 Property Details</h3>
-                                <p style="margin: 5px 0;"><strong>Property Type:</strong> ${data.propertyType}</p>
-                                <p style="margin: 5px 0;"><strong>Roof Type:</strong> ${data.roofType}</p>
-                            </div>
-                            
-                            <div style="background-color: #f0fdf4; padding: 20px; border-radius: 6px; border-left: 4px solid #22c55e; margin-bottom: 25px;">
-                                <h3 style="color: #22c55e; margin: 0 0 15px 0;">⚡ Energy & Solar Preferences</h3>
-                                <p style="margin: 5px 0;"><strong>Monthly Electric Bill:</strong> ${data.monthlyBill}</p>
-                                <p style="margin: 5px 0;"><strong>Timeline:</strong> ${data.urgency}</p>
-                                <p style="margin: 5px 0;"><strong>Solar Type:</strong> ${data.solarType}</p>
-                                <p style="margin: 5px 0;"><strong>Financing Preference:</strong> ${data.financing}</p>
-                            </div>
+                            ${isCareerForm ? `
+                                <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; border-left: 4px solid #0ea5e9; margin-bottom: 25px;">
+                                    <h3 style="color: #0ea5e9; margin: 0 0 15px 0;">💼 Position Details</h3>
+                                    <p style="margin: 5px 0;"><strong>Position of Interest:</strong> ${data.position}</p>
+                                    <p style="margin: 5px 0;"><strong>Experience Level:</strong> ${data.experience}</p>
+                                    <p style="margin: 5px 0;"><strong>Availability:</strong> ${data.availability}</p>
+                                    <p style="margin: 5px 0;"><strong>Education:</strong> ${data.education}</p>
+                                </div>
+                                
+                                <div style="background-color: #f0fdf4; padding: 20px; border-radius: 6px; border-left: 4px solid #22c55e; margin-bottom: 25px;">
+                                    <h3 style="color: #22c55e; margin: 0 0 15px 0;">� Background & Preferences</h3>
+                                    <p style="margin: 5px 0;"><strong>Previous Industry:</strong> ${data.previousIndustry}</p>
+                                    <p style="margin: 5px 0;"><strong>Desired Salary:</strong> ${data.desiredSalary}</p>
+                                    ${data.resume ? `<p style="margin: 5px 0;"><strong>Resume/CV:</strong> ${data.resume}</p>` : ''}
+                                </div>
+                            ` : `
+                                <div style="background-color: #f0f9ff; padding: 20px; border-radius: 6px; border-left: 4px solid #0ea5e9; margin-bottom: 25px;">
+                                    <h3 style="color: #0ea5e9; margin: 0 0 15px 0;">�🏠 Property Details</h3>
+                                    <p style="margin: 5px 0;"><strong>Property Type:</strong> ${data.propertyType}</p>
+                                    <p style="margin: 5px 0;"><strong>Roof Type:</strong> ${data.roofType}</p>
+                                </div>
+                                
+                                <div style="background-color: #f0fdf4; padding: 20px; border-radius: 6px; border-left: 4px solid #22c55e; margin-bottom: 25px;">
+                                    <h3 style="color: #22c55e; margin: 0 0 15px 0;">⚡ Energy & Solar Preferences</h3>
+                                    <p style="margin: 5px 0;"><strong>Monthly Electric Bill:</strong> ${data.monthlyBill}</p>
+                                    <p style="margin: 5px 0;"><strong>Timeline:</strong> ${data.urgency}</p>
+                                    <p style="margin: 5px 0;"><strong>Solar Type:</strong> ${data.solarType}</p>
+                                    <p style="margin: 5px 0;"><strong>Financing Preference:</strong> ${data.financing}</p>
+                                </div>
+                            `}
                             
                             ${data.message ? `
                                 <div style="background-color: #fffbeb; padding: 20px; border-radius: 6px; border-left: 4px solid #f59e0b; margin-bottom: 25px;">
-                                    <h3 style="color: #f59e0b; margin: 0 0 15px 0;">💬 Additional Information</h3>
+                                    <h3 style="color: #f59e0b; margin: 0 0 15px 0;">${isCareerForm ? '📝 Cover Letter / Additional Information' : '💬 Additional Information'}</h3>
                                     <p style="margin: 0; line-height: 1.6;">${data.message}</p>
                                 </div>
                             ` : ''}
                             
                             <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
                                 <p style="color: #666; font-size: 14px; margin: 0;">
-                                    This email was sent from the Relentless Energy website contact form.<br>
-                                    <strong>Action Required:</strong> Please respond within 24 hours as promised to the customer.
+                                    This ${isCareerForm ? 'job application' : 'quote request'} was sent from the Relentless Energy website.<br>
+                                    <strong>Action Required:</strong> Please respond within ${isCareerForm ? '3-5 business days' : '24 hours'} as promised to the ${isCareerForm ? 'applicant' : 'customer'}.
                                 </p>
                             </div>
                         </div>
@@ -98,7 +121,7 @@ export async function POST(req: NextRequest) {
                     Authorization: `Basic ${auth}`,
                 },
                 body: JSON.stringify({
-                    title: `${data.firstName} ${data.lastName}`,
+                    title: `${isCareerForm ? 'Job Application' : 'Solar Quote'} - ${data.firstName} ${data.lastName}`,
                     content: JSON.stringify(data, null, 2),
                     status: "publish",
                 }),
