@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/scroll-reveal"
 import CountUpStats from "@/components/count-up-stats"
 import { Sparkles, Users, Award, Shield, Star, Phone } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata: Metadata = {
     title: "Our Team - Expert Solar Professionals | Relentless Energy",
@@ -24,18 +25,20 @@ export const metadata: Metadata = {
 export default function OurTeamPage() {
     const founders = [
         {
-            name: "Michael Johnson",
+            name: "Jason Feliz",
             role: "Co-Founder & CEO",
-            bio: "With over 15 years in renewable energy, Michael leads our vision of making solar accessible to every Florida family. Tesla-certified master installer with 2,000+ successful installations.",
+            bio: "For Jason, relentless isn't just a word—it's the driving force behind everything he does. With 17 years of building and growing businesses from the ground up, Jason brings a unique blend of financial expertise and unwavering dedication to quality. His journey from finance to solar is driven by a commitment to providing environmentally sound and financially smart solutions. Jason believes that a company is only as strong as its team, and he leads a group of dedicated professionals who share his relentless work ethic and commitment to making a real difference in the community.",
             certifications: ["Tesla Certified Installer", "NABCEP Certified", "Master Electrician"],
-            initials: "MJ",
+            initials: "JF",
+            image: "/images/jason.jpeg",
         },
         {
-            name: "David Thompson",
+            name: "David Le",
             role: "Co-Founder & CTO",
-            bio: "David brings 12 years of electrical engineering expertise to every project. Specializes in complex commercial installations and cutting-edge battery storage solutions.",
+            bio: "David brings a passion for cutting-edge technology and innovation to every solar project. As CTO, he oversees the technical aspects of installations, ensuring each system is engineered for maximum efficiency and reliability. David specializes in complex commercial installations and advanced battery storage solutions, staying at the forefront of solar innovation. His meticulous attention to detail and commitment to excellence ensures that every Relentless Energy system meets the highest industry standards.",
             certifications: ["Licensed Electrical Engineer", "Tesla Powerwall Certified", "Commercial Solar Specialist"],
-            initials: "DT",
+            initials: "DL",
+            image: "/images/david.jpeg",
         },
     ]
 
@@ -200,19 +203,25 @@ export default function OurTeamPage() {
                             <ScrollReveal key={founder.name} delay={index * 0.1}>
                                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                                     <CardContent className="p-8 text-center">
-                                        <div className="w-32 h-32 rounded-full bg-red-100 flex items-center justify-center text-2xl font-bold text-red-600 mx-auto mb-6">
-                                            {founder.initials}
+                                        <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-red-100 flex items-center justify-center">
+                                            <Image
+                                                src={founder.image}
+                                                alt={founder.name}
+                                                width={128}
+                                                height={128}
+                                                className={`w-full h-full object-cover ${founder.name === "Jason Feliz" ? "object-top" : "object-center"}`}
+                                            />
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{founder.name}</h3>
                                         <p className="text-red-600 font-medium mb-4">{founder.role}</p>
                                         <p className="text-gray-600 mb-6">{founder.bio}</p>
-                                        <div className="space-y-2">
+                                        {/* <div className="space-y-2">
                                             {founder.certifications.map((cert) => (
                                                 <Badge key={cert} variant="secondary" className="mr-2 mb-2">
                                                     {cert}
                                                 </Badge>
                                             ))}
-                                        </div>
+                                        </div> */}
                                     </CardContent>
                                 </Card>
                             </ScrollReveal>
@@ -243,9 +252,9 @@ export default function OurTeamPage() {
                                         </div>
                                         <h3 className="text-lg font-bold text-gray-900 mb-2">{dept.name}</h3>
                                         <p className="text-gray-600 mb-4">{dept.description}</p>
-                                        <Badge variant="outline" className="border-red-200 text-red-700">
+                                        {/* <Badge variant="outline" className="border-red-200 text-red-700">
                                             {dept.teamSize} Team Members
-                                        </Badge>
+                                        </Badge> */}
                                     </CardContent>
                                 </Card>
                             </ScrollReveal>
@@ -255,7 +264,7 @@ export default function OurTeamPage() {
             </section>
 
             {/* Team Members */}
-            <section className="py-20 bg-white">
+            {/* <section className="py-20 bg-white">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <ScrollReveal>
                         <div className="text-center mb-16">
@@ -293,7 +302,7 @@ export default function OurTeamPage() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
             <section className="py-20 bg-red-600">
