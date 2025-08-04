@@ -10,7 +10,7 @@ const navigation = [
     { name: "Home", href: "/" },
     {
         name: "Solutions",
-        href: "/solutions/solar-power-systems",
+        href: "/solutions",
         children: [
             { name: "Residential Solar", href: "/solutions/home-solar-panel-installation" },
             { name: "Commercial Solar", href: "/solutions/commercial-solar-panel-installation" },

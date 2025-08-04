@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     keywords:
         "solar solutions Tampa Bay, residential solar panels Florida, commercial solar installation, Tesla Solar Roof, Tesla Powerwall, solar pergola, battery backup systems, solar energy solutions St Petersburg",
     alternates: {
-        canonical: "/solutions/solar-power-systems",
+        canonical: "/solutions",
     },
 }
 

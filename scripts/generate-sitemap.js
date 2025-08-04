@@ -40,7 +40,7 @@ async function generateSitemap() {
     "solar-power-electricity-savings/solar-federal-tax-credit",
     "solar-power-electricity-savings/net-metering-florida",
     "solar-power-electricity-savings/solar-panel-financing",
-    "solutions/solar-power-systems",
+    "solutions",
     "solutions/commercial-solar-panel-installation",
     "solutions/home-battery-backup",
     "solutions/home-solar-panel-installation",
