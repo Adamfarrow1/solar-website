@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import {
     Award,
     Users,
@@ -21,7 +22,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import ScrollReveal from "@/components/scroll-reveal"
-import Image from "next/image"
 
 export const metadata: Metadata = {
     title: "About Relentless Energy | Tesla Certified Solar Installer Tampa Bay",
@@ -76,8 +76,8 @@ export default function AboutPage() {
 
                         <ScrollReveal direction="up" delay={600}>
                             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                                For over a decade, we've been Tampa Bay's trusted solar energy partner, helping 10,000+ homeowners and
-                                businesses harness the power of Florida sunshine with premium Tesla-certified installations.
+                                Founded by Jason Feliz and Luan Le, we've been Tampa Bay's trusted solar energy partner, helping
+                                hundreds of homeowners and businesses harness the power of Florida sunshine with premium Tesla-certified installations.
                             </p>
                         </ScrollReveal>
 
@@ -112,12 +112,12 @@ export default function AboutPage() {
                         <ScrollReveal direction="up" delay={1000}>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                                    <div className="text-3xl font-bold text-red-600 mb-2">10,000+</div>
+                                    <div className="text-3xl font-bold text-red-600 mb-2">1,000+</div>
                                     <div className="text-gray-700 font-medium">Happy Customers</div>
                                     <div className="text-sm text-gray-500">Across Tampa Bay</div>
                                 </div>
                                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                                    <div className="text-3xl font-bold text-red-600 mb-2">10+</div>
+                                    <div className="text-3xl font-bold text-red-600 mb-2">5+</div>
                                     <div className="text-gray-700 font-medium">Years Experience</div>
                                     <div className="text-sm text-gray-500">Industry expertise</div>
                                 </div>
@@ -147,13 +147,13 @@ export default function AboutPage() {
                                     </h2>
                                     <p className="text-lg text-gray-600 leading-relaxed mb-6">
                                         Relentless Energy was born from a simple belief shared by two renewable energy enthusiasts: every
-                                        Florida home deserves access to clean, affordable solar energy. Founded in 2013 by Michael Johnson
-                                        and David Thompson, we started with a mission to make solar accessible to Tampa Bay families.
+                                        Florida home deserves access to clean, affordable solar energy. Founded by Jason Feliz and Luan Le,
+                                        we started with a mission to make solar accessible to Tampa Bay families.
                                     </p>
                                     <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                        What began as a small local business has grown into Florida's premier Tesla Certified solar
-                                        installation company. We've helped over 10,000 families reduce their carbon footprint while saving
-                                        thousands on electricity bills.
+                                        What began as a partnership between two passionate entrepreneurs has grown into Florida's premier
+                                        Tesla Certified solar installation company. We've helped thousands of families reduce their carbon
+                                        footprint while saving thousands on electricity bills.
                                     </p>
                                 </div>
 
@@ -310,8 +310,8 @@ export default function AboutPage() {
                                 </CardHeader>
                                 <CardContent>
                                     <CardDescription className="text-gray-600 leading-relaxed">
-                                        Over 10,000 successful installations across Tampa Bay with a 99.8% customer satisfaction rate and
-                                        countless 5-star reviews.
+                                        Over 1,000 successful installations across Tampa Bay with a 99.8% customer satisfaction rate and
+                                        countless 5-star reviews from our growing community of satisfied customers.
                                     </CardDescription>
                                 </CardContent>
                             </Card>
@@ -347,7 +347,7 @@ export default function AboutPage() {
                             </Badge>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">Meet the Solar Experts</h2>
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                Meet the two visionaries who founded Relentless Energy and built Tampa Bay's most trusted solar
+                                Meet Jason Feliz and Luan Le, the two visionaries who founded Relentless Energy and built Tampa Bay's most trusted solar
                                 installation company through their combined expertise and unwavering commitment to excellence.
                             </p>
                         </div>
@@ -357,28 +357,23 @@ export default function AboutPage() {
                         <ScrollReveal direction="up" delay={400}>
                             <Card className="text-center bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105 group">
                                 <CardHeader className="pb-4">
-                                    <div className="w-32 h-32 bg-gradient-to-r from-red-600 to-red-700 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-3xl font-bold text-white">MJ</span>
+                                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-red-100 flex items-center justify-center">
+                                        <Image
+                                            src="/images/jason.jpeg"
+                                            alt="Jason Feliz"
+                                            width={128}
+                                            height={128}
+                                            className="w-full h-full object-cover object-top"
+                                        />
                                     </div>
-                                    <CardTitle className="text-2xl text-gray-900">Michael Johnson</CardTitle>
+                                    <CardTitle className="text-2xl text-gray-900">Jason Feliz</CardTitle>
                                     <CardDescription className="text-red-600 font-semibold text-lg">Co-Founder & CEO</CardDescription>
                                 </CardHeader>
                                 <CardContent className="px-8">
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Tesla Master Installer with 15+ years in renewable energy. Michael co-founded Relentless Energy with
-                                        a vision to make premium solar accessible to every Florida family. His expertise in system design
-                                        and project management has helped deliver over 5,000 successful installations.
+                                        For Jason, relentless isn't just a word—it's the driving force behind everything he does. With 17 years of building and growing businesses from the ground up, Jason brings a unique blend of financial expertise and unwavering dedication to quality. His journey from finance to solar is driven by a commitment to providing environmentally sound and financially smart solutions.
                                     </p>
-                                    <div className="mt-6 space-y-2">
-                                        <div className="flex items-center justify-center text-sm text-gray-500">
-                                            <Award className="w-4 h-4 mr-2" />
-                                            Tesla Master Installer
-                                        </div>
-                                        <div className="flex items-center justify-center text-sm text-gray-500">
-                                            <Shield className="w-4 h-4 mr-2" />
-                                            NABCEP Certified
-                                        </div>
-                                    </div>
+
                                 </CardContent>
                             </Card>
                         </ScrollReveal>
@@ -386,28 +381,23 @@ export default function AboutPage() {
                         <ScrollReveal direction="up" delay={600}>
                             <Card className="text-center bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border-0 transform hover:scale-105 group">
                                 <CardHeader className="pb-4">
-                                    <div className="w-32 h-32 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-3xl font-bold text-white">DT</span>
+                                    <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 border-4 border-red-100 flex items-center justify-center">
+                                        <Image
+                                            src="/images/david.jpeg"
+                                            alt="Luan Le"
+                                            width={128}
+                                            height={128}
+                                            className="w-full h-full object-cover object-center"
+                                        />
                                     </div>
-                                    <CardTitle className="text-2xl text-gray-900">David Thompson</CardTitle>
-                                    <CardDescription className="text-blue-600 font-semibold text-lg">Co-Founder & CTO</CardDescription>
+                                    <CardTitle className="text-2xl text-gray-900">Luan Le</CardTitle>
+                                    <CardDescription className="text-red-600 font-semibold text-lg">Co-Founder & CTO</CardDescription>
                                 </CardHeader>
                                 <CardContent className="px-8">
                                     <p className="text-gray-600 leading-relaxed text-lg">
-                                        Licensed electrical contractor and solar technology innovator with 12+ years in the industry. David
-                                        co-founded Relentless Energy to bring cutting-edge solar solutions to Tampa Bay. He oversees all
-                                        technical operations and ensures every installation meets the highest quality standards.
+                                        As a part-owner of Relentless Energy Solar, Luan Le brings a wealth of experience and a passion for community. Originally from Vietnam, Luan's impressive career spans over two decades, with a strong background in manufacturing, construction, and land development. His commitment to both his work and his community makes him a valuable part of the team.
                                     </p>
-                                    <div className="mt-6 space-y-2">
-                                        <div className="flex items-center justify-center text-sm text-gray-500">
-                                            <Zap className="w-4 h-4 mr-2" />
-                                            Licensed Electrical Contractor
-                                        </div>
-                                        <div className="flex items-center justify-center text-sm text-gray-500">
-                                            <CheckCircle className="w-4 h-4 mr-2" />
-                                            Solar Technology Specialist
-                                        </div>
-                                    </div>
+
                                 </CardContent>
                             </Card>
                         </ScrollReveal>
