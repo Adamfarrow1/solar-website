@@ -33,9 +33,9 @@ export default function OurTeamPage() {
             image: "/images/jason.jpeg",
         },
         {
-            name: "David Le",
+            name: "Luan Le",
             role: "Co-Founder & CTO",
-            bio: "David brings a passion for cutting-edge technology and innovation to every solar project. As CTO, he oversees the technical aspects of installations, ensuring each system is engineered for maximum efficiency and reliability. David specializes in complex commercial installations and advanced battery storage solutions, staying at the forefront of solar innovation. His meticulous attention to detail and commitment to excellence ensures that every Relentless Energy system meets the highest industry standards.",
+            bio: "As a part-owner of Relentless Energy Solar, Luan Le brings a wealth of experience and a passion for community. Originally from Vietnam, Luan's impressive career spans over two decades, with a strong background in manufacturing, construction, and land development. This diverse expertise has given him a deep understanding of what it takes to build and grow successful ventures from the ground up. Beyond his professional accomplishments, Luan is dedicated to giving back to the community, a value that aligns perfectly with Relentless Energy Solar's mission. His commitment to both his work and his community makes him a valuable part of the team.",
             certifications: ["Licensed Electrical Engineer", "Tesla Powerwall Certified", "Commercial Solar Specialist"],
             initials: "DL",
             image: "/images/david.jpeg",
