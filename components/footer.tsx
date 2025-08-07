@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react"
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
     return (
@@ -14,15 +14,13 @@ export default function Footer() {
                             reliable, efficient solar energy solutions.
                         </p>
                         <div className="flex space-x-4">
-                            <Link href="#" className="text-gray-400 hover:text-red-400">
+                            <Link href="https://www.facebook.com/relentlessenergysolar/" className="text-gray-400 hover:text-red-400">
                                 <Facebook className="h-5 w-5" />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-red-400">
+                            <Link href="https://www.instagram.com/relentless_energy_solar" className="text-gray-400 hover:text-red-400">
                                 <Instagram className="h-5 w-5" />
                             </Link>
-                            <Link href="#" className="text-gray-400 hover:text-red-400">
-                                <Linkedin className="h-5 w-5" />
-                            </Link>
+
                         </div>
                     </div>
 

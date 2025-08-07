@@ -447,7 +447,7 @@ export default function TestimonialsPage() {
                                     variant="outline"
                                     className="border-red-200 text-red-700 hover:bg-red-50 bg-transparent"
                                 >
-                                    <Link href="https://facebook.com/relentlessenergy" target="_blank">
+                                    <Link href="https://www.facebook.com/relentlessenergysolar/" target="_blank">
                                         View Facebook Reviews
                                     </Link>
                                 </Button>
