@@ -31,6 +31,7 @@ const navigation = [
         name: "Incentives",
         href: "/solar-power-electricity-savings",
         children: [
+            { name: "Pricing Estimator", href: "/solar-power-electricity-savings/pricing-estimator" },
             { name: "Electricity Savings", href: "/solar-power-electricity-savings/solar-power-electricity-savings" },
             { name: "Federal Tax Credits", href: "/solar-power-electricity-savings/solar-federal-tax-credit" },
             { name: "Net Metering", href: "/solar-power-electricity-savings/net-metering-florida" },

@@ -74,6 +74,11 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-red-500">Incentives</h3>
                         <ul className="space-y-2">
                             <li>
+                                <Link href="/solar-power-electricity-savings/pricing-estimator" className="text-gray-300 hover:text-white">
+                                    Pricing Estimator
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/solar-power-electricity-savings/solar-power-electricity-savings" className="text-gray-300 hover:text-white">
                                     Electricity Savings
                                 </Link>

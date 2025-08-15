@@ -121,6 +121,17 @@ export default function HomePage() {
                   size="lg"
                   className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
                 >
+                  <Link href="/solar-power-electricity-savings/pricing-estimator">
+                    <Sun className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
+                    Calculate Savings
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
+                >
                   <Link href="tel:386-832-1119">
                     <Phone className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                     (386) 832-1119
@@ -405,6 +416,17 @@ export default function HomePage() {
                   <Link href="/free-solar-quote">
                     Get Your Free Solar Quote
                     <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-red-600 text-lg px-10 py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
+                >
+                  <Link href="/solar-power-electricity-savings/pricing-estimator">
+                    <Sun className="mr-2 h-6 w-6" />
+                    Estimate Your Savings
                   </Link>
                 </Button>
                 <Button
