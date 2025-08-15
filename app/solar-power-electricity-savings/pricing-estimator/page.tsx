@@ -72,10 +72,10 @@ export default function PricingEstimatorPage() {
 
         const bill = Math.max(0, parseFloat(monthlyBill));
         const kwhUsage = Math.max(0, parseFloat(monthlyKwh));
-        
+
         // Calculate utility rate from their bill data
         const rate = bill / kwhUsage;
-        
+
         // Sanity check - typical rates in Florida are $0.10-$0.20/kWh
         if (rate < 0.05 || rate > 0.50) {
             alert("Please check your monthly bill and kWh usage - the calculated rate seems unusual.");
@@ -134,7 +134,7 @@ export default function PricingEstimatorPage() {
             monthlyPayment: payment,
             calculatedUtilityRate: Math.round(rate * 100) / 100, // round to nearest cent
         });
-    };    return (
+    }; return (
         <div className="min-h-screen bg-white pt-24 sm:pt-32">
             {/* Hero Section */}
             <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
