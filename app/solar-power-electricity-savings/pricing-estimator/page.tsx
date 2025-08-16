@@ -26,10 +26,56 @@ import Link from "next/link"
 import ScrollReveal from "@/components/scroll-reveal"
 import { useState, useEffect } from "react"
 
+// Custom styles for better mobile responsiveness
+const customStyles = `
+  @media (max-width: 640px) {
+    input[type="range"] {
+      height: 6px !important;
+    }
+    .slider-thumb {
+      width: 16px !important;
+      height: 16px !important;
+    }
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dc2626;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dc2626;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 640px) {
+    input[type="range"]::-webkit-slider-thumb {
+      width: 16px;
+      height: 16px;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+    }
+  }
+`
+
 export default function PricingEstimatorPage() {
     const [monthlyBill, setMonthlyBill] = useState("")
     const [monthlyKwh, setMonthlyKwh] = useState("")
     const [roofType, setRoofType] = useState("")
+    const [roofAge, setRoofAge] = useState("")
     const [shadingLevel, setShadingLevel] = useState("")
     const [offsetPercent, setOffsetPercent] = useState("90") // %
     const [apr, setApr] = useState("6.0") // %
@@ -68,7 +114,7 @@ export default function PricingEstimatorPage() {
     }
 
     const calculateEstimate = () => {
-        if (!monthlyBill || !monthlyKwh || !roofType || !shadingLevel) return;
+        if (!monthlyBill || !monthlyKwh || !roofType || !roofAge || !shadingLevel) return;
 
         const bill = Math.max(0, parseFloat(monthlyBill));
         const kwhUsage = Math.max(0, parseFloat(monthlyKwh));
@@ -119,8 +165,18 @@ export default function PricingEstimatorPage() {
             monthlyPayment(netCost, parseFloat(apr) || 0, parseInt(termYears || "20", 10) || 20)
         );
 
+        // Interest-only payment calculation
+        const interestOnlyPayment = Math.round((netCost * (parseFloat(apr) || 0) / 100) / 12);
+
         // CO2
         const annualCO2Reduction = targetAnnualKwhOffset * CO2_LBS_PER_KWH;
+
+        // Home appreciation estimate (based on system size)
+        // Formula: $15k base + $1k per kW, capped at $50k
+        const homeAppreciation = Math.min(50000, 15000 + (systemKw * 1000));
+
+        // Monthly power bill savings estimate
+        const monthlySavings = Math.round(year1Savings / 12);
 
         setEstimatedResults({
             systemSize: Math.round(systemKw * 10) / 10,
@@ -128,38 +184,45 @@ export default function PricingEstimatorPage() {
             federalTaxCredit: Math.round(federalTaxCredit),
             netCost: Math.round(netCost),
             annualSavings: Math.round(year1Savings),
+            monthlySavings: monthlySavings,
             paybackPeriod: Math.round(simplePaybackYears * 10) / 10,
             twentyYearSavings: Math.round(twentyYearSavings),
             annualCO2Reduction: Math.round(annualCO2Reduction),
             monthlyPayment: payment,
+            interestOnlyPayment: interestOnlyPayment,
             calculatedUtilityRate: Math.round(rate * 100) / 100, // round to nearest cent
+            homeAppreciation: Math.round(homeAppreciation),
         });
-    }; return (
-        <div className="min-h-screen bg-white pt-24 sm:pt-32">
+    };
+
+    return (
+        <>
+            <style dangerouslySetInnerHTML={{ __html: customStyles }} />
+            <div className="min-h-screen bg-white pt-24 sm:pt-32">
             {/* Hero Section */}
             <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 {/* Background Elements */}
-                <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-50"></div>
-                <div className="absolute top-0 left-0 w-56 h-56 sm:w-72 sm:h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-                <div className="absolute top-0 right-0 w-56 h-56 sm:w-72 sm:h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-red-50"></div>
+                <div className="absolute top-0 left-0 w-56 h-56 sm:w-72 sm:h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+                <div className="absolute top-0 right-0 w-56 h-56 sm:w-72 sm:h-72 bg-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-72 h-72 sm:w-96 sm:h-96 bg-red-50 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-pulse delay-500"></div>
 
                 <div className="relative max-w-7xl mx-auto">
                     <div className="text-center max-w-4xl mx-auto">
                         <ScrollReveal direction="fade" delay={200}>
                             <div className="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-red-100 shadow-lg mb-6">
-                                <Calculator className="w-4 h-4 mr-2 text-red-600" />
-                                <span className="text-sm font-semibold text-red-700">Free Solar Pricing Calculator</span>
+                                <PiggyBank className="w-4 h-4 mr-2 text-red-600" />
+                                <span className="text-sm font-semibold text-red-700">Free Solar Savings Calculator</span>
                                 <div className="ml-2 w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
                             </div>
                         </ScrollReveal>
 
                         <ScrollReveal direction="up" delay={400}>
                             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                                Solar System{" "}
+                                Solar Savings{" "}
                                 <span className="relative">
                                     <span className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 bg-clip-text text-transparent">
-                                        Pricing Estimator
+                                        Estimator
                                     </span>
                                     <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-red-700 rounded-full transform scale-x-0 animate-pulse"></div>
                                 </span>
@@ -168,7 +231,7 @@ export default function PricingEstimatorPage() {
 
                         <ScrollReveal direction="up" delay={600}>
                             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                                Get an instant estimate for your solar system cost, savings, and payback period. See how much you could save with solar energy in Tampa Bay.
+                                Discover how much money you can save every year with solar energy. Get your personalized savings estimate and see your payback period in Tampa Bay.
                             </p>
                         </ScrollReveal>
                     </div>
@@ -176,9 +239,9 @@ export default function PricingEstimatorPage() {
             </section>
 
             {/* Calculator Section */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-12">
+            <section className="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+                <div className="max-w-4xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                         {/* Calculator Form */}
                         <ScrollReveal direction="left" delay={200}>
                             {/* Instructions Card */}
@@ -203,16 +266,16 @@ export default function PricingEstimatorPage() {
                             </Card>
 
                             <Card className="shadow-2xl border-0 bg-gradient-to-br from-white to-red-50">
-                                <CardHeader className="pb-6">
-                                    <CardTitle className="text-2xl text-gray-900 flex items-center">
-                                        <Calculator className="w-6 h-6 mr-3 text-red-600" />
-                                        Solar Calculator
+                                <CardHeader className="pb-4 sm:pb-6">
+                                    <CardTitle className="text-xl sm:text-2xl text-gray-900 flex items-center">
+                                        <PiggyBank className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600" />
+                                        Solar Savings Calculator
                                     </CardTitle>
-                                    <CardDescription className="text-lg text-gray-600">
-                                        Enter your information below to get a personalized solar estimate
+                                    <CardDescription className="text-base sm:text-lg text-gray-600">
+                                        Enter your information below to discover how much you can save with solar
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="space-y-6">
+                                <CardContent className="space-y-4 sm:space-y-6">
                                     <div className="space-y-2">
                                         <Label htmlFor="monthly-bill" className="text-base font-semibold text-gray-700">
                                             Monthly Electricity Bill ($)
@@ -225,8 +288,26 @@ export default function PricingEstimatorPage() {
                                                 placeholder="200"
                                                 value={monthlyBill}
                                                 onChange={(e) => setMonthlyBill(e.target.value)}
-                                                className="pl-10 h-12 text-lg"
+                                                className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
                                             />
+                                        </div>
+                                        <div className="mt-3">
+                                            <input
+                                                type="range"
+                                                min="50"
+                                                max="500"
+                                                step="10"
+                                                value={monthlyBill || 200}
+                                                onChange={(e) => setMonthlyBill(e.target.value)}
+                                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                                                style={{
+                                                    background: `linear-gradient(to right, #dc2626 0%, #dc2626 ${((parseFloat(monthlyBill) || 200) - 50) / (500 - 50) * 100}%, #e5e7eb ${((parseFloat(monthlyBill) || 200) - 50) / (500 - 50) * 100}%, #e5e7eb 100%)`
+                                                }}
+                                            />
+                                            <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                                <span>$50</span>
+                                                <span>$500</span>
+                                            </div>
                                         </div>
                                         <p className="text-sm text-gray-500">
                                             Your total monthly electric bill amount
@@ -238,7 +319,7 @@ export default function PricingEstimatorPage() {
                                             Roof Type
                                         </Label>
                                         <Select value={roofType} onValueChange={setRoofType}>
-                                            <SelectTrigger className="h-12 text-lg">
+                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
                                                 <SelectValue placeholder="Select your roof type" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -255,10 +336,31 @@ export default function PricingEstimatorPage() {
 
                                     <div className="space-y-2">
                                         <Label className="text-base font-semibold text-gray-700">
+                                            Roof Age
+                                        </Label>
+                                        <Select value={roofAge} onValueChange={setRoofAge}>
+                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
+                                                <SelectValue placeholder="How old is your roof?" />
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectItem value="0-5">0-5 years (New/Recently Replaced)</SelectItem>
+                                                <SelectItem value="6-10">6-10 years (Good Condition)</SelectItem>
+                                                <SelectItem value="11-15">11-15 years (Fair Condition)</SelectItem>
+                                                <SelectItem value="16-20">16-20 years (Aging)</SelectItem>
+                                                <SelectItem value="21+">21+ years (May Need Replacement Soon)</SelectItem>
+                                            </SelectContent>
+                                        </Select>
+                                        <p className="text-sm text-gray-500">
+                                            Roof age helps us determine if any roof work may be needed before installation
+                                        </p>
+                                    </div>
+
+                                    <div className="space-y-2">
+                                        <Label className="text-base font-semibold text-gray-700">
                                             Roof Shading Level
                                         </Label>
                                         <Select value={shadingLevel} onValueChange={setShadingLevel}>
-                                            <SelectTrigger className="h-12 text-lg">
+                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
                                                 <SelectValue placeholder="Select shading level" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -284,8 +386,26 @@ export default function PricingEstimatorPage() {
                                                 placeholder="1200"
                                                 value={monthlyKwh}
                                                 onChange={(e) => setMonthlyKwh(e.target.value)}
-                                                className="pl-10 h-12 text-lg"
+                                                className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
                                             />
+                                        </div>
+                                        <div className="mt-3">
+                                            <input
+                                                type="range"
+                                                min="300"
+                                                max="3000"
+                                                step="50"
+                                                value={monthlyKwh || 1200}
+                                                onChange={(e) => setMonthlyKwh(e.target.value)}
+                                                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                                                style={{
+                                                    background: `linear-gradient(to right, #b91c1c 0%, #b91c1c ${((parseFloat(monthlyKwh) || 1200) - 300) / (3000 - 300) * 100}%, #e5e7eb ${((parseFloat(monthlyKwh) || 1200) - 300) / (3000 - 300) * 100}%, #e5e7eb 100%)`
+                                                }}
+                                            />
+                                            <div className="flex justify-between text-xs text-gray-500 mt-1">
+                                                <span>300 kWh</span>
+                                                <span>3000 kWh</span>
+                                            </div>
                                         </div>
                                         <p className="text-sm text-gray-500">
                                             Find this on your electric bill (look for "kWh used" or "Energy Delivered")
@@ -296,38 +416,78 @@ export default function PricingEstimatorPage() {
                                         <Label htmlFor="offset-percent" className="text-base font-semibold text-gray-700">
                                             Solar Offset Target (%)
                                         </Label>
-                                        <div className="relative">
-                                            <Zap className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-                                            <Input
-                                                id="offset-percent"
-                                                type="number"
-                                                min="50"
-                                                max="100"
-                                                placeholder="90"
-                                                value={offsetPercent}
-                                                onChange={(e) => setOffsetPercent(e.target.value)}
-                                                className="pl-10 h-12 text-lg"
-                                            />
+                                        <div className="space-y-3">
+                                            <div className="relative">
+                                                <Zap className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
+                                                <Input
+                                                    id="offset-percent"
+                                                    type="number"
+                                                    min="50"
+                                                    max="100"
+                                                    placeholder="90"
+                                                    value={offsetPercent}
+                                                    onChange={(e) => setOffsetPercent(e.target.value)}
+                                                    className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
+                                                />
+                                            </div>
+                                            <div className="space-y-1">
+                                                <input
+                                                    type="range"
+                                                    min="50"
+                                                    max="100"
+                                                    step="5"
+                                                    value={offsetPercent || 90}
+                                                    onChange={(e) => setOffsetPercent(e.target.value)}
+                                                    className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+                                                    style={{
+                                                        background: `linear-gradient(to right, #991b1b 0%, #991b1b ${((Number(offsetPercent) || 90) - 50) / (100 - 50) * 100}%, #e5e7eb ${((Number(offsetPercent) || 90) - 50) / (100 - 50) * 100}%, #e5e7eb 100%)`
+                                                    }}
+                                                />
+                                                <div className="flex justify-between text-xs text-gray-500">
+                                                    <span>50%</span>
+                                                    <span>100%</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <p className="text-sm text-gray-500">
                                             Percentage of your electric bill you want solar to cover (90% is optimal)
                                         </p>
                                     </div>
 
-                                    <div className="grid grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <Label htmlFor="apr" className="text-base font-semibold text-gray-700">
                                                 Loan APR (%)
                                             </Label>
-                                            <Input
-                                                id="apr"
-                                                type="number"
-                                                step="0.1"
-                                                placeholder="6.0"
-                                                value={apr}
-                                                onChange={(e) => setApr(e.target.value)}
-                                                className="h-12 text-lg"
-                                            />
+                                            <div className="space-y-3">
+                                                <Input
+                                                    id="apr"
+                                                    type="number"
+                                                    step="0.1"
+                                                    placeholder="6.0"
+                                                    value={apr}
+                                                    onChange={(e) => setApr(e.target.value)}
+                                                    className="h-10 sm:h-12 text-base sm:text-lg"
+                                                />
+                                                <div className="space-y-1">
+                                                    <input
+                                                        type="range"
+                                                        min="3"
+                                                        max="12"
+                                                        step="0.1"
+                                                        value={apr || 6}
+                                                        onChange={(e) => setApr(e.target.value)}
+                                                        className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+                                                        style={{
+                                                            background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${((Number(apr) || 6) - 3) / (12 - 3) * 100}%, #e5e7eb ${((Number(apr) || 6) - 3) / (12 - 3) * 100}%, #e5e7eb 100%)`
+                                                        }}
+                                                    />
+                                                    <div className="flex justify-between text-xs text-gray-500">
+                                                        <span>3%</span>
+                                                        <span>12%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <p className="text-sm text-gray-500">
                                                 Interest rate for solar financing
                                             </p>
@@ -336,14 +496,34 @@ export default function PricingEstimatorPage() {
                                             <Label htmlFor="term-years" className="text-base font-semibold text-gray-700">
                                                 Loan Term (Years)
                                             </Label>
-                                            <Input
-                                                id="term-years"
-                                                type="number"
-                                                placeholder="20"
-                                                value={termYears}
-                                                onChange={(e) => setTermYears(e.target.value)}
-                                                className="h-12 text-lg"
-                                            />
+                                            <div className="space-y-3">
+                                                <Input
+                                                    id="term-years"
+                                                    type="number"
+                                                    placeholder="20"
+                                                    value={termYears}
+                                                    onChange={(e) => setTermYears(e.target.value)}
+                                                    className="h-10 sm:h-12 text-base sm:text-lg"
+                                                />
+                                                <div className="space-y-1">
+                                                    <input
+                                                        type="range"
+                                                        min="10"
+                                                        max="30"
+                                                        step="1"
+                                                        value={termYears || 20}
+                                                        onChange={(e) => setTermYears(e.target.value)}
+                                                        className="w-full h-2 rounded-lg appearance-none cursor-pointer"
+                                                        style={{
+                                                            background: `linear-gradient(to right, #7f1d1d 0%, #7f1d1d ${((Number(termYears) || 20) - 10) / (30 - 10) * 100}%, #e5e7eb ${((Number(termYears) || 20) - 10) / (30 - 10) * 100}%, #e5e7eb 100%)`
+                                                        }}
+                                                    />
+                                                    <div className="flex justify-between text-xs text-gray-500">
+                                                        <span>10 years</span>
+                                                        <span>30 years</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <p className="text-sm text-gray-500">
                                                 Length of financing (20 years is typical)
                                             </p>
@@ -352,9 +532,9 @@ export default function PricingEstimatorPage() {
 
                                     <Button
                                         onClick={calculateEstimate}
-                                        className="w-full h-14 text-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
+                                        className="w-full h-12 sm:h-14 text-base sm:text-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                                     >
-                                        <Calculator className="w-5 h-5 mr-2" />
+                                        <PiggyBank className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                                         Calculate My Solar Savings
                                     </Button>
                                 </CardContent>
@@ -365,22 +545,64 @@ export default function PricingEstimatorPage() {
                         <ScrollReveal direction="right" delay={400}>
                             {estimatedResults ? (
                                 <div className="space-y-6">
+                                    {/* Home Appreciation - Top Impact */}
                                     <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-emerald-50">
                                         <CardHeader>
                                             <CardTitle className="text-xl text-gray-900 flex items-center">
-                                                <Sun className="w-5 h-5 mr-2 text-yellow-500" />
-                                                Your Solar System Estimate
+                                                <TrendingUp className="w-5 h-5 mr-2 text-green-500" />
+                                                Estimated Home Value Increase
                                             </CardTitle>
                                         </CardHeader>
                                         <CardContent>
-                                            <div className="grid grid-cols-2 gap-4 mb-4">
+                                            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                                                <div className="text-4xl font-bold text-green-600 mb-2">
+                                                    ${estimatedResults.homeAppreciation.toLocaleString()}
+                                                </div>
+                                                <div className="text-lg text-gray-700 mb-2">Added Home Value</div>
+                                                <div className="text-sm text-gray-500">
+                                                    Solar systems typically increase home value by $15k-$50k based on system size
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+
+                                    {/* Monthly Savings - Hard Hitting Point */}
+                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-red-50 to-pink-50">
+                                        <CardHeader>
+                                            <CardTitle className="text-xl text-gray-900 flex items-center">
+                                                <PiggyBank className="w-5 h-5 mr-2 text-red-500" />
+                                                Monthly Power Bill Savings
+                                            </CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="text-center p-6 bg-white rounded-lg shadow-sm">
+                                                <div className="text-4xl font-bold text-red-600 mb-2">
+                                                    ${estimatedResults.monthlySavings}/month
+                                                </div>
+                                                <div className="text-lg text-gray-700 mb-2">Estimated Monthly Savings</div>
+                                                <div className="text-sm text-gray-500">
+                                                    Your estimated reduction in monthly electricity costs
+                                                </div>
+                                            </div>
+                                        </CardContent>
+                                    </Card>
+
+                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-cyan-50">
+                                        <CardHeader>
+                                            <CardTitle className="text-xl text-gray-900 flex items-center">
+                                                <Sun className="w-5 h-5 mr-2 text-yellow-500" />
+                                                Your Solar System Summary
+                                            </CardTitle>
+                                        </CardHeader>
+                                        <CardContent>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                                                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                                                    <div className="text-2xl font-bold text-red-600">{estimatedResults.systemSize} kW</div>
+                                                    <div className="text-2xl font-bold text-blue-600">{estimatedResults.systemSize} kW</div>
                                                     <div className="text-sm text-gray-600">System Size</div>
                                                 </div>
                                                 <div className="text-center p-4 bg-white rounded-lg shadow-sm">
-                                                    <div className="text-2xl font-bold text-gray-900">${estimatedResults.systemCost.toLocaleString()}</div>
-                                                    <div className="text-sm text-gray-600">Total Cost</div>
+                                                    <div className="text-2xl font-bold text-red-600">${estimatedResults.annualSavings.toLocaleString()}</div>
+                                                    <div className="text-sm text-gray-600">Total Annual Savings</div>
                                                 </div>
                                             </div>
                                             <div className="text-center p-3 bg-blue-100 rounded-lg">
@@ -394,10 +616,10 @@ export default function PricingEstimatorPage() {
                                         </CardContent>
                                     </Card>
 
-                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-cyan-50">
+                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-indigo-50">
                                         <CardHeader>
                                             <CardTitle className="text-xl text-gray-900 flex items-center">
-                                                <DollarSign className="w-5 h-5 mr-2 text-green-500" />
+                                                <DollarSign className="w-5 h-5 mr-2 text-red-500" />
                                                 Financial Benefits
                                             </CardTitle>
                                         </CardHeader>
@@ -405,15 +627,29 @@ export default function PricingEstimatorPage() {
                                             <div className="space-y-4">
                                                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                     <span className="text-gray-700">Federal Tax Credit (30%)</span>
-                                                    <span className="font-bold text-green-600">-${estimatedResults.federalTaxCredit.toLocaleString()}</span>
+                                                    <span className="font-bold text-red-600">-${estimatedResults.federalTaxCredit.toLocaleString()}</span>
                                                 </div>
                                                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                                                    <span className="text-gray-700">Net Cost After Credits</span>
-                                                    <span className="font-bold text-gray-900">${estimatedResults.netCost.toLocaleString()}</span>
+                                                    <span className="text-gray-700">Monthly Savings on Power Bill</span>
+                                                    <span className="font-bold text-green-600">${estimatedResults.monthlySavings}/mo</span>
                                                 </div>
-                                                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                                                    <span className="text-gray-700">Est. Monthly Payment</span>
-                                                    <span className="font-bold text-blue-600">${estimatedResults.monthlyPayment}/mo</span>
+
+                                                {/* Payment Options */}
+                                                <div className="bg-gray-50 rounded-lg p-3">
+                                                    <h4 className="font-semibold text-gray-800 mb-3">Financing Options:</h4>
+                                                    <div className="space-y-2">
+                                                        <div className="flex justify-between items-center p-2 bg-white rounded">
+                                                            <span className="text-sm text-gray-700">Principal + Interest Payment</span>
+                                                            <span className="font-bold text-blue-600">${estimatedResults.monthlyPayment}/mo</span>
+                                                        </div>
+                                                        <div className="flex justify-between items-center p-2 bg-white rounded">
+                                                            <span className="text-sm text-gray-700">Interest-Only Payment</span>
+                                                            <span className="font-bold text-purple-600">${estimatedResults.interestOnlyPayment}/mo</span>
+                                                        </div>
+                                                    </div>
+                                                    <p className="text-xs text-gray-500 mt-2">
+                                                        Interest-only payments are lower but don't pay down principal
+                                                    </p>
                                                 </div>
                                             </div>
                                         </CardContent>
@@ -430,7 +666,7 @@ export default function PricingEstimatorPage() {
                                             <div className="space-y-4">
                                                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                     <span className="text-gray-700">Annual Savings</span>
-                                                    <span className="font-bold text-green-600">${estimatedResults.annualSavings.toLocaleString()}</span>
+                                                    <span className="font-bold text-red-600">${estimatedResults.annualSavings.toLocaleString()}</span>
                                                 </div>
                                                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                     <span className="text-gray-700">Payback Period</span>
@@ -438,22 +674,22 @@ export default function PricingEstimatorPage() {
                                                 </div>
                                                 <div className="flex justify-between items-center p-3 bg-white rounded-lg">
                                                     <span className="text-gray-700">20-Year Savings</span>
-                                                    <span className="font-bold text-green-600">${estimatedResults.twentyYearSavings.toLocaleString()}</span>
+                                                    <span className="font-bold text-red-600">${estimatedResults.twentyYearSavings.toLocaleString()}</span>
                                                 </div>
                                             </div>
                                         </CardContent>
                                     </Card>
 
-                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-green-50 to-lime-50">
+                                    <Card className="border-0 shadow-lg bg-gradient-to-br from-red-50 to-orange-50">
                                         <CardHeader>
                                             <CardTitle className="text-xl text-gray-900 flex items-center">
-                                                <Leaf className="w-5 h-5 mr-2 text-green-500" />
+                                                <Leaf className="w-5 h-5 mr-2 text-red-500" />
                                                 Environmental Impact
                                             </CardTitle>
                                         </CardHeader>
                                         <CardContent>
                                             <div className="text-center p-4 bg-white rounded-lg">
-                                                <div className="text-2xl font-bold text-green-600">{estimatedResults.annualCO2Reduction.toLocaleString()} lbs</div>
+                                                <div className="text-2xl font-bold text-red-600">{estimatedResults.annualCO2Reduction.toLocaleString()} lbs</div>
                                                 <div className="text-sm text-gray-600">CO₂ Reduced Annually</div>
                                                 <div className="text-xs text-gray-500 mt-1">Equivalent to planting {Math.round(estimatedResults.annualCO2Reduction / 48)} trees per year</div>
                                             </div>
@@ -516,9 +752,9 @@ export default function PricingEstimatorPage() {
 
                 <div className="relative max-w-6xl mx-auto text-center">
                     <ScrollReveal direction="up" delay={200}>
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready for a Detailed Assessment?</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Start Saving with Solar?</h2>
                         <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
-                            Get a precise quote with our Tesla-certified team. We'll provide a detailed site assessment and customized solar solution for your home.
+                            Lock in your savings with our Tesla-certified team. We'll provide a detailed assessment and show you exactly how much you can save every month.
                         </p>
                     </ScrollReveal>
 
@@ -530,8 +766,8 @@ export default function PricingEstimatorPage() {
                                 asChild
                             >
                                 <Link href="/free-solar-quote">
-                                    <Sun className="w-6 h-6 mr-3" />
-                                    Get Professional Quote
+                                    <PiggyBank className="w-6 h-6 mr-3" />
+                                    Start Saving Today
                                     <ArrowRight className="w-6 h-6 ml-3" />
                                 </Link>
                             </Button>
@@ -549,6 +785,7 @@ export default function PricingEstimatorPage() {
                     </ScrollReveal>
                 </div>
             </section>
-        </div>
+            </div>
+        </>
     )
 }

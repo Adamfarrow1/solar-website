@@ -3,7 +3,7 @@ import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-gray-900 text-white overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
@@ -160,15 +160,15 @@ export default function Footer() {
                             <h4 className="text-md font-semibold text-red-400 mb-3">Contact Us</h4>
                             <div className="space-y-3">
                                 <div className="flex items-center space-x-3">
-                                    <Phone className="h-4 w-4 text-red-500" />
+                                    <Phone className="h-4 w-4 text-red-500 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">(386) 832-1119</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
-                                    <Mail className="h-4 w-4 text-red-500" />
-                                    <span className="text-gray-300 text-sm">jfeliz@relentlessenergy.org</span>
+                                    <Mail className="h-4 w-4 text-red-500 flex-shrink-0" />
+                                    <span className="text-gray-300 text-sm break-all">jfeliz@relentlessenergy.org</span>
                                 </div>
                                 <div className="flex items-start space-x-3">
-                                    <MapPin className="h-4 w-4 text-red-500 mt-1" />
+                                    <MapPin className="h-4 w-4 text-red-500 mt-1 flex-shrink-0" />
                                     <span className="text-gray-300 text-sm">
                                         625 E Twiggs St Ste 110a
                                         <br />

@@ -104,19 +104,19 @@ export default function Header() {
                 }`}
         >
             {/* Top bar with contact info */}
-            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-2 px-4 text-sm">
+            <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-2 px-4 text-sm overflow-hidden">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center space-x-3 sm:space-x-6">
-                        <div className="flex items-center space-x-2">
-                            <Phone className="h-3 w-3" />
-                            <span className="font-medium text-xs sm:text-sm">(386) 832-1119</span>
+                    <div className="flex items-center space-x-3 sm:space-x-6 min-w-0 flex-1">
+                        <div className="flex items-center space-x-2 min-w-0">
+                            <Phone className="h-3 w-3 flex-shrink-0" />
+                            <span className="font-medium text-xs sm:text-sm truncate">(386) 832-1119</span>
                         </div>
-                        <div className="hidden sm:flex items-center space-x-2">
-                            <Mail className="h-3 w-3" />
-                            <span className="text-xs sm:text-sm">jfeliz@relentlessenergy.org</span>
+                        <div className="hidden sm:flex items-center space-x-2 min-w-0">
+                            <Mail className="h-3 w-3 flex-shrink-0" />
+                            <span className="text-xs sm:text-sm truncate">jfeliz@relentlessenergy.org</span>
                         </div>
                     </div>
-                    <div className="text-xs font-medium hidden md:block">⚡ Tesla Certified Installer | Licensed & Insured</div>
+                    <div className="text-xs font-medium hidden lg:block flex-shrink-0">⚡ Tesla Certified Installer | Licensed & Insured</div>
                 </div>
             </div>
 
@@ -217,7 +217,7 @@ export default function Header() {
                     />
 
                     {/* Menu Panel - Full Screen Height */}
-                    <div className="fixed top-0 right-0 w-full max-w-sm h-screen bg-white shadow-2xl transform transition-all duration-300 ease-out border-l border-gray-100">
+                    <div className="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl transform transition-all duration-300 ease-out border-l border-gray-100 flex flex-col overflow-hidden">
                         {/* Header */}
                         <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-white to-gray-50">
                             <Link href="/" className="flex items-center space-x-3 group" onClick={() => setMobileMenuOpen(false)}>
@@ -241,7 +241,7 @@ export default function Header() {
                         </div>
 
                         {/* Navigation Items */}
-                        <div className="px-6 py-6 space-y-2 h-[calc(100vh-240px)] overflow-y-auto bg-white">
+                        <div className="flex-1 px-6 py-6 space-y-2 overflow-y-auto bg-white min-h-0">
                             {navigation.map((item, index) => (
                                 <div key={item.name} className="space-y-1">
                                     <div className="flex items-center">
@@ -295,7 +295,7 @@ export default function Header() {
                         </div>
 
                         {/* Footer CTA - Fixed at Bottom */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
+                        <div className="flex-shrink-0 p-6 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
                             <Button
                                 asChild
                                 className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:via-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-base min-h-[52px] transition-all duration-300 hover:scale-[1.02] border border-red-500/20"
