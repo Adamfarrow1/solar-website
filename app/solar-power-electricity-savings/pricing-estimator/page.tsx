@@ -38,6 +38,12 @@ const customStyles = `
     }
   }
   
+  @media (min-width: 1024px) {
+    input[type="range"] {
+      height: 8px !important;
+    }
+  }
+  
   input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     width: 20px;
@@ -67,6 +73,17 @@ const customStyles = `
     input[type="range"]::-moz-range-thumb {
       width: 16px;
       height: 16px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    input[type="range"]::-webkit-slider-thumb {
+      width: 24px;
+      height: 24px;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
     }
   }
 `
@@ -239,9 +256,9 @@ export default function PricingEstimatorPage() {
             </section>
 
             {/* Calculator Section */}
-            <section className="py-8 sm:py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-                <div className="max-w-4xl mx-auto">
-                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+            <section className="py-8 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+                <div className="max-w-2xl lg:max-w-6xl xl:max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
                         {/* Calculator Form */}
                         <ScrollReveal direction="left" delay={200}>
                             {/* Instructions Card */}
@@ -266,18 +283,18 @@ export default function PricingEstimatorPage() {
                             </Card>
 
                             <Card className="shadow-2xl border-0 bg-gradient-to-br from-white to-red-50">
-                                <CardHeader className="pb-4 sm:pb-6">
-                                    <CardTitle className="text-xl sm:text-2xl text-gray-900 flex items-center">
-                                        <PiggyBank className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-red-600" />
+                                <CardHeader className="pb-4 sm:pb-6 lg:pb-8">
+                                    <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-gray-900 flex items-center">
+                                        <PiggyBank className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 mr-2 sm:mr-3 text-red-600" />
                                         Solar Savings Calculator
                                     </CardTitle>
-                                    <CardDescription className="text-base sm:text-lg text-gray-600">
+                                    <CardDescription className="text-base sm:text-lg lg:text-xl text-gray-600">
                                         Enter your information below to discover how much you can save with solar
                                     </CardDescription>
                                 </CardHeader>
-                                <CardContent className="space-y-4 sm:space-y-6">
+                                <CardContent className="space-y-4 sm:space-y-6 lg:space-y-8">
                                     <div className="space-y-2">
-                                        <Label htmlFor="monthly-bill" className="text-base font-semibold text-gray-700">
+                                        <Label htmlFor="monthly-bill" className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700">
                                             Monthly Electricity Bill ($)
                                         </Label>
                                         <div className="relative">
@@ -288,7 +305,7 @@ export default function PricingEstimatorPage() {
                                                 placeholder="200"
                                                 value={monthlyBill}
                                                 onChange={(e) => setMonthlyBill(e.target.value)}
-                                                className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
+                                                className="pl-10 h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl"
                                             />
                                         </div>
                                         <div className="mt-3">
@@ -319,7 +336,7 @@ export default function PricingEstimatorPage() {
                                             Roof Type
                                         </Label>
                                         <Select value={roofType} onValueChange={setRoofType}>
-                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
+                                            <SelectTrigger className="h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl">
                                                 <SelectValue placeholder="Select your roof type" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -339,7 +356,7 @@ export default function PricingEstimatorPage() {
                                             Roof Age
                                         </Label>
                                         <Select value={roofAge} onValueChange={setRoofAge}>
-                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
+                                            <SelectTrigger className="h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl">
                                                 <SelectValue placeholder="How old is your roof?" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -360,7 +377,7 @@ export default function PricingEstimatorPage() {
                                             Roof Shading Level
                                         </Label>
                                         <Select value={shadingLevel} onValueChange={setShadingLevel}>
-                                            <SelectTrigger className="h-10 sm:h-12 text-base sm:text-lg">
+                                            <SelectTrigger className="h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl">
                                                 <SelectValue placeholder="Select shading level" />
                                             </SelectTrigger>
                                             <SelectContent>
@@ -375,7 +392,7 @@ export default function PricingEstimatorPage() {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <Label htmlFor="monthly-kwh" className="text-base font-semibold text-gray-700">
+                                        <Label htmlFor="monthly-kwh" className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700">
                                             Monthly kWh Usage
                                         </Label>
                                         <div className="relative">
@@ -386,7 +403,7 @@ export default function PricingEstimatorPage() {
                                                 placeholder="1200"
                                                 value={monthlyKwh}
                                                 onChange={(e) => setMonthlyKwh(e.target.value)}
-                                                className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
+                                                className="pl-10 h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl"
                                             />
                                         </div>
                                         <div className="mt-3">
@@ -427,7 +444,7 @@ export default function PricingEstimatorPage() {
                                                     placeholder="90"
                                                     value={offsetPercent}
                                                     onChange={(e) => setOffsetPercent(e.target.value)}
-                                                    className="pl-10 h-10 sm:h-12 text-base sm:text-lg"
+                                                    className="pl-10 h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl"
                                                 />
                                             </div>
                                             <div className="space-y-1">
@@ -467,7 +484,7 @@ export default function PricingEstimatorPage() {
                                                     placeholder="6.0"
                                                     value={apr}
                                                     onChange={(e) => setApr(e.target.value)}
-                                                    className="h-10 sm:h-12 text-base sm:text-lg"
+                                                    className="h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl"
                                                 />
                                                 <div className="space-y-1">
                                                     <input
@@ -503,7 +520,7 @@ export default function PricingEstimatorPage() {
                                                     placeholder="20"
                                                     value={termYears}
                                                     onChange={(e) => setTermYears(e.target.value)}
-                                                    className="h-10 sm:h-12 text-base sm:text-lg"
+                                                    className="h-10 sm:h-12 lg:h-14 text-base sm:text-lg lg:text-xl"
                                                 />
                                                 <div className="space-y-1">
                                                     <input
@@ -532,9 +549,9 @@ export default function PricingEstimatorPage() {
 
                                     <Button
                                         onClick={calculateEstimate}
-                                        className="w-full h-12 sm:h-14 text-base sm:text-lg bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
+                                        className="w-full h-12 sm:h-14 lg:h-16 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800"
                                     >
-                                        <PiggyBank className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                                        <PiggyBank className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2" />
                                         Calculate My Solar Savings
                                     </Button>
                                 </CardContent>
