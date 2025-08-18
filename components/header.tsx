@@ -31,7 +31,7 @@ const navigation = [
         name: "Incentives",
         href: "/solar-power-electricity-savings",
         children: [
-            { name: "Pricing Estimator", href: "/solar-power-electricity-savings/pricing-estimator" },
+            { name: "Solar Savings Estimator", href: "/solar-power-electricity-savings/solar-savings-estimator" },
             { name: "Electricity Savings", href: "/solar-power-electricity-savings/solar-power-electricity-savings" },
             { name: "Federal Tax Credits", href: "/solar-power-electricity-savings/solar-federal-tax-credit" },
             { name: "Net Metering", href: "/solar-power-electricity-savings/net-metering-florida" },
@@ -183,45 +183,48 @@ export default function Header() {
                         ))}
                     </div>
 
-                    {/* CTA Button */}
-                    <div className="hidden lg:flex lg:items-center lg:space-x-4">
-                        <Button
-                            asChild
-                            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                        >
-                            <Link href="/free-solar-quote">Get Free Quote</Link>
-                        </Button>
-                    </div>
+                    {/* CTA Button & Mobile menu button */}
+                    <div className="flex items-center space-x-4">
+                        {/* CTA Button - Desktop only */}
+                        <div className="hidden lg:block">
+                            <Button
+                                asChild
+                                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                            >
+                                <Link href="/free-solar-quote">Get Free Quote</Link>
+                            </Button>
+                        </div>
 
-                    {/* Mobile menu button */}
-                    <div className="flex lg:hidden">
-                        <button
-                            type="button"
-                            className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 relative z-50"
-                            onClick={() => setMobileMenuOpen(true)}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            <Menu className="h-6 w-6" />
-                        </button>
+                        {/* Mobile menu button */}
+                        <div className="flex lg:hidden">
+                            <button
+                                type="button"
+                                className="inline-flex items-center justify-center rounded-xl p-2.5 text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors duration-200 relative z-50"
+                                onClick={() => setMobileMenuOpen(true)}
+                            >
+                                <span className="sr-only">Open main menu</span>
+                                <Menu className="h-6 w-6" />
+                            </button>
+                        </div>
                     </div>
                 </div>
             </nav>
 
             {/* Mobile menu */}
             {mobileMenuOpen && (
-                <div className="lg:hidden fixed inset-0 z-[100]">
+                <div className="lg:hidden fixed inset-0 z-[9999] h-screen w-screen">
                     {/* Backdrop */}
                     <div
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-all duration-300 ease-out"
+                        className="fixed inset-0 w-screen h-screen bg-black/70 backdrop-blur-md transition-all duration-300 ease-out"
                         onClick={() => setMobileMenuOpen(false)}
                     />
 
                     {/* Menu Panel - Full Screen Height */}
-                    <div className="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl transform transition-all duration-300 ease-out border-l border-gray-100 flex flex-col overflow-hidden">
+                    <div className="fixed top-0 right-0 w-full max-w-sm h-screen bg-white shadow-2xl transform transition-all duration-300 ease-out border-l border-gray-200 flex flex-col overflow-hidden">
                         {/* Header */}
-                        <div className="flex items-center justify-between p-6 border-b border-gray-100 bg-gradient-to-r from-white to-gray-50">
+                        <div className="flex items-center justify-between p-6 border-b border-gray-200 bg-white flex-shrink-0">
                             <Link href="/" className="flex items-center space-x-3 group" onClick={() => setMobileMenuOpen(false)}>
-                                <div className="relative p-2 rounded-xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-100">
+                                <div className="relative p-2 rounded-xl bg-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105 border border-gray-200">
                                     <Image src="/images/relentless-energy-logo.png" alt="Relentless Energy Logo" width={32} height={32} />
                                 </div>
                                 <div className="flex flex-col">
@@ -233,7 +236,7 @@ export default function Header() {
                             </Link>
                             <button
                                 type="button"
-                                className="rounded-xl p-2.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-all duration-200 hover:scale-105"
+                                className="rounded-xl p-2.5 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 hover:scale-105"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <X className="h-6 w-6" />
@@ -241,13 +244,13 @@ export default function Header() {
                         </div>
 
                         {/* Navigation Items */}
-                        <div className="flex-1 px-6 py-6 space-y-2 overflow-y-auto bg-white min-h-0">
+                        <div className="flex-1 px-6 py-6 space-y-3 overflow-y-auto bg-white">
                             {navigation.map((item, index) => (
-                                <div key={item.name} className="space-y-1">
-                                    <div className="flex items-center">
+                                <div key={item.name} className="space-y-2">
+                                    <div className="flex items-center w-full">
                                         <Link
                                             href={item.href}
-                                            className="flex-1 flex items-center px-4 py-4 text-base font-semibold text-gray-900 hover:text-red-600 hover:bg-gradient-to-r hover:from-red-50 hover:to-red-50/50 rounded-xl transition-all duration-300 min-h-[52px] group border border-transparent hover:border-red-100 hover:shadow-sm"
+                                            className="flex-1 flex items-center px-4 py-4 text-lg font-semibold text-gray-900 hover:text-red-600 hover:bg-red-50 rounded-xl transition-all duration-200 border border-gray-100 hover:border-red-200 hover:shadow-sm"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             <span className="flex-1">{item.name}</span>
@@ -255,64 +258,57 @@ export default function Header() {
                                         {item.children && (
                                             <button
                                                 onClick={() => toggleExpanded(item.name)}
-                                                className="ml-2 p-2 rounded-lg text-gray-400 hover:text-red-600 hover:bg-red-50 transition-all duration-200"
+                                                className="ml-3 p-3 rounded-lg text-gray-500 hover:text-red-600 hover:bg-red-50 transition-all duration-200 border border-gray-100 hover:border-red-200"
                                             >
                                                 <ChevronRight
-                                                    className={`h-4 w-4 transition-transform duration-300 ${expandedItems.includes(item.name) ? "rotate-90" : ""
-                                                        }`}
+                                                    className={`h-5 w-5 transition-transform duration-300 ${expandedItems.includes(item.name) ? "rotate-90" : ""}`}
                                                 />
                                             </button>
                                         )}
                                     </div>
 
                                     {item.children && expandedItems.includes(item.name) && (
-                                        <div className="ml-4 space-y-1 animate-in slide-in-from-top-2 duration-300">
-                                            <div className="border-l-2 border-red-200 pl-4 space-y-1">
-                                                {item.children.map((child, childIndex) => (
-                                                    <Link
-                                                        key={child.name}
-                                                        href={child.href}
-                                                        className="block px-4 py-3 text-sm font-medium text-gray-600 hover:text-red-600 hover:bg-gradient-to-r hover:from-red-50/80 hover:to-transparent rounded-lg transition-all duration-200 min-h-[44px] flex items-center group border border-transparent hover:border-red-100/50"
-                                                        onClick={() => setMobileMenuOpen(false)}
-                                                        style={{
-                                                            animationDelay: `${childIndex * 50}ms`,
-                                                        }}
-                                                    >
-                                                        <span className="flex-1">{child.name}</span>
-                                                        <ChevronRight className="h-3 w-3 text-gray-300 group-hover:text-red-400 transition-colors duration-200" />
-                                                    </Link>
-                                                ))}
-                                            </div>
+                                        <div className="ml-6 space-y-1 bg-gray-50 rounded-xl p-4">
+                                            {item.children.map((child, childIndex) => (
+                                                <Link
+                                                    key={child.name}
+                                                    href={child.href}
+                                                    className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-red-600 hover:bg-white rounded-lg transition-all duration-200 border border-transparent hover:border-red-100 hover:shadow-sm"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    <span className="flex-1">{child.name}</span>
+                                                </Link>
+                                            ))}
                                         </div>
                                     )}
 
-                                    {/* Subtle separator */}
+                                    {/* Separator */}
                                     {index < navigation.length - 1 && (
-                                        <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-2" />
+                                        <div className="h-px bg-gray-200 my-3" />
                                     )}
                                 </div>
                             ))}
                         </div>
 
                         {/* Footer CTA - Fixed at Bottom */}
-                        <div className="flex-shrink-0 p-6 border-t border-gray-100 bg-gradient-to-r from-gray-50 to-white">
+                        <div className="flex-shrink-0 p-6 border-t border-gray-200 bg-white">
                             <Button
                                 asChild
-                                className="w-full bg-gradient-to-r from-red-600 via-red-600 to-red-700 hover:from-red-700 hover:via-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-base min-h-[52px] transition-all duration-300 hover:scale-[1.02] border border-red-500/20"
+                                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl text-lg transition-all duration-300 hover:scale-[1.02]"
                             >
                                 <Link href="/free-solar-quote" onClick={() => setMobileMenuOpen(false)}>
                                     <span className="flex items-center justify-center space-x-2">
                                         <span>Get Free Quote</span>
-                                        <ChevronRight className="h-4 w-4" />
+                                        <ChevronRight className="h-5 w-5" />
                                     </span>
                                 </Link>
                             </Button>
 
                             {/* Contact info */}
-                            <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-500">
-                                <div className="flex items-center space-x-1">
-                                    <Phone className="h-3 w-3" />
-                                    <span className="font-medium">(386) 832-1119</span>
+                            <div className="mt-4 flex items-center justify-center space-x-4 text-sm text-gray-600">
+                                <div className="flex items-center space-x-2">
+                                    <Phone className="h-4 w-4" />
+                                    <span className="font-semibold">(386) 832-1119</span>
                                 </div>
                             </div>
                         </div>
