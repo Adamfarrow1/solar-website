@@ -27,6 +27,7 @@ async function generateSitemap() {
   const posts = await getPosts();
 
   const staticPages = [
+    "privacy-policy",
     "about-us",
     "about-us/faq",
     "about-us/our-guarantee",

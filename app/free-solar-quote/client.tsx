@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Link from "next/link"
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
@@ -38,6 +39,7 @@ interface FormData {
     solarType: string
     financing: string
     message: string
+    smsConsent: boolean
 }
 
 export default function FreeQuoteClient() {
@@ -62,6 +64,7 @@ export default function FreeQuoteClient() {
         solarType: "",
         financing: "",
         message: "",
+        smsConsent: false,
     })
 
     useEffect(() => {
@@ -74,8 +77,13 @@ export default function FreeQuoteClient() {
     }, [toastMessage])
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target
-        setFormData((prev) => ({ ...prev, [name]: value }))
+        const { name, value, type } = e.target
+        if (type === 'checkbox') {
+            const { checked } = e.target as HTMLInputElement
+            setFormData((prev) => ({ ...prev, [name]: checked }))
+        } else {
+            setFormData((prev) => ({ ...prev, [name]: value }))
+        }
     }
 
     const handleSelectChange = (name: string, value: string) => {
@@ -120,6 +128,7 @@ export default function FreeQuoteClient() {
                 solarType: "",
                 financing: "",
                 message: "",
+                smsConsent: false,
             })
         } catch (error) {
             setToastMessage({
@@ -508,12 +517,67 @@ export default function FreeQuoteClient() {
                                         </div>
                                     </ScrollReveal>
 
+                                    {/* SMS Consent */}
+                                    <ScrollReveal direction="up" delay={1050}>
+                                        <div className="space-y-4">
+                                            <div className="relative bg-gray-50 rounded-lg p-4 border border-gray-200">
+                                                <div className="flex items-start space-x-3">
+                                                    <div className="relative flex items-start">
+                                                        <div className="flex h-6 items-center">
+                                                            <input
+                                                                id="smsConsent"
+                                                                name="smsConsent"
+                                                                type="checkbox"
+                                                                required
+                                                                checked={formData.smsConsent}
+                                                                onChange={handleInputChange}
+                                                                className="h-5 w-5 text-red-600 focus:ring-red-500 focus:ring-offset-0 border-gray-300 rounded transition-all duration-150 ease-in-out hover:border-red-500 cursor-pointer"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                    <div className="text-sm text-gray-600 leading-relaxed">
+                                                        <Label htmlFor="smsConsent" className="cursor-pointer font-medium text-gray-700 block mb-1">
+                                                            SMS Communications Consent *
+                                                        </Label>
+                                                        <p className="mb-2">
+                                                            By providing my phone number, I agree to receive SMS messages from Relentless Energy regarding:
+                                                        </p>
+                                                        <ul className="list-inside space-y-1 mb-2 ml-1">
+                                                            <li className="flex items-center space-x-2 text-gray-600">
+                                                                <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+                                                                <span>Appointment confirmations and reminders</span>
+                                                            </li>
+                                                            <li className="flex items-center space-x-2 text-gray-600">
+                                                                <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+                                                                <span>Project updates and service notifications</span>
+                                                            </li>
+                                                            <li className="flex items-center space-x-2 text-gray-600">
+                                                                <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+                                                                <span>Customer support communications</span>
+                                                            </li>
+                                                        </ul>
+                                                        <p className="text-xs text-gray-500">
+                                                            Message and data rates may apply. Message frequency varies.{" "}
+                                                            <Link
+                                                                href="/privacy-policy"
+                                                                className="text-red-600 hover:text-red-700 font-medium underline decoration-dotted underline-offset-2"
+                                                            >
+                                                                Privacy Policy
+                                                            </Link>
+                                                            . Text STOP to cancel or HELP for assistance.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ScrollReveal>
+
                                     {/* Submit Button */}
                                     <ScrollReveal direction="up" delay={1100}>
                                         <Button
                                             type="submit"
                                             size="lg"
-                                            disabled={isSubmitting}
+                                            disabled={isSubmitting || !formData.smsConsent}
                                             className="w-full bg-red-600 hover:bg-red-700 text-white text-lg py-4 h-auto font-semibold disabled:opacity-50"
                                         >
                                             {isSubmitting ? (
@@ -525,6 +589,11 @@ export default function FreeQuoteClient() {
                                                 "Get My Free Solar Quote"
                                             )}
                                         </Button>
+                                        {!formData.smsConsent && (
+                                            <p className="text-xs text-gray-500 mt-2 text-center">
+                                                Please accept the SMS consent agreement to submit your quote request.
+                                            </p>
+                                        )}
                                     </ScrollReveal>
                                 </form>
                             </CardContent>

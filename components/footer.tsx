@@ -185,17 +185,11 @@ export default function Footer() {
                         <p className="text-gray-400 text-sm">
                             © 2024 Relentless Energy. All rights reserved.
                         </p>
-                        {/* <div className="flex space-x-6 mt-4 md:mt-0">
+                        <div className="flex space-x-6 mt-4 md:mt-0">
                             <Link href="/privacy-policy" className="text-gray-400 hover:text-white text-sm">
                                 Privacy Policy
                             </Link>
-                            <Link href="/terms-of-service" className="text-gray-400 hover:text-white text-sm">
-                                Terms of Service
-                            </Link>
-                            <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm">
-                                Sitemap
-                            </Link>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
