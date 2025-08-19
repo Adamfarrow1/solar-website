@@ -555,16 +555,24 @@ export default function FreeQuoteClient() {
                                                                 <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
                                                                 <span>Customer support communications</span>
                                                             </li>
+                                                            <li className="flex items-center space-x-2 text-gray-600">
+                                                                <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+                                                                <span>Special offers and promotional updates</span>
+                                                            </li>
+                                                            <li className="flex items-center space-x-2 text-gray-600">
+                                                                <span className="block h-1.5 w-1.5 rounded-full bg-red-600 flex-shrink-0"></span>
+                                                                <span>Educational content and solar news</span>
+                                                            </li>
                                                         </ul>
                                                         <p className="text-xs text-gray-500">
-                                                            Message and data rates may apply. Message frequency varies.{" "}
+                                                            Message and data rates may apply. Message frequency varies. By providing consent, you also agree to receive marketing communications as detailed in our{" "}
                                                             <Link
                                                                 href="/privacy-policy"
                                                                 className="text-red-600 hover:text-red-700 font-medium underline decoration-dotted underline-offset-2"
                                                             >
                                                                 Privacy Policy
                                                             </Link>
-                                                            . Text STOP to cancel or HELP for assistance.
+                                                            . You can opt out of marketing messages at any time. Text STOP to cancel all messages or HELP for assistance.
                                                         </p>
                                                     </div>
                                                 </div>

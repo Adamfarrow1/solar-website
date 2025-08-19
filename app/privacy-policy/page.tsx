@@ -94,7 +94,34 @@ export default function PrivacyPolicyPage() {
 
                     <ScrollReveal>
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-gray-900">6. Data Security</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">6. Marketing and Outreach Communications</h2>
+                            <p className="text-gray-600">
+                                With your consent, we may use your contact information for marketing and outreach purposes:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                                <li>Sending promotional emails about new solar products, special offers, or company updates</li>
+                                <li>Providing information about solar energy educational events and workshops</li>
+                                <li>Sharing relevant solar industry news and regulatory updates</li>
+                                <li>Conducting customer satisfaction surveys and feedback requests</li>
+                                <li>Inviting you to refer friends and family to our solar services</li>
+                            </ul>
+                            <p className="text-gray-600 mt-4">
+                                You can opt out of marketing communications at any time by:
+                            </p>
+                            <ul className="list-disc pl-6 space-y-2 text-gray-600">
+                                <li>Clicking the &quot;unsubscribe&quot; link in our marketing emails</li>
+                                <li>Texting STOP to opt out of SMS marketing messages</li>
+                                <li>Contacting our customer service team</li>
+                            </ul>
+                            <p className="text-gray-600 mt-4">
+                                Please note that even if you opt out of marketing communications, you will still receive essential service-related communications regarding your solar installation, maintenance, or warranty information.
+                            </p>
+                        </section>
+                    </ScrollReveal>
+
+                    <ScrollReveal>
+                        <section className="space-y-4">
+                            <h2 className="text-2xl font-bold text-gray-900">7. Data Security</h2>
                             <p className="text-gray-600">
                                 We implement appropriate technical and organizational security measures to protect your information, including:
                             </p>
@@ -109,7 +136,7 @@ export default function PrivacyPolicyPage() {
 
                     <ScrollReveal>
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-gray-900">7. Your Rights</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">8. Your Rights</h2>
                             <p className="text-gray-600">
                                 You have the right to:
                             </p>
@@ -125,7 +152,7 @@ export default function PrivacyPolicyPage() {
 
                     <ScrollReveal>
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-gray-900">8. Changes to This Policy</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">9. Changes to This Policy</h2>
                             <p className="text-gray-600">
                                 We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last Updated&quot; date at the top.
                             </p>
@@ -134,7 +161,7 @@ export default function PrivacyPolicyPage() {
 
                     <ScrollReveal>
                         <section className="space-y-4">
-                            <h2 className="text-2xl font-bold text-gray-900">9. Contact Us</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">10. Contact Us</h2>
                             <p className="text-gray-600">
                                 If you have any questions about this Privacy Policy, please contact us at:
                             </p>
