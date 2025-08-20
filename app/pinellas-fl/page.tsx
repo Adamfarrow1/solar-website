@@ -172,7 +172,7 @@ export default function PinellasFLPage() {
                                     size="lg"
                                     className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         Get Free Quote
                                         <ArrowRight className="h-5 w-5 ml-2" />
                                     </Link>
@@ -470,7 +470,7 @@ export default function PinellasFLPage() {
                                     size="lg"
                                     className="bg-white text-red-600 hover:bg-gray-100 font-bold px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         Get Free Quote
                                         <ArrowRight className="h-5 w-5 ml-2" />
                                     </Link>

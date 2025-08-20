@@ -110,7 +110,7 @@ export default function HomePage() {
                   size="lg"
                   className="bg-red-600 hover:bg-red-700 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto hover:scale-105 transition-all duration-300 group"
                 >
-                  <Link href="/free-solar-quote">
+                  <Link href="/contact">
                     Get Your Free Quote
                     <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -413,7 +413,7 @@ export default function HomePage() {
                   variant="secondary"
                   className="text-lg px-10 py-4 h-auto hover:scale-105 transition-all duration-300 group"
                 >
-                  <Link href="/free-solar-quote">
+                  <Link href="/contact">
                     Get Your Free Solar Quote
                     <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>

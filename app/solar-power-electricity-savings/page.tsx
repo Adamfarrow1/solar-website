@@ -84,7 +84,7 @@ export default function IncentivesPage() {
                                     className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                                     asChild
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         <Calculator className="w-4 h-4 sm:w-5 sm:h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" />
                                         Calculate Your Savings
                                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
@@ -488,7 +488,7 @@ export default function IncentivesPage() {
                                 className="group bg-white text-red-600 hover:bg-gray-100 font-semibold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                                 asChild
                             >
-                                <Link href="/free-solar-quote">
+                                <Link href="/contact">
                                     <Calculator className="w-6 h-6 mr-3 group-hover:rotate-12 transition-transform duration-300" />
                                     Calculate Your Exact Savings
                                     <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
@@ -522,7 +522,7 @@ export default function IncentivesPage() {
                                     className="group bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
                                     asChild
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         Get Your Free Quote Today
                                         <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" />
                                     </Link>

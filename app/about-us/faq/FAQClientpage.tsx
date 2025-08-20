@@ -255,7 +255,7 @@ export default function FAQClientPage() {
 
                         <ScrollReveal delay={0.3}>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link href="/free-solar-quote">
+                                <Link href="/contact">
                                     <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
                                         Get Free Quote
                                     </Button>
@@ -328,7 +328,7 @@ export default function FAQClientPage() {
                             your home.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link href="/free-solar-quote">
+                            <Link href="/contact">
                                 <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
                                     Schedule Consultation
                                 </Button>

@@ -147,7 +147,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                             size="lg"
                                             className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                                         >
-                                            <Link href="/free-solar-quote">
+                                            <Link href="/contact">
                                                 Get Free Quote
                                                 <ArrowRight className="h-5 w-5 ml-2" />
                                             </Link>
@@ -293,7 +293,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                             size="sm"
                                             className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-2 rounded-xl transition-all duration-300"
                                         >
-                                            <Link href="/free-solar-quote">
+                                            <Link href="/contact">
                                                 Check Your Area
                                                 <ArrowRight className="h-4 w-4 ml-1" />
                                             </Link>
@@ -349,7 +349,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                         asChild
                                         className="w-full mt-8 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-semibold py-4 rounded-2xl transition-all duration-300 transform hover:scale-105"
                                     >
-                                        <Link href="/free-solar-quote">
+                                        <Link href="/contact">
                                             Get Your Custom Quote
                                             <ArrowRight className="h-5 w-5 ml-2" />
                                         </Link>
@@ -567,7 +567,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                         asChild
                                         className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 rounded-2xl transition-all duration-300 transform hover:scale-105"
                                     >
-                                        <Link href="/free-solar-quote">
+                                        <Link href="/contact">
                                             Start Your Solar Journey
                                             <ArrowRight className="h-5 w-5 ml-2" />
                                         </Link>
@@ -658,7 +658,7 @@ export default async function ServiceAreaPage({ params }: ServiceAreaPageProps) 
                                     size="lg"
                                     className="bg-white text-red-600 hover:bg-gray-100 font-bold px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         Get Free Quote
                                         <ArrowRight className="h-5 w-5 ml-2" />
                                     </Link>

@@ -124,7 +124,7 @@ export default function ResidentialSolarPage() {
                                         size="lg"
                                         className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold"
                                     >
-                                        <Link href="/free-solar-quote">
+                                        <Link href="/contact">
                                             Free Solar Consultation
                                             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                                         </Link>
@@ -750,7 +750,7 @@ export default function ResidentialSolarPage() {
                                     size="lg"
                                     className="bg-white text-red-600 hover:bg-gray-100 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 h-auto font-semibold group"
                                 >
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         Free Solar Consultation
                                         <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform duration-300" />
                                     </Link>

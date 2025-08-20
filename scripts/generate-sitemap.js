@@ -35,7 +35,7 @@ async function generateSitemap() {
     "about-us/our-team",
     "about-us/testimonials",
     "about-us/careers",
-    "free-solar-quote",
+    "contact",
     "solar-power-electricity-savings/solar-savings-estimator",
     "solar-power-electricity-savings",
     "solar-power-electricity-savings/solar-power-electricity-savings",

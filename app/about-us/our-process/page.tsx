@@ -193,7 +193,7 @@ export default function OurProcessPage() {
                         <ScrollReveal delay={0.3}>
                             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                 <Button asChild size="lg" className="bg-red-600 hover:bg-red-700">
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Start Your Journey
                                     </Link>
@@ -369,7 +369,7 @@ export default function OurProcessPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button asChild size="lg" variant="secondary">
-                                    <Link href="/free-solar-quote">
+                                    <Link href="/contact">
                                         <Phone className="mr-2 h-5 w-5" />
                                         Get Free Quote
                                     </Link>

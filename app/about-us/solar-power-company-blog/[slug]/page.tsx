@@ -284,7 +284,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                                 <p className="text-red-100 mb-6">
                                     Get a free quote from Florida's premier Tesla Certified solar installer.
                                 </p>
-                                <Link href="/free-solar-quote">
+                                <Link href="/contact">
                                     <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
                                         Get Free Quote
                                     </Button>

@@ -39,12 +39,12 @@ export const metadata: Metadata = {
     },
     metadataBase: new URL("https://www.relentlessenergy.org"),
     alternates: {
-        canonical: "https://www.relentlessenergy.org/free-solar-quote",
+        canonical: "https://www.relentlessenergy.org/contact",
     },
     openGraph: {
         title: "Free Solar Quote | Get Your Custom Solar Proposal Today",
         description: "Get your free solar quote from Tesla Certified installers. Custom proposals with $0 down financing, 25-year warranty, and guaranteed savings.",
-        url: "https://www.relentlessenergy.org/free-solar-quote",
+        url: "https://www.relentlessenergy.org/contact",
         siteName: "Relentless Energy",
         type: "website",
         locale: "en_US",
