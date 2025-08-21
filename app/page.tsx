@@ -121,7 +121,7 @@ export default function HomePage() {
                   size="lg"
                   className="border-2 border-white text-white hover:bg-white hover:text-gray-900 text-base sm:text-lg px-6 sm:px-10 py-3 sm:py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
                 >
-                  <Link href="/solar-power-electricity-savings/pricing-estimator">
+                  <Link href="/solar-power-electricity-savings/solar-savings-estimator">
                     <Sun className="mr-2 h-5 w-5 sm:h-6 sm:w-6" />
                     Calculate Savings
                   </Link>
@@ -424,7 +424,7 @@ export default function HomePage() {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white hover:text-red-600 text-lg px-10 py-4 h-auto bg-transparent hover:scale-105 transition-all duration-300"
                 >
-                  <Link href="/solar-power-electricity-savings/pricing-estimator">
+                  <Link href="/solar-power-electricity-savings/solar-savings-estimator">
                     <Sun className="mr-2 h-6 w-6" />
                     Estimate Your Savings
                   </Link>
