@@ -503,9 +503,9 @@ export default function AboutPage() {
                                 className="group border-2 border-white text-white hover:bg-white hover:text-red-600 px-10 py-4 rounded-2xl bg-transparent shadow-lg hover:shadow-xl transition-all duration-300"
                                 asChild
                             >
-                                <Link href="tel:386-832-1119">
+                                <Link href="tel:813-761-1631">
                                     <Phone className="w-6 h-6 mr-3" />
-                                    Call (386) 832-1119
+                                    Call (813) 761-1631
                                 </Link>
                             </Button>
                         </div>
@@ -519,7 +519,7 @@ export default function AboutPage() {
                                 </div>
                                 <div>
                                     <div className="font-semibold mb-1">Call Us</div>
-                                    <div className="text-sm opacity-90">(386) 832-1119</div>
+                                    <div className="text-sm opacity-90">(813) 761-1631</div>
                                 </div>
                             </div>
                             <div className="flex flex-col items-center space-y-3">

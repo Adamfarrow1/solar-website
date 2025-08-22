@@ -224,9 +224,9 @@ export default function TeslaSolarClient() {
                                     size="lg"
                                     className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-md px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 text-base sm:text-lg lg:text-xl font-bold rounded-2xl bg-transparent hover:scale-105 transition-all duration-300"
                                 >
-                                    <Link href="tel:386-832-1119" className="flex items-center justify-center">
+                                    <Link href="tel:813-761-1631" className="flex items-center justify-center">
                                         <Phone className="mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 lg:h-6 lg:w-6 flex-shrink-0" />
-                                        <span>(386) 832-1119</span>
+                                        <span>(813) 761-1631</span>
                                     </Link>
                                 </Button>
                             </div>
@@ -485,9 +485,9 @@ export default function TeslaSolarClient() {
                                     variant="outline"
                                     className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-md font-bold px-8 py-4 text-lg rounded-xl bg-transparent hover:scale-105 transition-all duration-300"
                                 >
-                                    <Link href="tel:386-832-1119">
+                                    <Link href="tel:813-761-1631">
                                         <Phone className="mr-2 h-5 w-5" />
-                                        (386) 832-1119
+                                        (813) 761-1631
                                     </Link>
                                 </Button>
                             </div>

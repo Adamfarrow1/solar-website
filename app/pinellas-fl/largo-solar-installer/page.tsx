@@ -120,7 +120,7 @@ export default function LargoSolarInstallerPage() {
         name: "Relentless Energy - Largo Solar Installer",
         description: "Tesla Certified solar installation company serving Largo, Florida with residential and commercial solar solutions.",
         url: "https://relentlessenergy.org/pinellas-fl/largo-solar-installer",
-        telephone: "(386) 832-1119",
+        telephone: "(813) 761-1631",
         address: {
             "@type": "PostalAddress",
             addressLocality: "Largo",
@@ -199,9 +199,9 @@ export default function LargoSolarInstallerPage() {
                                             size="lg"
                                             className="border-2 border-gray-300 hover:border-red-600 text-gray-700 hover:text-red-600 font-semibold px-8 py-4 rounded-2xl bg-white/80 backdrop-blur-sm hover:bg-white transition-all duration-300"
                                         >
-                                            <Link href="tel:(386)832-1119">
+                                            <Link href="tel:813-761-1631">
                                                 <Phone className="h-5 w-5 mr-2" />
-                                                Call (386) 832-1119
+                                                Call (813) 761-1631
                                             </Link>
                                         </Button>
                                     </div>
@@ -544,9 +544,9 @@ export default function LargoSolarInstallerPage() {
                                     size="lg"
                                     className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold px-10 py-4 rounded-2xl bg-transparent backdrop-blur-sm transition-all duration-300"
                                 >
-                                    <Link href="tel:(386) 832-1119">
+                                    <Link href="tel:(813) 761-1631">
                                         <Phone className="h-5 w-5 mr-2" />
-                                        Call (386) 832-1119
+                                        Call (813) 761-1631
                                     </Link>
                                 </Button>
                             </div>

@@ -179,8 +179,8 @@ export default function FreeQuoteClient() {
                             <div className="mt-8 p-4 bg-red-50 rounded-lg">
                                 <p className="text-sm text-gray-600">
                                     <strong>Need immediate assistance?</strong> Call us at{" "}
-                                    <a href="tel:3868321119" className="text-red-600 font-semibold">
-                                        (386) 832-1119
+                                    <a href="tel:813-761-1631" className="text-red-600 font-semibold">
+                                        (813) 761-1631
                                     </a>
                                 </p>
                             </div>
@@ -316,7 +316,7 @@ export default function FreeQuoteClient() {
                                                         value={formData.phone}
                                                         onChange={handleInputChange}
                                                         className="h-12 text-base border-gray-300 focus:border-red-500 focus:ring-red-500"
-                                                        placeholder="(386) 832-1119"
+                                                        placeholder="(813) 761-1631"
                                                     />
                                                 </div>
                                             </div>
@@ -706,7 +706,7 @@ export default function FreeQuoteClient() {
                                         <div className="flex items-center space-x-3">
                                             <Phone className="h-5 w-5 text-red-600" />
                                             <div>
-                                                <p className="font-semibold text-gray-900">(386) 832-1119</p>
+                                                <p className="font-semibold text-gray-900">(813) 761-1631</p>
                                                 <p className="text-sm text-gray-600">Mon-Fri 8AM-6PM, Sat 9AM-4PM</p>
                                             </div>
                                         </div>

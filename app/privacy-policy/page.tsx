@@ -175,8 +175,8 @@ export default function PrivacyPolicyPage() {
                                     </li>
                                     <li className="flex items-center space-x-3">
                                         <span className="font-semibold text-gray-900">Phone:</span>
-                                        <a href="tel:3868321119" className="text-red-600 hover:text-red-700">
-                                            (386) 832-1119
+                                        <a href="tel:813-761-1631" className="text-red-600 hover:text-red-700">
+                                            (813) 761-1631
                                         </a>
                                     </li>
                                 </ul>
